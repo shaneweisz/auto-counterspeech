@@ -1,2 +1,3 @@
-# auto-counterspeech
-Automatic generation of counterspeech (a direct response to hate speech that seeks to undermine it)
+# Automating Counterspeech in Dialogue Systems
+
+Counterspeech is a direct response to hate speech that seeks to undermine it. A key advantage of using counterspeech to combat hate speech is that it does not violate freedom of speech (compard to measures like content moderation and blocking users). However, manual generation of good counterspeech is time-consuming and expensive. AI, therefore, could have a powerful impact in improving the *scalability* of applying counterspeech. However, research on AI approaches to generating counterspeech is still in its infancy. As such, the aim of this project thus is to contribute towards improved automatic generation of counterspeech.
