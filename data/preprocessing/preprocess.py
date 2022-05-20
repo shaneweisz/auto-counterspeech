@@ -34,7 +34,7 @@ def validate(args):
         args.output_file_path = default_output_file_path
 
     assert args.output_file_path != args.input_file_path
-    assert args.output_file_path.endswith(".csv")
+    assert args.output_file_path.name.endswith(".csv")
 
     return args
 

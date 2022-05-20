@@ -32,4 +32,8 @@ class Preprocessor(ABC):
         with open(output_file_path, "w") as f:
             f.write(Preprocessor.OUTPUT_HEADER + "\n")
             for hs, cs in hs_cs_pairs:
+                # escape quotes in hs and cs to avoid errors when writing to csv
+                hs = hs.replace('"', '""')
+                cs = cs.replace('"', '""')
+
                 f.write(f'"{hs}","{cs}"\n')
