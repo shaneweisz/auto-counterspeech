@@ -29,7 +29,8 @@ class GabPreprocessor(Preprocessor):
                     hss.append(hs)
                 except IndexError:
                     print(
-                        f"Error: HS idx {hs_idx} not a valid index in the conversation."
+                        f"Warning: HS idx {hs_idx} is not a valid index "
+                        + "in the conversation. Skipping this entry."
                     )
             for hs in hss:
                 for cs in cs_responses:
@@ -40,3 +41,6 @@ class GabPreprocessor(Preprocessor):
     @staticmethod
     def remove_conversations_with_no_hate_speech(df: pd.DataFrame) -> pd.DataFrame:
         return df[pd.notnull(df["hate_speech_idx"])]
+
+
+RedditPreprocessor = GabPreprocessor
