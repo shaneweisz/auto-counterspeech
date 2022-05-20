@@ -17,7 +17,9 @@ Optionally install development dependencies with:
 pip install -r requirements-dev.txt
 ```
 
-## Preprocessing
+## Data
+
+### Preprocessing
 
 Firstly, notice that the unprocessed counterspeech datasets (as released by their authors) are located in `data/unprocessed`.
 
@@ -28,4 +30,20 @@ The preprocessing can be replicated by running:
 ```bash
 cd data
 python preprocessing/preprocess.py -i unprocessed/<data>.csv [-o <output_file_path>]
+```
+
+### Analysis
+
+Data analysis can be conducted on all datasets by running:
+
+```bash
+cd data
+source analysis/analyse_all_datasets.sh
+```
+
+or on an individual dataset by running:
+
+```bash
+cd data
+python analysis/analyse_dataset.py -f <data.csv>
 ```

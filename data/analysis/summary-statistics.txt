@@ -1,0 +1,40 @@
+Analysing gab.csv:
+--------------------------------------------------
+Number of rows: 41647
+Random HS comment: Because they were prepared to sell us out when cunt hiLIARy won the election. (Soon to be dead) George Soros funded the program and was ready to flood the US with shit hole African rapefugees.....
+Random CS response: Please refrain from using derogatory terms for females and refugees from Africa.
+Number of unique HS comments: 13669
+Number of unique CS responses: 21825
+Median length of HS in words: 20.0
+Median length of CS in words: 15.0
+
+Analysing reddit.csv:
+--------------------------------------------------
+Number of rows: 14286
+Random HS comment: I'm ok with this as I've been always a fan of yelling "GREETINGS, CUNTS" at the top of my lungs.  Makes the blood flows and the hatred of your colleges towards you fuels them through the day's work.  Working as a caretaker of elders is fun.
+Random CS response: I love working with the elderly because they don't agree with all these new things like you cannot call people "guys". Come on.
+Number of unique HS comments: 5195
+Number of unique CS responses: 7667
+Median length of HS in words: 24.0
+Median length of CS in words: 16.0
+
+Analysing CONAN.csv:
+--------------------------------------------------
+Number of rows: 14988
+Random HS comment: Muslims cannot add any value to our culture.
+Random CS response: This may dissapoint you.but every single individual is contributing to a society in one way or another, regardless of their race or religion.
+Number of unique HS comments: 856
+Number of unique CS responses: 6803
+Median length of HS in words: 10.0
+Median length of CS in words: 15.0
+
+Analysing Multitarget-CONAN.csv:
+--------------------------------------------------
+Number of rows: 5003
+Random HS comment: Jews have no place here. They are not a part of our country.
+Random CS response: Jews were born in this country like you and me, they are our fellow countryman. If you would like to have a 'better society' and a 'better religion', then you should go and create your own nation.
+Number of unique HS comments: 3718
+Number of unique CS responses: 4997
+Median length of HS in words: 12.0
+Median length of CS in words: 23.0
+
