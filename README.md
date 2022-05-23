@@ -59,3 +59,17 @@ or on an individual dataset by running:
 cd data
 python analysis/analyse_dataset.py -f <data.csv>
 ```
+
+## Evaluation
+
+A file containing model predictions can be evaluated as follows:
+
+```bash
+python evaluate.py -f <preds>.csv [-m <metrics>]
+```
+
+Note that the predictions file must have the following fields: `input`, `prediction` and `reference`.
+
+The supported metrics are:
+
+* `sacrebleu` (computes BLEU-4)
