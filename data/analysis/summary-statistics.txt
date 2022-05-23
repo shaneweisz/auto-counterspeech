@@ -20,13 +20,13 @@ Median length of CS in words: 16.0
 
 Analysing CONAN.csv:
 --------------------------------------------------
-Number of rows: 14988
+Number of rows: 6645
 Random HS comment: Muslims cannot add any value to our culture.
 Random CS response: This may dissapoint you.but every single individual is contributing to a society in one way or another, regardless of their race or religion.
-Number of unique HS comments: 856
-Number of unique CS responses: 6803
-Median length of HS in words: 10.0
-Median length of CS in words: 15.0
+Number of unique HS comments: 520
+Number of unique CS responses: 4036
+Median length of HS in words: 13.0
+Median length of CS in words: 17.0
 
 Analysing Multitarget-CONAN.csv:
 --------------------------------------------------
