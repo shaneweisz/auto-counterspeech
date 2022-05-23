@@ -12,17 +12,17 @@ def main(args):
     print(f"Number of rows: {len(df)}")
 
     idx = 1000
-    print(f"Random HS comment: {df['HateSpeech'][idx]}")
-    print(f"Random CS response: {df['CounterSpeech'][idx]}")
+    print(f"Random HS comment: {df['hate_speech'][idx]}")
+    print(f"Random CS response: {df['counter_speech'][idx]}")
 
-    print(f"Number of unique HS comments: {len(df['HateSpeech'].unique())}")
-    print(f"Number of unique CS responses: {len(df['CounterSpeech'].unique())}")
+    print(f"Number of unique HS comments: {len(df['hate_speech'].unique())}")
+    print(f"Number of unique CS responses: {len(df['counter_speech'].unique())}")
 
     print(
-        f"Median length of HS in words: {df['HateSpeech'].apply(lambda x: len(str(x).split())).median()}"
+        f"Median length of HS in words: {df['hate_speech'].apply(lambda x: len(str(x).split())).median()}"
     )
     print(
-        f"Median length of CS in words: {df['CounterSpeech'].apply(lambda x: len(str(x).split())).median()}"
+        f"Median length of CS in words: {df['counter_speech'].apply(lambda x: len(str(x).split())).median()}"
     )
 
     print()

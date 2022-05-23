@@ -4,7 +4,7 @@ from abc import ABC, abstractmethod
 
 
 class Preprocessor(ABC):
-    OUTPUT_HEADER = "HateSpeech,CounterSpeech"
+    OUTPUT_HEADER = "hate_speech,counter_speech"
 
     def __init__(self, input_file_path: Path, output_file_path: Path):
         self.input_file_path = input_file_path
