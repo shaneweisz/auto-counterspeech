@@ -130,3 +130,6 @@ dmypy.json
 
 # VS Code debug files
 .vscode/launch.json
+
+# Temporary files
+tmp*

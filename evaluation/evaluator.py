@@ -3,6 +3,10 @@ from typing import List
 from datasets import load_metric
 import pandas as pd
 
+METRIC_TO_PARAMS = {
+    "bleu-4": {"path": "sacrebleu"},
+}
+
 
 class Evaluator:
     def __init__(
@@ -34,7 +38,13 @@ class Evaluator:
 
     def evaluate(self, metrics: List[str]) -> float:
         for metric in metrics:
-            metric_obj = load_metric(metric)
+            if metric not in METRIC_TO_PARAMS:
+                raise ValueError(
+                    f"Unsupported metric: {metric}. "
+                    + f"Supported metrics are: {', '.join(list(METRIC_TO_PARAMS.keys()))}"
+                )
+            metric_params = METRIC_TO_PARAMS[metric]
+            metric_obj = load_metric(**metric_params)
             metric_value = metric_obj.compute(
                 predictions=self.predictions, references=self.references
             )
