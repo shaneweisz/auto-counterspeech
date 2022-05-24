@@ -29,6 +29,14 @@ Optionally install development dependencies with:
 pip install -r requirements-dev.txt
 ```
 
+The nltk tokenizer requires the punkt package. This is used for the BLEU evaluation metrics.
+
+You can install this locally using the python interpreter as follows:
+
+```bash
+python -c 'import nltk; nltk.download("punkt")'
+```
+
 ## Data
 
 ### Preprocessing

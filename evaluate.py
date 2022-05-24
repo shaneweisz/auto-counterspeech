@@ -1,20 +1,19 @@
 import argparse
 from pathlib import Path
 from evaluation.evaluator import Evaluator
+from evaluation.metrics.metric_factory import MetricFactory
 
 
 def main(args):
-    evaluator = evaluator_from_file_path(args.file_path)
-    evaluator.evaluate(args.metrics)
+    metrics = [MetricFactory.from_metric_name(name) for name in args.metrics]
+    evaluator = Evaluator.from_csv(args.file_path)
+    scores = evaluator.evaluate(metrics)
+    print_scores(scores)
 
 
-def evaluator_from_file_path(file_path):
-    if file_path.suffix == ".csv":
-        return Evaluator.from_csv(file_path)
-    elif file_path.suffix == ".json":
-        return Evaluator.from_json(file_path)
-    else:
-        raise ValueError("File must be .csv or .json")
+def print_scores(scores):
+    for metric_name, score in scores.items():
+        print(f"{metric_name}: {score:.3f}")
 
 
 if __name__ == "__main__":
@@ -24,7 +23,7 @@ if __name__ == "__main__":
         "-m",
         "--metrics",
         nargs="+",
-        default=["sacrebleu"],
+        default=["bleu-2"],
     )
     args = parser.parse_args()
     main(args)
