@@ -1,2 +1,2 @@
 from .metric_factory import MetricFactory
-from .metric import Metric
+from .base_metric import Metric

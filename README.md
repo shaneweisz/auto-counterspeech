@@ -79,4 +79,5 @@ Note that the predictions file must have the following fields: `input`, `predict
 
 The supported metrics are:
 
-* `bleu-1`, `bleu-2`, `bleu-3`, `bleu-4`
+* `bleu1`, `bleu2`, `bleu3`, `bleu4`
+* `rouge1`, `rouge2`, `rougeL`

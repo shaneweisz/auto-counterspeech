@@ -1,4 +1,4 @@
-ipykernel==6.13.0
-black==22.3.0
-flake8==4.0.1
-matplotlib==3.5.2
+ipykernel==6.13.0 # for Jupyter notebooks
+black==22.3.0 # formatter
+flake8==4.0.1 # linter
+matplotlib==3.5.2 # plotting
