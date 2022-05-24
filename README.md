@@ -41,15 +41,14 @@ python -c 'import nltk; nltk.download("punkt")'
 
 ### Preprocessing
 
-Firstly, notice that the unprocessed counterspeech datasets (as released by their authors) are located in `data/unprocessed`.
+Firstly, notice that the original counterspeech datasets (as released by their authors) are located in `data/originals`.
 
 After preprocessing the datasets, the resulting files are located at the top-level of the `data` directory.
 
 The preprocessing can be replicated by running:
 
 ```bash
-cd data
-python preprocessing/preprocess.py -i unprocessed/<data>.csv [-o <output_file_path>]
+python preprocess.py -i data/originals/<data>.csv [-o <output_file_path>]
 ```
 
 ### Analysis
@@ -65,7 +64,7 @@ or on an individual dataset by running:
 
 ```bash
 cd data
-python analysis/analyse_dataset.py -f <data.csv>
+python analysis/analyse_dataset.py -f <data>.csv
 ```
 
 ## Evaluation

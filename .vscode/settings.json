@@ -1,5 +1,8 @@
 {
     "python.formatting.provider": "black",
+    "python.formatting.blackArgs": [
+        "--experimental-string-processing"
+    ], // to automatically break long strings
     "python.linting.flake8Enabled": true,
     "python.linting.enabled": true,
 }

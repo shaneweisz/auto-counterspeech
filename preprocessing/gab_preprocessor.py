@@ -3,7 +3,7 @@ from typing import List, Tuple
 import pandas as pd
 import ast
 import re
-from base_preprocessor import Preprocessor
+from .base_preprocessor import Preprocessor
 
 
 class GabPreprocessor(Preprocessor):
@@ -41,6 +41,3 @@ class GabPreprocessor(Preprocessor):
     @staticmethod
     def remove_conversations_with_no_hate_speech(df: pd.DataFrame) -> pd.DataFrame:
         return df[pd.notnull(df["hate_speech_idx"])]
-
-
-RedditPreprocessor = GabPreprocessor

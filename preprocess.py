@@ -1,7 +1,11 @@
 from pathlib import Path
 import argparse
-from gab_preprocessor import GabPreprocessor, RedditPreprocessor
-from conan_preprocessor import ConanPreprocessor, MultiTargetConanPreprocessor
+from preprocessing import (
+    GabPreprocessor,
+    RedditPreprocessor,
+    ConanPreprocessor,
+    MultiTargetConanPreprocessor,
+)
 
 
 def main(args):
@@ -20,21 +24,32 @@ def main(args):
 
 
 def validate(args):
-    assert args.input_file_path.name in [
+    supported_input_files = [
         "gab.csv",
         "reddit.csv",
         "CONAN.csv",
         "Multitarget-CONAN.csv",
     ]
+    if args.input_file_path.name not in supported_input_files:
+        err_msg = f"Input file name must be one of: {supported_input_files}"
+        raise ValueError(err_msg)
 
     if args.output_file_path is None:
-        default_output_file_path = Path(__file__).parent.parent / (
-            args.input_file_path.name
+        default_output_file_path = (
+            Path(__file__).parent / "data" / (args.input_file_path.name)
         )
         args.output_file_path = default_output_file_path
 
-    assert args.output_file_path != args.input_file_path
-    assert args.output_file_path.name.endswith(".csv")
+    if args.output_file_path == args.input_file_path:
+        err_msg = (
+            "Input and output file paths must be different, otherwise you'll overwrite"
+            " the input file."
+        )
+        raise ValueError(err_msg)
+
+    if not args.output_file_path.name.endswith(".csv"):
+        err_msg = "Output file name must end with .csv"
+        raise ValueError(err_msg)
 
     return args
 

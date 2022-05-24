@@ -1,7 +1,7 @@
 from pathlib import Path
 import pandas as pd
 from typing import List, Tuple
-from base_preprocessor import Preprocessor
+from .base_preprocessor import Preprocessor
 
 
 class ConanPreprocessor(Preprocessor):
@@ -26,14 +26,3 @@ class ConanPreprocessor(Preprocessor):
         originally_english = cn_id[:2] == "EN"
         translated_to_english = cn_id[-2:] == "T1"
         return originally_english or translated_to_english
-
-
-class MultiTargetConanPreprocessor(Preprocessor):
-    def extract_hs_cs_pairs(self, file_path: Path) -> List[Tuple[str, str]]:
-        df = pd.read_csv(file_path)
-        hs_cs_pairs = []
-        for _, row in df.iterrows():
-            hs = row["HATE_SPEECH"]
-            cs = row["COUNTER_NARRATIVE"]
-            hs_cs_pairs.append((hs, cs))
-        return hs_cs_pairs
