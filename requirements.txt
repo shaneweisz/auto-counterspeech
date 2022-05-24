@@ -2,4 +2,5 @@ pandas==1.4.2 # to work with CSVs
 datasets==2.2.2 # huggingface library that includes metrics
 sacrebleu==2.1.0 # for official BLEU-4 score
 nltk==3.7 # for BLEU score
-rouge-score==0.0.4 # for ROUGE score
+rouge-score==0.0.4 # for ROUGE-1, ROUGE-2, ROUGE-L
+bert-score==0.3.11 # official BERT score implementation

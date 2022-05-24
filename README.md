@@ -3,13 +3,11 @@
 
 ## Project Overview
 
-Counterspeech is a direct response to hate speech that seeks to undermine it. The key advantage of using counterspeech to combat hate speech, as opposed to measures like content moderation and blocking users, is that it does not violate freedom of speech. However, manual generation of good counterspeech is time-consuming and expensive. AI, therefore, could have a powerful impact in improving the *scalability* of applying counterspeech. However, research on AI approaches to generating counterspeech is still in its infancy. As such, this project thus aims to contribute towards improved automatic generation of counterspeech.
+"Counterspeech" is a direct response to hate speech that seeks to undermine it. The key advantage of using counterspeech to combat hate speech, as opposed to measures like content moderation and blocking users, is that it does not violate freedom of speech. However, manual generation of good counterspeech is time-consuming and expensive. AI, therefore, could have a powerful impact in improving the *scalability* of applying counterspeech. However, research on AI approaches to generating counterspeech is still in its infancy. As such, this project thus aims to contribute towards improved automatic generation of counterspeech.
 
 ## Requirements
 
-The recommended python version is python 3.8+.
-
-You can check your python version is at least 3.8 by running `python --version`
+The recommended python version is python 3.8+. You can check your python version is at least 3.8 by running `python --version`
 
 We recommend that you create a top-level virtual environment with:
 
@@ -81,3 +79,4 @@ The supported metrics are:
 
 * `bleu1`, `bleu2`, `bleu3`, `bleu4`
 * `rouge1`, `rouge2`, `rougeL`
+* `bertscore`
