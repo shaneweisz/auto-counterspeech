@@ -1,7 +1,7 @@
 import argparse
 from pathlib import Path
 from evaluation.evaluator import Evaluator
-from evaluation.metrics.metric_factory import MetricFactory
+from evaluation.metrics import MetricFactory
 
 
 def main(args):

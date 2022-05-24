@@ -1,7 +1,7 @@
 from pathlib import Path
 from typing import Dict, List
 import pandas as pd
-from .metrics.metric import Metric
+from .metrics import Metric
 
 
 class Evaluator:
