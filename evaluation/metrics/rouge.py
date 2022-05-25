@@ -14,9 +14,7 @@ class ROUGE(Metric):
     def name(self) -> str:
         return f"ROUGE-{self.rouge_type[5:]}"
 
-    def compute_score(
-        self, predictions: List[str], references: List[List[str]]
-    ) -> float:
+    def compute_score(self, predictions: List[str], references: List[str]) -> float:
         results = self.rouge.compute(
             predictions=predictions,
             references=references,

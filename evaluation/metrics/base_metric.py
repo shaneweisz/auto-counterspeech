@@ -11,6 +11,9 @@ class Metric(ABC):
 
     @abstractmethod
     def compute_score(
-        self, predictions: List[str], references: List[List[str]], inputs: List[str]
+        self,
+        predictions: List[str],
+        references: List[str] = None,
+        inputs: List[str] = None,
     ) -> float:
         pass

@@ -8,7 +8,7 @@ class Evaluator:
     def __init__(
         self,
         predictions: List[str],
-        references: List[List[str]] = None,  # allows multiple references per prediction
+        references: List[str] = None,
         inputs: List[str] = None,
     ):
         self.predictions = predictions
@@ -25,7 +25,6 @@ class Evaluator:
 
         predictions = df["prediction"].to_list()
         references = df["reference"].to_list()
-        references = [[reference] for reference in references]
         inputs = df["input"].to_list()
 
         return cls(predictions, references, inputs)
