@@ -1,8 +1,10 @@
 import re
+
 from .base_metric import Metric
 from .bleu import BLEU
 from .rouge import ROUGE
 from .bert_score import BERTScore
+from .distinct_n import DistinctN
 
 
 class MetricFactory:
@@ -23,6 +25,9 @@ class MetricFactory:
             return ROUGE(rouge_type=metric_name)
         elif metric_name.startswith("bert"):
             return BERTScore()
+        elif metric_name.startswith("distinct"):
+            N = int(re.search(r"\d+", metric_name).group())
+            return DistinctN(N=N)
         else:
             err_msg = f"Unsupported metric: `{metric_name}`"
             raise ValueError(err_msg)

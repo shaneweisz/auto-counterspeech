@@ -80,3 +80,4 @@ The supported metrics are:
 * `bleu1`, `bleu2`, `bleu3`, `bleu4`
 * `rouge1`, `rouge2`, `rougeL`
 * `bertscore`
+* `distinct1`, `distinct2`
