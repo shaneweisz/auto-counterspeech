@@ -1,5 +1,5 @@
 from typing import List
-from .base_metric import Metric
+from ..base_metric import Metric
 import bert_score
 import numpy as np
 import logging

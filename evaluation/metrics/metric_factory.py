@@ -1,10 +1,8 @@
 import re
 
 from .base_metric import Metric
-from .bleu import BLEU
-from .rouge import ROUGE
-from .bert_score import BERTScore
-from .distinct_n import DistinctN
+from .relevance import BLEU, ROUGE, BERTScore
+from .diversity import DistinctN
 
 
 class MetricFactory:

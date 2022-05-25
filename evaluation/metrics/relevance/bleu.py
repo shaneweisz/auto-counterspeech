@@ -1,6 +1,6 @@
 from typing import List
 from nltk.translate.bleu_score import corpus_bleu
-from .base_metric import Metric
+from ..base_metric import Metric
 import nltk
 
 
