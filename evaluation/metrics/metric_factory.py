@@ -2,6 +2,7 @@ import re
 from .base_metric import Metric
 from .bleu import BLEU
 from .rouge import ROUGE
+from .bert_score import BERTScore
 
 
 class MetricFactory:
@@ -20,6 +21,8 @@ class MetricFactory:
                 err_msg += "\nSupported rouge_types: " + ", ".join(valid_rouge_types)
                 raise ValueError(err_msg)
             return ROUGE(rouge_type=metric_name)
+        elif metric_name.startswith("bert"):
+            return BERTScore()
         else:
             err_msg = f"Unsupported metric: `{metric_name}`"
             raise ValueError(err_msg)
