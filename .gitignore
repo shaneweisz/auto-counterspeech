@@ -133,3 +133,6 @@ dmypy.json
 
 # Temporary files
 tmp*
+
+# Repo-specific files
+evaluation/metrics/fluency/cola_model

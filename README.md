@@ -82,3 +82,11 @@ The supported metrics are:
 * `bertscore`
 * `distinct1`, `distinct2`
 * `entropy1`, `entropy2`, `entropy3`, `entropy4`
+
+To use GRUEN, the following steps are necessary:
+* Download the pretrained CoLA classifier [here](https://drive.google.com/file/d/1Hw5na_Iy4-kGEoX60bD8vXYeJDQrzyj6/view?usp=sharing), unzip it, rename the folder `cola_model` and put it under `./`.
+* Download `en_core_web_md` from the `spacy` module by
+
+```
+python -m spacy download en_core_web_md
+```
