@@ -77,8 +77,22 @@ Note that the predictions file must have the following fields: `input`, `predict
 
 The supported metrics are:
 
-* `bleu1`, `bleu2`, `bleu3`, `bleu4`
-* `rouge1`, `rouge2`, `rougeL`
-* `bertscore`
-* `distinct1`, `distinct2`
-* `entropy1`, `entropy2`, `entropy3`, `entropy4`
+1. Relevance:
+
+    * `bleu1`, `bleu2`, `bleu3`, `bleu4`
+    * `rouge1`, `rouge2`, `rougeL`
+    * `bertscore`
+
+2. Diversity:
+
+    * `distinct1`, `distinct2`
+    * `entropy1`, `entropy2`, `entropy3`, `entropy4`
+
+3. Fluency:
+
+    * `gruen`
+
+Note that to use GRUEN, the following steps are necessary:
+
+* Download the pretrained CoLA classifier [here](https://drive.google.com/file/d/1Hw5na_Iy4-kGEoX60bD8vXYeJDQrzyj6/view?usp=sharing) and unzip it in the `evaluation/models/fluency` directory.
+* Download `en_core_web_md` from the `spacy` module by running `python -m spacy download en_core_web_md`
