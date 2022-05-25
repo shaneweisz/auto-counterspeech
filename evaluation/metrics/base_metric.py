@@ -13,7 +13,6 @@ class Metric(ABC):
     def compute_score(
         self,
         predictions: List[str],
-        references: List[str] = None,
-        inputs: List[str] = None,
+        **metric_kwargs,
     ) -> float:
         pass

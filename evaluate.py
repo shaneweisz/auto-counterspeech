@@ -5,9 +5,11 @@ from evaluation.metrics import MetricFactory
 
 
 def main(args):
+    if args.verbose:
+        print(f"Loading metrics: {args.metrics}")
     metrics = [MetricFactory.from_metric_name(name) for name in args.metrics]
     evaluator = Evaluator.from_csv(args.file_path)
-    scores = evaluator.evaluate(metrics)
+    scores = evaluator.evaluate(metrics, args.verbose)
     print_scores(scores)
 
 
@@ -25,5 +27,6 @@ if __name__ == "__main__":
         nargs="+",
         default=["bleu-2"],
     )
+    parser.add_argument("-v", "--verbose", action="store_true")
     args = parser.parse_args()
     main(args)
