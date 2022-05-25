@@ -2,7 +2,7 @@ import re
 
 from .base_metric import Metric
 from .relevance import BLEU, ROUGE, BERTScore
-from .diversity import DistinctN
+from .diversity import DistinctN, EntropyN
 
 
 class MetricFactory:
@@ -21,11 +21,20 @@ class MetricFactory:
                 err_msg += "\nSupported rouge_types: " + ", ".join(valid_rouge_types)
                 raise ValueError(err_msg)
             return ROUGE(rouge_type=metric_name)
-        elif metric_name.startswith("bert"):
+        elif metric_name.lower().startswith("bert"):
             return BERTScore()
-        elif metric_name.startswith("distinct"):
+        elif metric_name.lower().startswith("dist"):
             N = int(re.search(r"\d+", metric_name).group())
+            if N > 2:
+                err_msg = f"Dist-N must be <= 2, got {N}"
+                raise ValueError(err_msg)
             return DistinctN(N=N)
+        elif metric_name.lower().startswith("ent"):
+            N = int(re.search(r"\d+", metric_name).group())
+            if N > 4:
+                err_msg = f"Ent-N must be <= 4, got {N}"
+                raise ValueError(err_msg)
+            return EntropyN(N=N)
         else:
             err_msg = f"Unsupported metric: `{metric_name}`"
             raise ValueError(err_msg)

@@ -81,3 +81,4 @@ The supported metrics are:
 * `rouge1`, `rouge2`, `rougeL`
 * `bertscore`
 * `distinct1`, `distinct2`
+* `entropy1`, `entropy2`, `entropy3`, `entropy4`

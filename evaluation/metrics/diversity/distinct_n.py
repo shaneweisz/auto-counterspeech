@@ -11,7 +11,7 @@ class DistinctN(Metric):
 
     @property
     def name(self) -> str:
-        return f"Distinct-{self.N}"
+        return f"Dist-{self.N}"
 
     def compute_score(self, predictions: List[str], **kwargs) -> float:
         distinct_ngrams = set()
