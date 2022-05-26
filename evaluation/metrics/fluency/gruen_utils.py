@@ -64,7 +64,7 @@ def preprocess_candidates(candidates):
 """ Scores Calculation """
 
 
-def get_lm_score(sentences):
+def get_lm_score(sentences, verbose=False):
     def score_sentence(sentence, tokenizer, model):
         # if len(sentence.strip().split()) <= 1:
         #     return 10000
@@ -90,7 +90,9 @@ def get_lm_score(sentences):
     transformers.modeling_utils.logger.setLevel(logging.WARNING)
 
     lm_score = []
-    for sentence in tqdm(sentences, desc="Computing LM scores using BERT"):
+    for sentence in tqdm(
+        sentences, desc="Computing LM scores using BERT", disable=not verbose
+    ):
         if len(sentence) == 0:
             lm_score.append(0.0)
             continue
@@ -102,7 +104,7 @@ def get_lm_score(sentences):
     return lm_score
 
 
-def get_cola_score(sentences):
+def get_cola_score(sentences, verbose=False):
     def load_pretrained_cola_model(model_name, saved_pretrained_CoLA_model_dir):
         config_class, model_class, tokenizer_class = (
             BertConfig,
@@ -168,6 +170,7 @@ def get_cola_score(sentences):
         for batch in tqdm(
             eval_dataloader,
             desc="Evaluating BERT CoLA-grammaticality classifer",
+            disable=not verbose,
         ):
             model.eval()
             batch = tuple(t.to(device) for t in batch)
@@ -219,9 +222,9 @@ def get_cola_score(sentences):
     return cola_score
 
 
-def get_grammaticality_score(processed_candidates):
-    lm_score = get_lm_score(processed_candidates)
-    cola_score = get_cola_score(processed_candidates)
+def get_grammaticality_score(processed_candidates, verbose=False):
+    lm_score = get_lm_score(processed_candidates, verbose=verbose)
+    cola_score = get_cola_score(processed_candidates, verbose=verbose)
     grammaticality_score = [
         1.0 * math.exp(-0.5 * x) + 1.0 * y for x, y in zip(lm_score, cola_score)
     ]
@@ -314,9 +317,11 @@ def get_focus_score(all_summary):
     return focus_score
 
 
-def get_gruen(candidates):
+def get_gruen(candidates, verbose=False):
     processed_candidates = preprocess_candidates(candidates)
-    grammaticality_score = get_grammaticality_score(processed_candidates)
+    grammaticality_score = get_grammaticality_score(
+        processed_candidates, verbose=verbose
+    )
     redundancy_score = get_redundancy_score(processed_candidates)
     focus_score = get_focus_score(processed_candidates)
     # coherence_score = get_coherence_score(processed_candidates)

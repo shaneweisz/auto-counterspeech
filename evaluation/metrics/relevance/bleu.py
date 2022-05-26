@@ -12,10 +12,9 @@ class BLEU(Metric):
     def name(self) -> str:
         return f"BLEU-{self.N}"
 
-    def compute_score(self, predictions: List[str], **kwargs) -> float:
-        assert "references" in kwargs
-        references = kwargs["references"]
-
+    def compute_score(
+        self, predictions: List[str], references: List[str], **kwargs
+    ) -> float:
         predictions_tok = [nltk.word_tokenize(pred) for pred in predictions]
         references_tok = [[nltk.word_tokenize(ref)] for ref in references]
         weights = tuple([1 / self.N] * self.N)  # e.g. (0.5, 0.5) for N=2

@@ -7,28 +7,31 @@ import transformers
 
 
 class BERTScore(Metric):
-    def __init__(self) -> None:
-        super().__init__()
+    @property
+    def name(self) -> str:
+        return "BERTScore"
+
+    def compute_score(
+        self, predictions: List[str], references: List[str], verbose: bool, **kwargs
+    ) -> float:
+        bert_scorer = self._load_bert_scorer(references)
+        (P, R, F) = bert_scorer.score(predictions, references, verbose=verbose)
+        score = np.mean(F.tolist())
+        return score
+
+    def _load_bert_scorer(self, references: List[str]):
+        too_few_refs_for_idf = len(references) <= 100
+        idf = False if too_few_refs_for_idf else True
+        idf_sents = references if idf else None
 
         # hide the warning about some weights of the model checkpoint not used
         transformers.modeling_utils.logger.setLevel(logging.ERROR)
-        self.bert_scorer = bert_score.BERTScorer(
-            idf=True, lang="en", rescale_with_baseline=True
+        bert_scorer = bert_score.BERTScorer(
+            idf=idf,
+            idf_sents=idf_sents,
+            lang="en",
+            rescale_with_baseline=True,
         )
         transformers.modeling_utils.logger.setLevel(logging.WARNING)
 
-    @property
-    def name(self) -> str:
-        return f"BERTScore ({self.bert_scorer.hash})"
-
-    def compute_score(self, predictions: List[str], **kwargs) -> float:
-        assert "references" in kwargs
-        references: List[str] = kwargs["references"]
-        verbose: bool = kwargs.get("verbose", False)
-
-        self.bert_scorer.compute_idf(sents=references)
-
-        (P, R, F) = self.bert_scorer.score(predictions, references, verbose=verbose)
-
-        mean_F = np.mean(F.tolist())
-        return mean_F
+        return bert_scorer
