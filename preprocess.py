@@ -36,7 +36,7 @@ def validate(args):
 
     if args.output_file_path is None:
         default_output_file_path = (
-            Path(__file__).parent / "data" / (args.input_file_path.name)
+            Path(__file__).parent / "data" / "processed" / (args.input_file_path.name)
         )
         args.output_file_path = default_output_file_path
 
