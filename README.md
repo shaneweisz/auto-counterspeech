@@ -54,26 +54,28 @@ python preprocess.py -i data/originals/<data>.csv [-o <output_file_path>]
 Data analysis can be conducted on all datasets by running:
 
 ```bash
-cd data
-source analysis/analyse_all_datasets.sh
+python analyse_datasets.py
 ```
 
 or on an individual dataset by running:
 
 ```bash
-cd data
-python analysis/analyse_dataset.py -f <data>.csv
+python analyse_datasets.py -f <data>.csv
 ```
 
 ## Evaluation
 
-A file containing model predictions can be evaluated as follows:
+A CSV file containing model predictions (with fields: `input`, `prediction` and `reference`) can be evaluated as follows:
 
 ```bash
-python evaluate.py -f <preds>.csv [-m <metrics>]
+python evaluate.py -f <preds>.csv [-m <metrics>] [-v --verbose]
 ```
 
-Note that the predictions file must have the following fields: `input`, `prediction` and `reference`.
+or with separate files as follows:
+
+```bash
+python evaluate.py -r <references.txt> -p <predictions.txt> [-m <metrics>] [-v --verbose]
+```
 
 The supported metrics are:
 

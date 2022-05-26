@@ -73,7 +73,6 @@ if __name__ == "__main__":
         nargs="+",
         default=[f"data/processed/{dataset}.csv" for dataset in datasets],
     )
-    argparser.add_argument("-a", "--all", action="store_true")
     argparser.add_argument(
         "-o",
         "--output_path",
