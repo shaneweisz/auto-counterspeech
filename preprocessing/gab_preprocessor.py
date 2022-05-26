@@ -1,5 +1,5 @@
 from pathlib import Path
-from typing import List, Tuple
+from typing import List, Any
 import pandas as pd
 import ast
 import re
@@ -7,7 +7,7 @@ from .base_preprocessor import Preprocessor
 
 
 class GabPreprocessor(Preprocessor):
-    def extract_hs_cs_pairs(self, file_path: Path) -> List[Tuple[str, str]]:
+    def extract_rows(self, file_path: Path) -> List[List[Any]]:
         df = pd.read_csv(file_path)
         df = self.remove_conversations_with_no_hate_speech(df)
         hs_cs_pairs = []
@@ -34,7 +34,7 @@ class GabPreprocessor(Preprocessor):
                     )
             for hs in hss:
                 for cs in cs_responses:
-                    hs_cs_pairs.append((hs, cs))
+                    hs_cs_pairs.append([hs, cs])
 
         return hs_cs_pairs
 

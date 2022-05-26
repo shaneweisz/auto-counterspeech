@@ -1,11 +1,11 @@
 from pathlib import Path
 import pandas as pd
-from typing import List, Tuple
+from typing import Any, List
 from .base_preprocessor import Preprocessor
 
 
 class ConanPreprocessor(Preprocessor):
-    def extract_hs_cs_pairs(self, file_path: Path) -> List[Tuple[str, str]]:
+    def extract_rows(self, file_path: Path) -> List[List[Any]]:
         df = pd.read_csv(file_path)
         hs_cs_pairs = []
         for _, row in df.iterrows():
@@ -13,7 +13,7 @@ class ConanPreprocessor(Preprocessor):
             if self._is_english(cn_id):
                 hs = row["hateSpeech"]
                 cs = row["counterSpeech"]
-                hs_cs_pairs.append((hs, cs))
+                hs_cs_pairs.append([hs, cs])
         return hs_cs_pairs
 
     @staticmethod
