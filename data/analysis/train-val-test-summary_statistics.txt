@@ -1,0 +1,48 @@
+----------------------------------------------------------------------------------------------------
+Analysing data/test.csv:
+----------------------------------------------------------------------------------------------------
+Number of rows: 750
+Random HS comment: Lesbians are a danger to society because of their actions. I might punch them in the face, to teach them what's right.
+Random CS response: Violence is a crime and anyone found guilty will pay the price.
+Number of unique HS comments: 750
+Number of unique CS responses: 750
+Median length of HS in words: 13.0
+Median length of CS in words: 23.0
+Distribution of number of repeats of CS responses:
+  1
+750
+Distribution of number of repeats of HS comments:
+  1
+750
+----------------------------------------------------------------------------------------------------
+Analysing data/val.csv:
+----------------------------------------------------------------------------------------------------
+Number of rows: 750
+Random HS comment: Gypsies are literally destroying Europe. They are literally invading and destroying our beautiful continent. They are a cancer on our race and they must be stopped.
+Random CS response: Your statement is FALSE. They are guiltless victims of the 'influx of refugees' paranoia. They are European and have been persecuted for centuries. They have always fought for their rights, and for the protection of their culture and way of life, as any european would do. In fact there are many good Gypsy activists who are working to improve their lives. And what we are doing to these people is a malevolent smear campaign, with no common motivation. They are part of European history.
+Number of unique HS comments: 750
+Number of unique CS responses: 749
+Median length of HS in words: 13.0
+Median length of CS in words: 24.0
+Distribution of number of repeats of CS responses:
+  1  2
+748  1
+Distribution of number of repeats of HS comments:
+  1
+750
+----------------------------------------------------------------------------------------------------
+Analysing data/train.csv:
+----------------------------------------------------------------------------------------------------
+Number of rows: 3503
+Random HS comment: I'm tired of gay people telling other people what they are doing with their own bodies.
+Random CS response: I'm sure you're tired of hearing about other's bodies, but this is an individual's right to use their own body to their liking.
+Number of unique HS comments: 2218
+Number of unique CS responses: 3501
+Median length of HS in words: 11.0
+Median length of CS in words: 23.0
+Distribution of number of repeats of CS responses:
+   1  2
+3499  2
+Distribution of number of repeats of HS comments:
+  1   2   3   4   5   6   7   8   9   10  11  12  13  15  17  18  25  33  55
+1683 310  89  59  27  12  13   5   2   5   3   1   1   2   1   1   1   1   2

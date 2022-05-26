@@ -26,7 +26,7 @@ def analyse_dataset(file_path):
 
     logging.info(f"Number of rows: {len(df)}")
 
-    idx = 1000
+    idx = 42
     logging.info(f"Random HS comment: {df['hate_speech'][idx]}")
     logging.info(f"Random CS response: {df['counter_speech'][idx]}")
 

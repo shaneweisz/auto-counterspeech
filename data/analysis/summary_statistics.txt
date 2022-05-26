@@ -2,8 +2,8 @@
 Analysing data/processed/gab.csv:
 ----------------------------------------------------------------------------------------------------
 Number of rows: 41647
-Random HS comment: Because they were prepared to sell us out when cunt hiLIARy won the election. (Soon to be dead) George Soros funded the program and was ready to flood the US with shit hole African rapefugees.....
-Random CS response: Please refrain from using derogatory terms for females and refugees from Africa.
+Random HS comment: KAMALA HARRIS THE SJW SLUT !!   SLEPT WITH A NIGGER TO ADVANCE HER POLITICAL CARRER !!
+Random CS response: The language in this post is completely incorrect and hateful. You could make a better point if you used neutral language and presented fact
 Number of unique HS comments: 13669
 Number of unique CS responses: 21825
 Median length of HS in words: 20.0
@@ -18,8 +18,8 @@ Distribution of number of repeats of HS comments:
 Analysing data/processed/reddit.csv:
 ----------------------------------------------------------------------------------------------------
 Number of rows: 14286
-Random HS comment: I'm ok with this as I've been always a fan of yelling "GREETINGS, CUNTS" at the top of my lungs.  Makes the blood flows and the hatred of your colleges towards you fuels them through the day's work.  Working as a caretaker of elders is fun.
-Random CS response: I love working with the elderly because they don't agree with all these new things like you cannot call people "guys". Come on.
+Random HS comment: In an ironic twist, dumb fucking hillbilly white people like yourself have become the country's lowest common denominator. The most amusing part is you're too stupid to even hide it anymore.
+Random CS response: Insulting someone because of their race is hate speech. Do not use that speech here.
 Number of unique HS comments: 5195
 Number of unique CS responses: 7667
 Median length of HS in words: 24.0
@@ -34,8 +34,8 @@ Distribution of number of repeats of HS comments:
 Analysing data/processed/CONAN.csv:
 ----------------------------------------------------------------------------------------------------
 Number of rows: 6645
-Random HS comment: Muslims cannot add any value to our culture.
-Random CS response: This may dissapoint you.but every single individual is contributing to a society in one way or another, regardless of their race or religion.
+Random HS comment: Shocking. 2 men are murdered in Paris by having their throats cut by some savage shouting 'Allahu Akbar' and the BBC ignore the story. Another cover up.
+Random CS response: Mate, the media is constantly biased against Muslims and tries to make them out to be the enemy. What we hardly ever see is the many more positive stories.
 Number of unique HS comments: 520
 Number of unique CS responses: 4036
 Median length of HS in words: 13.0
@@ -50,8 +50,8 @@ Distribution of number of repeats of HS comments:
 Analysing data/processed/Multitarget-CONAN.csv:
 ----------------------------------------------------------------------------------------------------
 Number of rows: 5003
-Random HS comment: Jews have no place here. They are not a part of our country.
-Random CS response: Jews were born in this country like you and me, they are our fellow countryman. If you would like to have a 'better society' and a 'better religion', then you should go and create your own nation.
+Random HS comment: The UK Government recently published a paper on ‘Online Harms’ – in other words they are going to be working with Jewish and Muslim anti-hate organisations to censor the Internet. (Referring to Tell Mama, CST and Stop Hate UK)
+Random CS response: The internet has become a shouting platform for people's hateful views. Of course something needs to be done since people don't seem able to moderate their words themselves.
 Number of unique HS comments: 3718
 Number of unique CS responses: 4997
 Median length of HS in words: 12.0
