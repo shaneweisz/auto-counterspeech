@@ -2,28 +2,34 @@ from pathlib import Path
 from typing import List
 from evaluation.evaluator import Evaluator
 from evaluate import load_metrics
-from models import DialoGPTmGenerator
+from models import DialoGPT
 import argparse
 import wandb
+import json
 
-wandb.init(project="AutoCounterspeech", group="dialoGPTm", job_type="dialoGPTm")
+wandb.init(project="AutoCounterspeech", group="Multitarget-CONAN", job_type="dialoGPT")
 
 
 def main(args):
     inputs = get_list_from_file(args.inputs_path)
     references = get_list_from_file(args.references_path)
 
-    if args.model == "dialoGPTm":
-        model = DialoGPTmGenerator()
+    # config from config.json
+    config = json.load(open(args.config_path))
+    wandb.config.update(config)
+
+    if args.model == "dialoGPT":
+        model = DialoGPT(config)
     else:
         raise ValueError(f"Unknown model: {args.model}")
-    predictions = model.generate(inputs, verbose=True)
+    predictions = model.generate_responses(inputs)
 
     pred_table = wandb.Table(columns=["Input", "Model Response", "Gold Response"])
     for input, prediction, reference in zip(inputs, predictions, references):
         pred_table.add_data(input, prediction, reference)
 
     scores = evaluate(predictions, references, inputs, args.metrics)
+    print(scores)
     scores_table = wandb.Table(columns=["Metric", "Score"])
     for metric, score in scores.items():
         scores_table.add_data(metric, score)
@@ -55,7 +61,8 @@ if __name__ == "__main__":
     parser.add_argument(
         "-r", "--references_path", type=Path, default="data/test_references.txt"
     )
-    parser.add_argument("-m", "--model", type=str, default="dialoGPTm")
+    parser.add_argument("-m", "--model", type=str)
+    parser.add_argument("-c", "--config", dest="config_path", type=Path)
     parser.add_argument(
         "--metrics",
         nargs="+",
@@ -72,5 +79,6 @@ if __name__ == "__main__":
             "ent2",
         ],
     )
+
     args = parser.parse_args()
     main(args)

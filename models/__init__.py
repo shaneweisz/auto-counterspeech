@@ -1,1 +1,1 @@
-from .dialoGPT_generator import DialoGPTmGenerator
+from .dialoGPT import DialoGPT
