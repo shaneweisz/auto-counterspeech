@@ -16,15 +16,24 @@ def main(args):
     )
 
     df_no_hs_duplicates, df_val = train_test_split(
-        df_no_hs_duplicates, test_size=args.val_size
+        df_no_hs_duplicates, test_size=args.val_size, random_state=args.seed
     )
 
     # the rest of df_no_hs_duplicates plus the rows with duplicates form the train set
     df_train = pd.concat([df_no_hs_duplicates, df_hs_duplicates])
 
+    # write the train, val, and test sets to csv
     df_train.to_csv(args.output_dir / "train.csv", index=False, quoting=csv.QUOTE_ALL)
     df_val.to_csv(args.output_dir / "val.csv", index=False, quoting=csv.QUOTE_ALL)
     df_test.to_csv(args.output_dir / "test.csv", index=False, quoting=csv.QUOTE_ALL)
+
+    # write the test inputs and references to txt files
+    with open(args.output_dir / "test_inputs.txt", "w") as f:
+        for row in df_test.itertuples():
+            f.write(row.hate_speech + "\n")
+    with open(args.output_dir / "test_references.txt", "w") as f:
+        for row in df_test.itertuples():
+            f.write(row.counter_speech + "\n")
 
 
 if __name__ == "__main__":
