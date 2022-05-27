@@ -8,7 +8,7 @@ def main(args):
     metrics = load_metrics(args.metrics)
     evaluator = setup_evaluator(args)
     scores = evaluator.evaluate(metrics, args.verbose)
-    output_path = output_scores(scores)
+    output_path = output_scores(scores, args)
     print(f"Saved scores to {output_path.absolute()}")
 
 
@@ -24,7 +24,7 @@ def setup_evaluator(args):
     return evaluator
 
 
-def output_scores(scores):
+def output_scores(scores, args):
     print("=" * 20 + "\nScores:\n" + "=" * 20)
     file_with_predictions = args.from_csv if args.from_csv else args.predictions
     output_path = Path(file_with_predictions).with_suffix(".eval.txt")
