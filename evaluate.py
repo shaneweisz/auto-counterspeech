@@ -37,6 +37,19 @@ def output_scores(scores, args):
     return output_path
 
 
+DEFAULT_METRICS = [
+    "gruen",
+    "dist1",
+    "dist2",
+    "ent1",
+    "ent2",
+    "bert-score",
+    "bleu1",
+    "bleu2",
+    "rouge1",
+    "rouge2",
+]
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("-p", "--predictions", type=Path)
@@ -47,7 +60,7 @@ if __name__ == "__main__":
         "-m",
         "--metrics",
         nargs="+",
-        default=["bleu-2"],
+        default=DEFAULT_METRICS,
     )
     parser.add_argument("-v", "--verbose", action="store_true")
     args = parser.parse_args()
