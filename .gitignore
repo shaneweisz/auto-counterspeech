@@ -137,4 +137,3 @@ tmp*
 # Repo-specific files
 evaluation/metrics/fluency/cola_model
 wandb
-data/small_test*
