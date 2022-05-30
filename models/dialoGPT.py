@@ -39,5 +39,9 @@ class DialoGPT:
 
 
 if __name__ == "__main__":
-    DialoGPT
-    ().interact_with_model()
+    config = {
+        "model_name": "microsoft/DialoGPT-medium",
+        "num_beams": 1,
+        "max_length": 100,
+    }
+    DialoGPT(config).interact_with_model()
