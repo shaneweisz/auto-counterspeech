@@ -8,8 +8,7 @@ def main(args):
     metrics = load_metrics(args.metrics)
     evaluator = setup_evaluator(args)
     scores = evaluator.evaluate(metrics, args.verbose)
-    output_path = output_scores(scores, args)
-    print(f"Saved scores to {output_path.absolute()}")
+    output_scores(scores, args)
 
 
 def load_metrics(metric_names):
@@ -25,15 +24,27 @@ def setup_evaluator(args):
 
 
 def output_scores(scores, args):
+    print_scores(scores)
+    if not args.no_save_to_file:
+        save_scores_to_file(scores, args)
+
+
+def print_scores(scores):
     print("=" * 20 + "\nScores:\n" + "=" * 20)
+    for metric_name, score in scores.items():
+        output_line = f"{metric_name+':':<12} {score:.3f}"
+        print(output_line)
+    print("=" * 20)
+
+
+def save_scores_to_file(scores, args):
     file_with_predictions = args.from_csv if args.from_csv else args.predictions
     output_path = Path(file_with_predictions).with_suffix(".eval.txt")
     with output_path.open("w") as f:
         for metric_name, score in scores.items():
             output_line = f"{metric_name+':':<12} {score:.3f}"
             f.write(output_line + "\n")
-            print(output_line)
-    print("=" * 20)
+    print(f"Saved scores to {output_path.absolute()}")
     return output_path
 
 
@@ -56,6 +67,7 @@ if __name__ == "__main__":
     parser.add_argument("-r", "--references", type=Path)
     parser.add_argument("-i", "--inputs", type=Path)
     parser.add_argument("--from_csv", type=Path)
+    parser.add_argument("-o", "--no_save_to_file", action="store_true")
     parser.add_argument(
         "-m",
         "--metrics",
