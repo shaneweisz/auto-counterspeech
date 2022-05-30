@@ -21,19 +21,13 @@ Then install the main dependencies as below:
 pip install -r requirements.txt
 ```
 
-Optionally install development dependencies with:
+Install development dependencies with:
 
 ```bash
 pip install -r requirements-dev.txt
 ```
 
-The nltk tokenizer requires the punkt package. This is used for the BLEU evaluation metrics.
 
-You can install this locally using the python interpreter as follows:
-
-```bash
-python -c 'import nltk; nltk.download("punkt")'
-```
 
 ## Data
 
@@ -63,18 +57,20 @@ or on an individual dataset by running:
 python analyse_datasets.py -f <data>.csv
 ```
 
-## Evaluation
+## Making Test Predictions
 
-A CSV file containing model predictions (with fields: `input`, `prediction` and `reference`) can be evaluated as follows:
+Predictions using a model (e.g. `dialoGPT` can be made on a set of inputs as follows:
 
-```bash
-python evaluate.py -f <preds>.csv [-m <metrics>] [-v --verbose]
+```
+python test.py --model <modelname> --config <config>.json -i <inputs>.txt [-o <predictions>.txt]
 ```
 
-or with separate files as follows:
+## Evaluation
+
+Model predictions can be evaluated with respect to inputs and gold-standard references by running:
 
 ```bash
-python evaluate.py -r <references.txt> -p <predictions.txt> [-m <metrics>] [-v --verbose]
+python evaluate.py -r <references.txt> -p <predictions.txt> -i <inputs.txt> [-m <metrics>] [-v --verbose]
 ```
 
 The supported metrics are:
@@ -96,5 +92,11 @@ The supported metrics are:
 
 Note that to use GRUEN, the following steps are necessary:
 
-* Download the pretrained CoLA classifier [here](https://drive.google.com/file/d/1Hw5na_Iy4-kGEoX60bD8vXYeJDQrzyj6/view?usp=sharing) and unzip it in the `evaluation/models/fluency` directory.
-* Download `en_core_web_md` from the `spacy` module by running `python -m spacy download en_core_web_md`
+* Download the pretrained CoLA classifier [here](https://drive.google.com/file/d/1Hw5na_Iy4-kGEoX60bD8vXYeJDQrzyj6/view?usp=sharing) and unzip it in the `evaluation/metrics/fluency` directory.
+* Run `python -m spacy download en_core_web_md` to download `en_core_web_md` from the `spacy` module.
+
+To use BLEU, the nltk tokenizer requires the punkt package. You can install this locally using the python interpreter as follows:
+
+```bash
+python -c 'import nltk; nltk.download("punkt")'
+```
