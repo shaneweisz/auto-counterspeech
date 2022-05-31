@@ -1,3 +1,5 @@
+--extra-index-url https://download.pytorch.org/whl/cu113 # for PyTorch 1.11.0 to work with CUDA 11.3
+torch==1.11.0+cu113
 pandas==1.4.2 # to work with CSVs
 datasets==2.2.2 # huggingface library that includes metrics
 sacrebleu==2.1.0 # for official BLEU-4 score

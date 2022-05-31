@@ -1,12 +1,17 @@
 from typing import List
 from tqdm import tqdm
 from transformers import AutoModelForCausalLM, AutoTokenizer
+import torch
+
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 
 class DialoGPT:
     def __init__(self, config):
         self.tokenizer = AutoTokenizer.from_pretrained(config["model_name"])
-        self.model = AutoModelForCausalLM.from_pretrained(config["model_name"])
+        self.model = AutoModelForCausalLM.from_pretrained(config["model_name"]).to(
+            device
+        )
         self.num_beams = config["num_beams"]
         self.max_length = config["max_length"]
 
@@ -16,7 +21,9 @@ class DialoGPT:
 
     def generate_response(self, hs_input: str) -> str:
         input_with_eos_token = hs_input + self.tokenizer.eos_token
-        input_ids = self.tokenizer.encode(input_with_eos_token, return_tensors="pt")
+        input_ids = self.tokenizer.encode(input_with_eos_token, return_tensors="pt").to(
+            device
+        )
 
         input_ids_then_response_ids = self.model.generate(
             input_ids,
@@ -31,16 +38,28 @@ class DialoGPT:
         return response
 
     def interact_with_model(self):
-        hs_input = input("Hate speech: ")
+        class col:
+            BLUE = "\033[94m"
+            GREEN = "\033[92m"
+            END = "\033[0m"
+
+        def blue(s):
+            return col.BLUE + s + col.END
+
+        def green(s):
+            return col.GREEN + s + col.END
+
+        prompt = blue("Hate speech: ")
+        hs_input = input(prompt)
         while hs_input != "":
             response = self.generate_response(hs_input)
-            print("Response: ", response)
-            hs_input = input("Hate speech: ")
+            print(green("Response: "), response)
+            hs_input = input(prompt)
 
 
 if __name__ == "__main__":
     config = {
-        "model_name": "microsoft/DialoGPT-medium",
+        "model_name": "checkpoints/finetuned-dialogpt/checkpoint-2000",
         "num_beams": 1,
         "max_length": 100,
     }
