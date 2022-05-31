@@ -33,14 +33,14 @@ pip install -r requirements-dev.txt
 
 ### Preprocessing
 
-Firstly, notice that the original counterspeech datasets (as released by their authors) are located in `data/originals`.
+Firstly, notice that the original counterspeech datasets (as released by their authors) are located in `data/unprocessed`.
 
 After preprocessing the datasets, the resulting files are located at the top-level of the `data` directory.
 
 The preprocessing can be replicated by running:
 
 ```bash
-python preprocess.py -i data/originals/<data>.csv [-o <output_file_path>]
+python preprocess.py -i data/unprocessed/<data>.csv [-o <output_file_path>]
 ```
 
 ### Analysis
