@@ -27,8 +27,6 @@ Install development dependencies with:
 pip install -r requirements-dev.txt
 ```
 
-
-
 ## Data
 
 ### Preprocessing
@@ -43,23 +41,31 @@ The preprocessing can be replicated by running:
 python preprocess.py -i data/unprocessed/<data>.csv [-o <output_file_path>]
 ```
 
-### Analysis
+### Train-Val-Test Split
 
-Data analysis can be conducted on all datasets by running:
+To replicate the train-val-test split, run:
 
 ```bash
-python analyse_datasets.py
+python split_train_val_test.py -i <path_to_csv> -o <output_dir>
+```
+
+### Exploratory Data Analysis (EDA)
+
+Data analysis can be conducted on all datasets (gab, reddit, conan, multitarget-conan) by running:
+
+```bash
+python eda.py [-o <output_file_path>]
 ```
 
 or on an individual dataset by running:
 
 ```bash
-python analyse_datasets.py -f <data>.csv
+python eda.py -f <data>.csv [-o <output_file_path>]
 ```
 
 ## Making Test Predictions
 
-Predictions using a model (e.g. `dialoGPT` can be made on a set of inputs as follows:
+Predictions using a model (e.g. `dialoGPT`) can be made on a set of inputs as follows:
 
 ```
 python test.py --model <modelname> --config <config>.json -i <inputs>.txt [-o <predictions>.txt]
@@ -67,7 +73,7 @@ python test.py --model <modelname> --config <config>.json -i <inputs>.txt [-o <p
 
 ## Evaluation
 
-Model predictions can be evaluated with respect to inputs and gold-standard references by running:
+Model predictions can be evaluated with respect to inputs and gold-standard references through various metrics by running:
 
 ```bash
 python evaluate.py -r <references.txt> -p <predictions.txt> -i <inputs.txt> [-m <metrics>] [-v --verbose]
