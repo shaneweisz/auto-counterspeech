@@ -1,5 +1,0 @@
-{
-    "model_name": "microsoft/DialoGPT-medium",
-    "num_beams": 10,
-    "max_length": 100
-}
