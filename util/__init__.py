@@ -1,0 +1,1 @@
+from .update_config_from_str import update_config_from_string
