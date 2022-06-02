@@ -36,6 +36,8 @@ def main():
     )
     print("Start training")
     trainer.train()
+    print("Training finished. Saving best model.")
+    trainer.save_model()
 
 
 def load_model(pretrained_model_name_or_path: str) -> AutoModelForCausalLM:
