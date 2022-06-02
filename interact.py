@@ -24,10 +24,11 @@ if __name__ == "__main__":
     parser.add_argument("-m", "--pretrained_model_name_or_path", type=str)
     parser.add_argument("-c", "--config", dest="decoding_config_path", type=Path)
     parser.add_argument(
+        "-o",
         "--config_overrides",
         type=str,
         default="",
-        help="Override some default config settings. Example: num_beams=5,no_repeat_ngram_size=3",
+        help="Override some default config settings. Example: num_beams=5;no_repeat_ngram_size=3",
     )
     args = parser.parse_args()
     main(args)

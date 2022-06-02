@@ -1,5 +1,0 @@
-{
-    "max_length": 100,
-    "num_beams": 3,
-    "no_repeat_ngram_size": 3
-}

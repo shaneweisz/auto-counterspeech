@@ -8,15 +8,13 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 
 class ResponseGenerator:
-    def __init__(
-        self, pretrained_model_name_or_path: str, decoding_config: Dict[str, Any]
-    ):
+    def __init__(self, pretrained_model_name_or_path: str, decoding_config: Dict[str, Any]):
         self.tokenizer = AutoTokenizer.from_pretrained(pretrained_model_name_or_path)
         self.model = AutoModelForCausalLM.from_pretrained(pretrained_model_name_or_path)
         self.model = self.model.to(device)
         self.decoding_config = decoding_config
 
-    def generate_responses(self, inputs: List[str], batch_size=1) -> List[str]:
+    def generate_responses(self, inputs: List[str], batch_size=8) -> List[str]:
         responses = []
         for i in tqdm(range(0, len(inputs), batch_size)):
             batch_inputs = inputs[i : i + batch_size]
@@ -32,9 +30,7 @@ class ResponseGenerator:
         self.tokenizer.pad_token = self.tokenizer.eos_token
 
         batch_inputs = [item + self.tokenizer.eos_token for item in batch_inputs]
-        tokenized_batch_inputs = self.tokenizer(
-            batch_inputs, return_tensors="pt", padding=True
-        ).to(device)
+        tokenized_batch_inputs = self.tokenizer(batch_inputs, return_tensors="pt", padding=True).to(device)
 
         generated_ids = self.model.generate(
             **tokenized_batch_inputs,
@@ -44,9 +40,7 @@ class ResponseGenerator:
 
         max_input_length = tokenized_batch_inputs["input_ids"].shape[-1]
         generated_ids = generated_ids[:, max_input_length:]
-        batch_responses = self.tokenizer.batch_decode(
-            generated_ids, skip_special_tokens=True
-        )
+        batch_responses = self.tokenizer.batch_decode(generated_ids, skip_special_tokens=True)
 
         return batch_responses
 

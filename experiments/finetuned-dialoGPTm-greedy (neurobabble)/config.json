@@ -1,5 +1,0 @@
-{
-    "model_name": "checkpoints/finetuned-dialogpt/checkpoint-2000",
-    "num_beams": 1,
-    "max_length": 100
-}

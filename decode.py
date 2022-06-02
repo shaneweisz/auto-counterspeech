@@ -1,5 +1,5 @@
 from pathlib import Path
-from typing import List
+from typing import Any, Dict, List
 from response_generation import ResponseGenerator
 from util import update_config_from_string
 import argparse
@@ -11,15 +11,14 @@ def main(args):
     print(f"Reading hate speech inputs from {args.inputs_path}")
     inputs = read_hate_speech_inputs(args.inputs_path)
 
-    decoding_config = json.load(open(args.decoding_config_path))
-    decoding_config = update_config_from_string(decoding_config, args.config_overrides)
+    decoding_config = get_decoding_config(args.decoding_config_path, args.config_overrides)
 
     print(f"Loading pretrained model from {args.pretrained_model_name_or_path}")
     model = ResponseGenerator(args.pretrained_model_name_or_path, decoding_config)
 
     print(f"Decoding config: {decoding_config}")
     print("Generating responses to hate speech inputs")
-    predictions = model.generate_responses(inputs)
+    predictions = model.generate_responses(inputs, args.batch_size)
 
     print("Saving experiment")
     exp_path = save_experiment(predictions, decoding_config, args)
@@ -30,9 +29,21 @@ def read_hate_speech_inputs(file_path: Path) -> List[str]:
     return [line.rstrip("\n") for line in open(file_path)]
 
 
+def get_decoding_config(decoding_config_path: Path, config_overrides: str) -> Dict[str, Any]:
+    decoding_config = json.load(open(decoding_config_path))
+    if "exponential_decay_length_penalty" in decoding_config:
+        # the tuple had to be stored as a string since tuples can't be stored in JSON
+        decoding_config["exponential_decay_length_penalty"] = eval(decoding_config["exponential_decay_length_penalty"])
+    decoding_config = update_config_from_string(decoding_config, config_overrides)
+    return decoding_config
+
+
 def save_experiment(predictions, decoding_config, args, base_dir=Path("experiments")) -> Path:
     """Returns the path to the saved experiment"""
-    experiment_name = generate_experiment_name(args.pretrained_model_name_or_path)
+    if not args.experiment_name:
+        experiment_name = generate_experiment_name(args.pretrained_model_name_or_path)
+    else:
+        experiment_name = args.experiment_name
 
     experiment_dir = base_dir / experiment_name
     experiment_dir.mkdir(exist_ok=True)
@@ -72,7 +83,10 @@ if __name__ == "__main__":
     parser.add_argument("-m", "--pretrained_model_name_or_path", type=str)
     parser.add_argument("-c", "--config", dest="decoding_config_path", type=Path)
     parser.add_argument("-i", "--inputs_path", type=Path)
+    parser.add_argument("-b", "--batch_size", type=int)
+    parser.add_argument("-e", "--experiment_name", type=str)
     parser.add_argument(
+        "-o",
         "--config_overrides",
         type=str,
         default="",
