@@ -15,12 +15,13 @@ class DistinctN(Metric):
 
     def compute_score(self, predictions: List[str], **kwargs) -> float:
         distinct_ngrams = set()
-        total_number_of_ngrams = 0
-
         for prediction in predictions:
             for ngram in ngrams(nltk.word_tokenize(prediction), self.N):
-                total_number_of_ngrams += 1
                 distinct_ngrams.add(ngram)
 
-        score = len(distinct_ngrams) / total_number_of_ngrams
+        num_distinct_ngrams = len(distinct_ngrams)
+        total_number_of_words = sum([len(nltk.word_tokenize(prediction)) for prediction in predictions])
+
+        score = num_distinct_ngrams / total_number_of_words
+
         return score

@@ -27,12 +27,12 @@ def test_when_all_unigrams_the_same():
     assert score == expected_score
 
 
-def test_when_all_unigrams_unique():
+def test_distinct2_when_all_unigrams_unique():
     distinct2 = DistinctN(N=2)
 
     predictions = ["one two", "three four"]
     score = distinct2.compute_score(predictions)
-    expected_score = 1
+    expected_score = 2 / 4
 
     assert score == expected_score
 
@@ -44,7 +44,7 @@ def test_distinct_bigrams():
     score = distinct2.compute_score(predictions)
 
     distinct_bigrams = 2
-    total_number_of_bigrams = 4
-    expected_score = distinct_bigrams / total_number_of_bigrams
+    total_number_of_unigrams = 7
+    expected_score = distinct_bigrams / total_number_of_unigrams
 
     assert score == expected_score
