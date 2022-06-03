@@ -15,7 +15,7 @@ def update_config_from_string(config: Dict[str, Any], update_str: str):
     for k, v in d.items():
         if v.lower() in ["null", "none"]:
             v = None
-        if v.lower() == "true":
+        elif v.lower() == "true":
             v = True
         elif v.lower() == "false":
             v = False
