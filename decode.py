@@ -52,6 +52,7 @@ def save_experiment(predictions, decoding_config, args, base_dir=Path("experimen
     preds_output_path = experiment_dir / "predictions.txt"
     with open(preds_output_path, "w") as f:
         for pred in predictions:
+            pred = pred.replace("\n", " ")  # don't allow newlines in predictions (only seems to arise from sampling)
             f.write(f"{pred}\n")
 
     # Save decoding config
