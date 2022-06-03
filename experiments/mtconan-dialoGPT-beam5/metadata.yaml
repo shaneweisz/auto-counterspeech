@@ -1,8 +1,8 @@
-Date: 2022-06-02 19-44-52
+Date: 2022-06-03 09-59-12
 Args:
 	pretrained_model_name_or_path: models/dialogpt-mtconan
 	decoding_config_path: config/decode.default.config.json
 	inputs_path: data/test.inputs.txt
 	batch_size: 32
-	experiment_name: mtconan-dialoGPT-beam5
+	experiment_name: mtconan-dialoGPT-beam5-earlystop
 	config_overrides: num_beams=5
