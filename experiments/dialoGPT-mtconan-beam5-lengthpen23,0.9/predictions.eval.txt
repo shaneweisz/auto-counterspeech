@@ -1,0 +1,10 @@
+GRUEN:       0.760
+Dist-1:      0.058
+Dist-2:      0.203
+Ent-1:       5.031
+Ent-2:       6.906
+BERTScore:   0.120
+BLEU-1:      0.217
+BLEU-2:      0.095
+ROUGE-1:     0.251
+ROUGE-2:     0.063

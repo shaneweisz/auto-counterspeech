@@ -1,0 +1,8 @@
+Date: 2022-06-03 10-35-41
+Args:
+	pretrained_model_name_or_path: models/dialoGPT-mtconan
+	decoding_config_path: config/decode.default.config.json
+	inputs_path: data/test.inputs.txt
+	batch_size: 32
+	experiment_name: dialoGPT-mtconan-beam5-lengthpen23,0.9
+	config_overrides: num_beams=5;exponential_decay_length_penalty=(23,0.9)
