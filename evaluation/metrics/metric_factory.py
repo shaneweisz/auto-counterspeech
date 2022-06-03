@@ -4,6 +4,7 @@ from .base_metric import Metric
 from .relevance import BLEU, ROUGE, BERTScore
 from .diversity import DistinctN, EntropyN
 from .fluency import GRUEN
+from .response_length import ResponseLengthSummaryStatistic
 
 
 class MetricFactory:
@@ -41,6 +42,15 @@ class MetricFactory:
         # Fluency metrics
         elif metric_name.lower().startswith("gruen"):
             return GRUEN()
+        # Response length metrics
+        elif metric_name.lower().startswith("max-len"):
+            return ResponseLengthSummaryStatistic("max")
+        elif metric_name.lower().startswith("min-len"):
+            return ResponseLengthSummaryStatistic("min")
+        elif metric_name.lower().startswith("mean-len"):
+            return ResponseLengthSummaryStatistic("mean")
+        elif metric_name.lower().startswith("median-len"):
+            return ResponseLengthSummaryStatistic("median")
         else:
             err_msg = f"Unsupported metric: `{metric_name}`"
             raise ValueError(err_msg)

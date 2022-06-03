@@ -40,7 +40,7 @@ def print_scores(scores):
 def save_scores_to_file(scores, args):
     file_with_predictions = args.from_csv if args.from_csv else args.predictions
     output_path = Path(file_with_predictions).with_suffix(".eval.txt")
-    with output_path.open("w") as f:
+    with output_path.open("a") as f:
         for metric_name, score in scores.items():
             output_line = f"{metric_name+':':<12} {score:.3f}"
             f.write(output_line + "\n")
@@ -59,15 +59,19 @@ DEFAULT_METRICS = [
     "bleu2",
     "rouge1",
     "rouge2",
+    "min-length",
+    "max-length",
+    "mean-length",
+    "median-length",
 ]
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("-p", "--predictions", type=Path)
-    parser.add_argument("-r", "--references", type=Path)
-    parser.add_argument("-i", "--inputs", type=Path)
+    parser.add_argument("-r", "--references", type=Path, default="data/test.refs.txt")
+    parser.add_argument("-i", "--inputs", type=Path, default="data/test.inputs.txt")
     parser.add_argument("--from_csv", type=Path)
-    parser.add_argument("-o", "--no_save_to_file", action="store_true")
+    parser.add_argument("-n", "--no_save_to_file", action="store_true")
     parser.add_argument(
         "-m",
         "--metrics",
