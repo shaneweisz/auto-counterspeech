@@ -8,7 +8,7 @@ BLEU-1:      0.105
 BLEU-2:      0.046
 ROUGE-1:     0.362
 ROUGE-2:     0.083
-min response length: 37.000
-max response length: 106.000
-mean response length: 97.006
-median response length: 99.000
+MinLen:      33.000
+MaxLen:      92.000
+MeanLen:     84.450
+MedianLen:   86.000

@@ -1,7 +1,6 @@
 from typing import List
 from ..base_metric import Metric
 import numpy as np
-import nltk
 
 
 class ResponseLengthSummaryStatistic(Metric):
@@ -11,7 +10,7 @@ class ResponseLengthSummaryStatistic(Metric):
 
     @property
     def name(self) -> str:
-        return f"{self.kind} response length"
+        return f"{self.kind.capitalize()}Len"
 
     def compute_score(self, predictions: List[str], **kwargs) -> float:
         summary_stat_func = None
@@ -24,4 +23,4 @@ class ResponseLengthSummaryStatistic(Metric):
         elif self.kind == "median":
             summary_stat_func = np.median
 
-        return summary_stat_func([len(nltk.word_tokenize(pred)) for pred in predictions])
+        return summary_stat_func([len(pred.split(" ")) for pred in predictions])

@@ -139,3 +139,8 @@ evaluation/metrics/fluency/cola_model
 wandb
 models
 *slurm*
+
+# hacky shell scripts
+*.sh
+experiments/results.csv
+experiments/scale.py
