@@ -8,11 +8,12 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 
 class ResponseGenerator:
-    def __init__(self, pretrained_model_name_or_path: str, decoding_config: Dict[str, Any]):
+    def __init__(self, pretrained_model_name_or_path: str, decoding_config: Dict[str, Any], seed=42):
         self.tokenizer = AutoTokenizer.from_pretrained(pretrained_model_name_or_path)
         self.model = AutoModelForCausalLM.from_pretrained(pretrained_model_name_or_path)
         self.model = self.model.to(device)
         self.decoding_config = decoding_config
+        torch.manual_seed(seed)
 
     def generate_responses(self, inputs: List[str], batch_size=8) -> List[str]:
         responses = []

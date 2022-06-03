@@ -1,0 +1,8 @@
+Date: 2022-06-03 10-35-17
+Args:
+	pretrained_model_name_or_path: models/dialoGPT-mtconan
+	decoding_config_path: config/decode.default.config.json
+	inputs_path: data/test.inputs.txt
+	batch_size: 256
+	experiment_name: dialoGPT-mtconan-nucleus-p0.9
+	config_overrides: do_sample=true;top_p=0.9;top_k=0
