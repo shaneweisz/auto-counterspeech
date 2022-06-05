@@ -1,0 +1,14 @@
+GRUEN:       0.529
+Dist-1:      0.067
+Dist-2:      0.206
+Ent-1:       4.922
+Ent-2:       6.572
+BERTScore:   0.098
+BLEU-1:      0.211
+BLEU-2:      0.097
+ROUGE-1:     0.203
+ROUGE-2:     0.057
+MinLen:      8.000
+MaxLen:      36.000
+MeanLen:     24.736
+MedianLen:   24.000

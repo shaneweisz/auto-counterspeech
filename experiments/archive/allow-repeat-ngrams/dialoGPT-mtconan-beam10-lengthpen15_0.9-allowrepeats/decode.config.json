@@ -1,0 +1,1 @@
+{"max_new_tokens": 100, "num_beams": 10, "early_stopping": true, "exponential_decay_length_penalty": [15, 0.9]}
