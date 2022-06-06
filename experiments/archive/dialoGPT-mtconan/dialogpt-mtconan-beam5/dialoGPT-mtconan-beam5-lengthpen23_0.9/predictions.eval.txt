@@ -1,0 +1,7 @@
+GRUEN:       0.760
+BERTScore:   0.120
+BLEU-2:      0.095
+Ent-4:       8.103
+Dist-1:      0.058
+Dist-2:      0.203
+AvgLen:      29.606

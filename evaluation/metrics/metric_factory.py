@@ -44,13 +44,13 @@ class MetricFactory:
             return GRUEN()
         # Response length metrics
         elif metric_name.lower().startswith("max-len"):
-            return ResponseLengthSummaryStatistic("max")
+            return ResponseLengthSummaryStatistic("Max")
         elif metric_name.lower().startswith("min-len"):
-            return ResponseLengthSummaryStatistic("min")
-        elif metric_name.lower().startswith("mean-len"):
-            return ResponseLengthSummaryStatistic("mean")
+            return ResponseLengthSummaryStatistic("Min")
+        elif metric_name.lower().startswith("avg-len"):
+            return ResponseLengthSummaryStatistic("Avg")
         elif metric_name.lower().startswith("median-len"):
-            return ResponseLengthSummaryStatistic("median")
+            return ResponseLengthSummaryStatistic("Median")
         else:
             err_msg = f"Unsupported metric: `{metric_name}`"
             raise ValueError(err_msg)

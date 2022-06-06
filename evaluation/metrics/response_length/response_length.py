@@ -5,7 +5,7 @@ import numpy as np
 
 class ResponseLengthSummaryStatistic(Metric):
     def __init__(self, kind: str):
-        assert kind in ["max", "min", "mean", "median"]
+        assert kind in ["Max", "Min", "Avg", "Median"]
         self.kind = kind
 
     @property
@@ -14,13 +14,13 @@ class ResponseLengthSummaryStatistic(Metric):
 
     def compute_score(self, predictions: List[str], **kwargs) -> float:
         summary_stat_func = None
-        if self.kind == "max":
+        if self.kind == "Max":
             summary_stat_func = np.max
-        elif self.kind == "min":
+        elif self.kind == "Min":
             summary_stat_func = np.min
-        elif self.kind == "mean":
+        elif self.kind == "Avg":
             summary_stat_func = np.mean
-        elif self.kind == "median":
+        elif self.kind == "Median":
             summary_stat_func = np.median
 
         return summary_stat_func([len(pred.split(" ")) for pred in predictions])

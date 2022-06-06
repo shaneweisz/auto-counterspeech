@@ -98,7 +98,7 @@ The supported metrics are:
 
 4. Response lengths:
 
-    * `max-length`, `min-length`, `mean-length`, `median-length`
+    * `avg-length`, `max-length`, `min-length`, `median-length`
 
 Note that to use GRUEN, the following steps are necessary:
 
