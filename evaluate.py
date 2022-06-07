@@ -4,16 +4,17 @@ from evaluation.metrics import MetricFactory
 
 
 def main(args):
-    # Load metrics, predictions and references
+    print(f"Loading metrics: {args.metrics}")
     metrics = load_metrics(args.metrics)
+
+    print(f"Reading in files for evaluation: {args.predictions}, {args.references} and {args.inputs}")
     preds, refs, inputs = read_files_into_lists(args.predictions, args.references, args.inputs)
 
-    # Compute metrics
     for metric in metrics:
         print("Evaluating metric:", metric.name)
         metric.compute_score(preds, references=refs, verbose=args.verbose)
 
-    # Output results
+    print("Outputting results")
     print_scores(metrics)
     if not args.no_save:
         save_scores_to_file(metrics, args)
@@ -84,7 +85,7 @@ def save_detailed_scores_to_file(computed_metrics, args, preds):
 
     if "BERTScore" in metrics_dict:
         metric = metrics_dict["BERTScore"]
-        header = f"BERTScores\n"
+        header = "BERTScores\n"
         output += "=" * len(header) + "\n" + header + "=" * len(header) + "\n"
         for idx, pred in enumerate(preds):
             output += f"{idx+1},{metric.individual_scores[idx]:.3f},{pred}\n"
