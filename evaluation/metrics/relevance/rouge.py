@@ -5,6 +5,7 @@ import datasets
 
 class ROUGE(Metric):
     def __init__(self, rouge_type: str = "rouge2"):
+        super().__init__()
         if rouge_type not in ["rouge1", "rouge2", "rougeL"]:
             raise ValueError(f"Unsupported rouge_type: {rouge_type}")
         self.rouge_type = rouge_type
@@ -14,9 +15,7 @@ class ROUGE(Metric):
     def name(self) -> str:
         return f"ROUGE-{self.rouge_type[5:]}"
 
-    def compute_score(
-        self, predictions: List[str], references: List[str], **kwargs
-    ) -> float:
+    def compute_score(self, predictions: List[str], references: List[str], **kwargs) -> float:
         results = self.rouge.compute(
             predictions=predictions,
             references=references,
@@ -26,4 +25,7 @@ class ROUGE(Metric):
             score = results[self.rouge_type].mid.fmeasure
         else:
             score = results[self.rouge_type].mid.recall
+
+        self.score = score
+
         return score

@@ -11,13 +11,14 @@ class BERTScore(Metric):
     def name(self) -> str:
         return "BERTScore"
 
-    def compute_score(
-        self, predictions: List[str], references: List[str], verbose: bool, **kwargs
-    ) -> float:
+    def compute_score(self, predictions: List[str], references: List[str], verbose: bool, **kwargs) -> float:
         bert_scorer = self._load_bert_scorer(references)
         (P, R, F) = bert_scorer.score(predictions, references, verbose=verbose)
-        score = np.mean(F.tolist())
-        return score
+
+        self.individual_scores = F.tolist()
+        self.score = np.mean(self.individual_scores)
+
+        return self.score
 
     def _load_bert_scorer(self, references: List[str]):
         too_few_refs_for_idf = len(references) <= 100

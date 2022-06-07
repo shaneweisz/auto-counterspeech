@@ -24,6 +24,9 @@ class UnbiasedToxicRoBERTa(Metric):
 
         mean_toxicity = np.mean(toxicity_scores)
 
+        self.score = mean_toxicity
+        self.individual_scores = toxicity_scores
+
         return mean_toxicity
 
 

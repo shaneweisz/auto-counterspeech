@@ -10,6 +10,6 @@ class GRUEN(Metric):
         return "GRUEN"
 
     def compute_score(self, predictions: List[str], **kwargs) -> float:
-        scores = get_gruen(predictions, verbose=kwargs.get("verbose", False))
-        score = np.mean(scores)
-        return score
+        self.individual_scores = get_gruen(predictions, verbose=kwargs.get("verbose", False))
+        self.score = np.mean(self.individual_scores)
+        return self.score

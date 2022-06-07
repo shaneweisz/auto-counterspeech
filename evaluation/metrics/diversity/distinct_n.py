@@ -23,5 +23,6 @@ class DistinctN(Metric):
         total_number_of_words = sum([len(nltk.word_tokenize(prediction)) for prediction in predictions])
 
         score = num_distinct_ngrams / total_number_of_words
+        self.score = score
 
         return score

@@ -5,6 +5,7 @@ import numpy as np
 
 class ResponseLengthSummaryStatistic(Metric):
     def __init__(self, kind: str):
+        super().__init__()
         assert kind in ["Max", "Min", "Avg", "Median"]
         self.kind = kind
 
@@ -23,4 +24,8 @@ class ResponseLengthSummaryStatistic(Metric):
         elif self.kind == "Median":
             summary_stat_func = np.median
 
-        return summary_stat_func([len(pred.split(" ")) for pred in predictions])
+        lengths = [len(pred.split(" ")) for pred in predictions]
+        summary_stat = summary_stat_func(lengths)
+        self.score = summary_stat
+
+        return summary_stat

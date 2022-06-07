@@ -1,18 +1,21 @@
 from __future__ import annotations
-from abc import ABC, abstractmethod
 from typing import List
 
 
-class Metric(ABC):
+class Metric:
+    def __init__(self):
+        self.score = None
+        self.individual_scores = None
+
     @property
-    @abstractmethod
     def name(self) -> str:
         pass
 
-    @abstractmethod
     def compute_score(
         self,
         predictions: List[str],
         **metric_kwargs,
     ) -> float:
+        """Compute the score of the metric, and store it in `self.score`.
+        Optionally also store a score for each prediction in `self.detailed_scores`."""
         pass

@@ -15,6 +15,7 @@ class EntropyN(Metric):
     """
 
     def __init__(self, N=2):
+        super().__init__()
         self.N = N
 
     @property
@@ -25,6 +26,7 @@ class EntropyN(Metric):
         ngram_counts = self._count_ngrams(predictions)
         ngram_frequencies = self._ngram_frequencies(ngram_counts)
         score = self.entropy(ngram_frequencies.values())
+        self.score = score
         return score
 
     def _count_ngrams(self, predictions: List[str]) -> dict:
@@ -40,9 +42,7 @@ class EntropyN(Metric):
 
     def _ngram_frequencies(self, ngram_counts: dict) -> dict:
         total_ngrams = sum(ngram_counts.values())
-        ngram_frequencies = {
-            ngram: count / total_ngrams for ngram, count in ngram_counts.items()
-        }
+        ngram_frequencies = {ngram: count / total_ngrams for ngram, count in ngram_counts.items()}
         return ngram_frequencies
 
     @staticmethod
