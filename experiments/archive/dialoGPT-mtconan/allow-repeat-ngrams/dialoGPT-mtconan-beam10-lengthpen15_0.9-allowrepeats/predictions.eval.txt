@@ -1,6 +1,7 @@
 GRUEN:       0.529
 BERTScore:   0.098
 BLEU-2:      0.097
+Toxicity:    0.149
 Ent-4:       7.481
 Dist-1:      0.067
 Dist-2:      0.206

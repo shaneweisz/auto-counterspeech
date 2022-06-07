@@ -141,6 +141,5 @@ models
 *slurm*
 
 # hacky shell scripts
-*.sh
-experiments/results.csv
-experiments/scale.py
+experiments/fix-eval-formatting.sh
+experiments/run-new-metrics.sh
