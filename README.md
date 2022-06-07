@@ -33,7 +33,7 @@ pip install -r requirements-dev.txt
 
 Firstly, notice that the original counterspeech datasets (as released by their authors) are located in `data/unprocessed`.
 
-After preprocessing the datasets, the resulting files are located at the top-level of the `data` directory.
+After preprocessing the datasets, the resulting files are located in the `data/preprocessed` directory.
 
 The preprocessing can be replicated by running:
 
@@ -63,17 +63,17 @@ or on an individual dataset by running:
 python eda.py -f <data>.csv [-o <output_file_path>]
 ```
 
-## Making Test Predictions
+## Generating Counterspeech Responses
 
-Predictions using a model (e.g. `dialoGPT`) can be made on a set of inputs as follows:
+Counterspeech response predictions using a model (e.g. `dialoGPT`) can be made on a set of inputs as follows:
 
 ```
-python test.py --model <modelname> --config <config>.json -i <inputs>.txt [-o <predictions>.txt]
+python decode.py --model <modelname> --config <config>.json -i <inputs>.txt [-o <predictions>.txt]
 ```
 
 ## Evaluation
 
-Model predictions can be evaluated with respect to inputs and gold-standard references through various metrics by running:
+Counterspeech response predictions can be evaluated with respect to inputs and gold-standard references through various metrics by running:
 
 ```bash
 python evaluate.py -r <references.txt> -p <predictions.txt> -i <inputs.txt> [-m <metrics>] [-v --verbose]
