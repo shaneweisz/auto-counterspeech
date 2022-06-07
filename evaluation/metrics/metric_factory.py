@@ -1,10 +1,12 @@
 import re
 
+
 from .base_metric import Metric
 from .relevance import BLEU, ROUGE, BERTScore
 from .diversity import DistinctN, EntropyN
 from .fluency import GRUEN
 from .response_length import ResponseLengthSummaryStatistic
+from .toxicity import UnbiasedToxicRoBERTa
 
 
 class MetricFactory:
@@ -51,6 +53,9 @@ class MetricFactory:
             return ResponseLengthSummaryStatistic("Avg")
         elif metric_name.lower().startswith("median-len"):
             return ResponseLengthSummaryStatistic("Median")
+        # Toxicity metrics
+        elif metric_name.lower().startswith("toxic"):
+            return UnbiasedToxicRoBERTa()
         else:
             err_msg = f"Unsupported metric: `{metric_name}`"
             raise ValueError(err_msg)

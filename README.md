@@ -100,6 +100,10 @@ The supported metrics are:
 
     * `avg-length`, `max-length`, `min-length`, `median-length`
 
+5. Toxicity:
+
+    * `toxicity`
+
 Note that to use GRUEN, the following steps are necessary:
 
 * Download the pretrained CoLA classifier [here](https://drive.google.com/file/d/1Hw5na_Iy4-kGEoX60bD8vXYeJDQrzyj6/view?usp=sharing) and unzip it in the `evaluation/metrics/fluency` directory.
