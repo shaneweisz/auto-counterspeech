@@ -5,7 +5,7 @@ from .metric import Metric
 from .relevance import BLEU, ROUGE, BERTScore
 from .diversity import DistinctN, EntropyN, ResponseLengthSummaryStatistic
 from .fluency import GRUEN, RoBERTaColaFluencyClassifier
-from .toxicity import UnbiasedToxicRoBERTa
+from .toxicity import UnbiasedRoBERTaToxicityClassifier
 
 
 def load_metrics(metric_names: List[str]) -> List[Metric]:
@@ -60,7 +60,7 @@ class MetricFactory:
             return ResponseLengthSummaryStatistic("Median")
         # Toxicity metrics
         elif metric_name.lower().startswith("toxic"):
-            return UnbiasedToxicRoBERTa()
+            return UnbiasedRoBERTaToxicityClassifier()
         else:
             err_msg = f"Unsupported metric: `{metric_name}`"
             raise ValueError(err_msg)

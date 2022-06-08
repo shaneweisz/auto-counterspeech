@@ -6,7 +6,7 @@ from ..metric import Metric
 import numpy as np
 
 
-class UnbiasedToxicRoBERTa(Metric):
+class UnbiasedRoBERTaToxicityClassifier(Metric):
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
     @property
