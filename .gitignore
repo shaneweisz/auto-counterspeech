@@ -135,7 +135,7 @@ dmypy.json
 tmp*
 
 # Repo-specific files
-evaluation/metrics/fluency/cola_model
+metrics/fluency/cola_model
 wandb
 models
 *slurm*

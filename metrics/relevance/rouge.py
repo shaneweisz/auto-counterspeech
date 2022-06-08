@@ -1,5 +1,5 @@
 from typing import List
-from ..base_metric import Metric
+from ..metric import Metric
 import datasets
 
 

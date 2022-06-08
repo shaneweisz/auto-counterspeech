@@ -2,7 +2,7 @@ from typing import List
 from detoxify import Detoxify
 import torch
 from tqdm import tqdm
-from ..base_metric import Metric
+from ..metric import Metric
 import numpy as np
 
 

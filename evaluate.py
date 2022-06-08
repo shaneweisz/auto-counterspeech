@@ -1,115 +1,146 @@
 import argparse
 from pathlib import Path
-from evaluation.metrics import MetricFactory
+from typing import List
+from metrics.cli import load_metrics
+from metrics import Metric
+from util.file_io import read_list_from_file, write_list_to_file, write_text_to_file
+from util.print_utils import horizontal_line
 
 
 def main(args):
-    print(f"Loading metrics: {args.metrics}")
-    metrics = load_metrics(args.metrics)
+    print(f"Loading metrics: {args.metric_names}")
+    metrics = load_metrics(args.metric_names)
 
-    print(f"Reading in files for evaluation: {args.predictions}, {args.references} and {args.inputs}")
-    preds, refs, inputs = read_files_into_lists(args.predictions, args.references, args.inputs)
+    print(f"Extracting predictions from: {args.predictions_path}")
+    predictions = read_list_from_file(args.predictions_path)
 
+    print(f"Extracting references from: {args.references_path}")
+    references = read_list_from_file(args.references_path)
+    assert len(references) == len(predictions)
+
+    print(f"Extracting inputs from: {args.inputs_path}")
+    inputs = read_list_from_file(args.inputs_path)
+    assert len(inputs) == len(predictions)
+
+    print("Computing scores:")
     for metric in metrics:
-        print("Evaluating metric:", metric.name)
-        metric.compute_score(preds, references=refs, verbose=args.verbose)
+        print(f"{metric.name + '...':<12}", end=" ", flush=True)
+        score = metric.compute_score(predictions, references=references, inputs=inputs, verbose=args.verbose)
+        print(f"{score:.3f}")
 
-    print("Outputting results")
-    print_scores(metrics)
     if not args.no_save:
-        save_scores_to_file(metrics, args)
-        save_detailed_scores_to_file(metrics, args, preds)
+        print("Saving scores:")
+
+        scores_output_path = Path(args.predictions_path).with_suffix(".scores.txt")
+        write_list_to_file(scores_output_path, [str(metric) for metric in metrics], append=True)
+        print(f"Saved aggregate scores to: {scores_output_path.absolute()}")
+
+        if any(metric.individual_scores is not None for metric in metrics):
+            detailed_scores_output_path = Path(args.predictions_path).with_suffix(".scores.detailed.csv")
+            content = individual_scores_output(metrics, predictions)
+            write_text_to_file(detailed_scores_output_path, content, append=True)
+            print(f"Saved detailed scores to: {detailed_scores_output_path.absolute()}")
+
+            highlighted_responses_output_path = Path(args.predictions_path).with_suffix(".scores.highlighted.txt")
+            content = highlighted_responses_output(metrics, predictions)
+            write_text_to_file(highlighted_responses_output_path, content, append=True)
+            print(f"Saved highlighted responses to: {highlighted_responses_output_path}")
 
 
-def load_metrics(metric_names):
-    return [MetricFactory.from_metric_name(name) for name in metric_names]
+def highlighted_responses_output(computed_metrics: List[Metric], predictions: List[str]):
+    metric_names_to_highlight = {
+        "Toxicity": {"cutoff": 0.5, "ineq_sign": ">="},
+        "GRUEN": {"cutoff": 0.5, "ineq_sign": "<="},
+        "BERTScore": {"cutoff": 0.5, "ineq_sign": ">="},
+    }
 
-
-def read_files_into_lists(predictions_path: Path, references_path: Path = None, inputs_path: Path = None):
-    predictions = [line.strip() for line in predictions_path.open()]
-    if references_path:
-        references = [line.strip() for line in references_path.open()]
-        assert len(predictions) == len(references)
-    else:
-        references = None
-    if inputs_path:
-        inputs = [line.strip() for line in inputs_path.open()]
-        assert len(predictions) == len(inputs)
-    else:
-        inputs = None
-    return predictions, references, inputs
-
-
-def print_scores(computed_metrics):
-    print("=" * 20 + "\nScores:\n" + "=" * 20)
-    for metric in computed_metrics:
-        output_line = f"{metric.name+':':<12} {metric.score:.3f}"
-        print(output_line)
-    print("=" * 20)
-
-
-def save_scores_to_file(computed_metrics, args):
-    output_path = Path(args.predictions).with_suffix(".eval.txt")
-    with output_path.open("a") as f:
-        for metric in computed_metrics:
-            output_line = f"{metric.name +':':<12} {metric.score:.3f}"
-            f.write(output_line + "\n")
-    print(f"Saved scores to {output_path.absolute()}")
-
-
-def save_detailed_scores_to_file(computed_metrics, args, preds):
-    output_path = Path(args.predictions).with_suffix(".eval.detailed.txt")
-
-    metrics_dict = {metric.name: metric for metric in computed_metrics}
     output = ""
+    for metric_name in metric_names_to_highlight:
+        if metric_name in [metric.name for metric in computed_metrics]:
+            metric = [metric for metric in computed_metrics if metric.name == metric_name][0]
+            output += filter_responses_beyond_cutoff(metric, predictions, **metric_names_to_highlight[metric_name])
 
-    if "Toxicity" in metrics_dict:
-        metric = metrics_dict["Toxicity"]
-        TOXICITY_CUTOFF = 0.5
-        header = f"Potentially Toxic Responses (score >= {TOXICITY_CUTOFF})\n"
-        output += "=" * len(header) + "\n" + header + "=" * len(header) + "\n"
-        for idx, pred in enumerate(preds):
-            score = metric.individual_scores[idx]
-            if score >= TOXICITY_CUTOFF:
-                output += f"{idx},{score:.3f},{pred}\n"
-
-    if "GRUEN" in metrics_dict:
-        metric = metrics_dict["GRUEN"]
-        LQ_CUTOFF = 0.52
-        header = f"Potentially Influent Responses (score <= {LQ_CUTOFF})\n"
-        output += "=" * len(header) + "\n" + header + "=" * len(header) + "\n"
-        for idx, pred in enumerate(preds):
-            score = metric.individual_scores[idx]
-            if score <= LQ_CUTOFF:
-                output += f"{idx},{score:.3f},{pred}\n"
-
-    if "BERTScore" in metrics_dict:
-        metric = metrics_dict["BERTScore"]
-        header = "BERTScores\n"
-        output += "=" * len(header) + "\n" + header + "=" * len(header) + "\n"
-        for idx, pred in enumerate(preds):
-            output += f"{idx+1},{metric.individual_scores[idx]:.3f},{pred}\n"
-
-    with output_path.open("a") as f:
-        f.write(output)
-
-    print(f"Saved detailed scores to {output_path.absolute()}")
+    return output
 
 
-DEFAULT_METRICS = ["gruen", "bleu2", "bert-score", "toxicity", "dist1", "dist2", "ent4", "avg-len"]
+def filter_responses_beyond_cutoff(metric: Metric, predictions: List[str], cutoff: float, ineq_sign=">="):
+    header = f"Responses with {metric.name} {ineq_sign} {cutoff}:"
+    output = horizontal_line(len(header)) + "\n"
+    output += header + "\n"
+    output += horizontal_line(len(header)) + "\n"
+
+    no_filtered_responses = True
+    for i, prediction in enumerate(predictions):
+        score = metric.individual_scores[i]
+        if eval(f"score{ineq_sign}{cutoff}"):
+            output += f"{i+1},{score:.3f},{prediction}\n"
+            no_filtered_responses = False
+
+    if no_filtered_responses:
+        output += "None\n"
+
+    return output
+
+
+def individual_scores_output(computed_metrics: List[Metric], predictions: List[str]) -> str:
+    metrics_with_individual_scores = [metric for metric in computed_metrics if metric.individual_scores is not None]
+
+    header = "Id," + ",".join([f"{metric.name}" for metric in metrics_with_individual_scores]) + ",Response"
+    output = header + "\n"
+
+    for idx, prediction in enumerate(predictions):
+        line = f"{idx+1}"
+        for metric in metrics_with_individual_scores:
+            line += f",{metric.individual_scores[idx]:.3f}"
+        line += f',"{prediction}"'
+
+        output += line + "\n"
+
+    return output
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("-p", "--predictions", type=Path)
-    parser.add_argument("-r", "--references", type=Path, default="data/test.refs.txt")
-    parser.add_argument("-i", "--inputs", type=Path, default="data/test.inputs.txt")
-    parser.add_argument("-n", "--no_save", action="store_true")
+
+    parser.add_argument(
+        "-p",
+        "--predictions",
+        type=Path,
+        dest="predictions_path",
+        required=True,
+        help="Path to file containing predicted responses for each input that should be scored",
+    )
+    parser.add_argument(
+        "-r",
+        "--references",
+        type=Path,
+        dest="references_path",
+        default="data/test.refs.txt",
+        help="Path to file containing gold-standard reference responses for each input",
+    )
+    parser.add_argument(
+        "-i",
+        "--inputs",
+        type=Path,
+        dest="inputs_path",
+        default="data/test.inputs.txt",
+        help="Path to file containing hate speech inputs that the predictions and references correspond to",
+    )
+
+    DEFAULT_METRICS = ["gruen", "bleu2", "bert-score", "toxicity", "dist1", "dist2", "ent4", "avg-len"]
     parser.add_argument(
         "-m",
         "--metrics",
+        dest="metric_names",
         nargs="+",
         default=DEFAULT_METRICS,
+        help="Metrics to compute scores for. Defaults to: {}".format(", ".join(DEFAULT_METRICS)),
     )
-    parser.add_argument("-v", "--verbose", action="store_true")
+
+    parser.add_argument(
+        "-n", "--no_save", action="store_true", help="Do not save scores to file. Print to console only."
+    )
+    parser.add_argument("-v", "--verbose", action="store_true", help="More verbose output when computing metrics")
+
     args = parser.parse_args()
     main(args)
