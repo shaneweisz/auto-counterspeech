@@ -19,7 +19,7 @@ class RoBERTaColaFluencyClassifier(Metric):
 
     @property
     def name(self) -> str:
-        return "RoBERTa-COLA"
+        return "Fluency"
 
     def compute_score(self, predictions: List[str], verbose: bool = False, **kwargs) -> float:
         scores = []

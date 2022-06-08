@@ -3,9 +3,8 @@ from typing import List
 
 from .metric import Metric
 from .relevance import BLEU, ROUGE, BERTScore
-from .diversity import DistinctN, EntropyN
+from .diversity import DistinctN, EntropyN, ResponseLengthSummaryStatistic
 from .fluency import GRUEN, RoBERTaColaFluencyClassifier
-from .response_length import ResponseLengthSummaryStatistic
 from .toxicity import UnbiasedToxicRoBERTa
 
 
