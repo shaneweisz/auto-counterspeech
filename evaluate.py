@@ -24,9 +24,9 @@ def main(args):
 
     print("Computing scores:")
     for metric in metrics:
-        print(f"{metric.name + '...':<12}", end=" ", flush=True)
+        print(metric.name + "...")
         score = metric.compute_score(predictions, references=references, inputs=inputs, verbose=args.verbose)
-        print(f"{score:.3f}")
+        print(f"Score: {score:.3f}")
 
     if not args.no_save:
         print("Saving scores:")
@@ -41,24 +41,26 @@ def main(args):
             write_text_to_file(detailed_scores_output_path, content, append=True)
             print(f"Saved detailed scores to: {detailed_scores_output_path.absolute()}")
 
-            highlighted_responses_output_path = Path(args.predictions_path).with_suffix(".scores.highlighted.txt")
-            content = highlighted_responses_output(metrics, predictions)
-            write_text_to_file(highlighted_responses_output_path, content, append=True)
-            print(f"Saved highlighted responses to: {highlighted_responses_output_path}")
+            flagged_responses_output_path = Path(args.predictions_path).with_suffix(".scores.flagged.txt")
+            content = responses_to_flag(metrics, predictions)
+            write_text_to_file(flagged_responses_output_path, content, append=True)
+            print(f"Saved flagged responses to: {flagged_responses_output_path.absolute()}")
 
 
-def highlighted_responses_output(computed_metrics: List[Metric], predictions: List[str]):
-    metric_names_to_highlight = {
-        "Toxicity": {"cutoff": 0.5, "ineq_sign": ">="},
-        "GRUEN": {"cutoff": 0.5, "ineq_sign": "<="},
-        "BERTScore": {"cutoff": 0.5, "ineq_sign": ">="},
-    }
+def responses_to_flag(computed_metrics: List[Metric], predictions: List[str]):
+    flaggable_metrics = [
+        ("Toxicity", 0.75, ">="),
+        ("GRUEN", 0.5, "<="),
+        ("Fluency", 0.75, "<="),
+        ("BERTScore", 0.5, ">="),
+        ("BERTScore", -0.05, "<="),
+    ]
 
     output = ""
-    for metric_name in metric_names_to_highlight:
+    for metric_name, cutoff, ineq_sign in flaggable_metrics:
         if metric_name in [metric.name for metric in computed_metrics]:
             metric = [metric for metric in computed_metrics if metric.name == metric_name][0]
-            output += filter_responses_beyond_cutoff(metric, predictions, **metric_names_to_highlight[metric_name])
+            output += filter_responses_beyond_cutoff(metric, predictions, cutoff, ineq_sign)
 
     return output
 
@@ -127,7 +129,7 @@ if __name__ == "__main__":
         help="Path to file containing hate speech inputs that the predictions and references correspond to",
     )
 
-    DEFAULT_METRICS = ["gruen", "bleu2", "bert-score", "toxicity", "dist1", "dist2", "ent4", "avg-len"]
+    DEFAULT_METRICS = ["roberta-cola", "bleu2", "bert-score", "toxicity", "dist1", "dist2", "ent4", "avg-len"]
     parser.add_argument(
         "-m",
         "--metrics",

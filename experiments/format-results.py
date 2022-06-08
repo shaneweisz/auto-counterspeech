@@ -5,10 +5,10 @@ results_csv = "/home/sw984/rds/hpc-work/mphil-project/auto-counterspeech/experim
 df = pd.read_csv(results_csv)
 
 # Reorder columns
-df = df[['Model', 'GRUEN', 'BLEU-2', 'BERTScore', 'Toxicity', 'Dist-1', 'Dist-2', 'Ent-4', 'AvgLen']]
+df = df[["Model", "Fluency", "BLEU-2", "BERTScore", "Toxicity", "Dist-1", "Dist-2", "Ent-4", "AvgLen"]]
 
 # Format columns as percentages
-COLS = ["GRUEN", "BERTScore", "Toxicity", "BLEU-2", "Dist-1", "Dist-2"]
+COLS = ["Fluency", "BERTScore", "Toxicity", "BLEU-2", "Dist-1", "Dist-2"]
 for col in COLS:
     df[col] = df[col] * 100
     df.rename(columns={col: col + "(%)"}, inplace=True)

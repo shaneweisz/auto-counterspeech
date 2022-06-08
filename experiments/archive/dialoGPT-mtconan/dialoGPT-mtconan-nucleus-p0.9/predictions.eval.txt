@@ -1,8 +1,0 @@
-GRUEN:       0.700
-BERTScore:   0.003
-BLEU-2:      0.043
-Toxicity:    0.103
-Ent-4:       10.448
-Dist-1:      0.066
-Dist-2:      0.363
-AvgLen:      79.310

@@ -12,6 +12,6 @@ class TestFluency:
         assert score < 0.1
 
     def test_fluent_sentences(self):
-        fluent_sentences = ["This is a fluent sentence. This is another fluent sentence."]
+        fluent_sentences = ["This is an example of a sentence that is fluent."]
         score = self.metric.compute_score(fluent_sentences)
         assert score > 0.5

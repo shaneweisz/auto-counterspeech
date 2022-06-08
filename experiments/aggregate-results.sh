@@ -3,7 +3,7 @@
 RESULTS_CSV=experiments/results.csv
 
 # extract metrics from all words left of ":" using grep
-EVAL_FILES=`find experiments -name *predictions.eval.txt -not -path *archive*`
+EVAL_FILES=`find experiments -name *predictions.scores.txt -not -path *archive*`
 for f in $EVAL_FILES; do
     metric_names=$(cat $f | sed 's/:.*//g')
 done

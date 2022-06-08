@@ -1,5 +1,5 @@
-Model,GRUEN(%),BLEU-2(%),BERTScore(%),Toxicity(%),Dist-1(%),Dist-2(%),Ent-4,AvgLen
-DialoGPT-outofthebox,77.5,3.0,11.1,22.3,14.1,39.2,7.33,10.27
-GPS,70.4,7.0,7.9,21.8,10.7,40.6,8.82,20.78
-DialoGPT-finetuned,79.3,9.7,13.3,11.2,6.9,21.4,7.71,22.46
-Oracle,79.5,N/A,N/A,9.3,15.4,56.8,9.35,24.69
+Model,Fluency(%),BLEU-2(%),BERTScore(%),Toxicity(%),Dist-1(%),Dist-2(%),Ent-4,AvgLen
+DialoGPT-outofthebox,96.1,3.0,11.1,22.3,14.2,39.2,7.33,10.26
+GPS,74.9,7.0,7.9,21.8,10.7,40.6,8.82,20.77
+DialoGPT-finetuned,98.0,9.7,13.3,11.2,6.9,21.4,7.71,22.44
+Oracle,95.4,N/A,N/A,9.3,15.4,56.8,9.35,24.69
