@@ -21,13 +21,9 @@ for col in non_modelname_cols:
 df.loc[df["Model"] == "oracle", "BERTScore(%)"] = "N/A"
 df.loc[df["Model"] == "oracle", "BLEU-2(%)"] = "N/A"
 
-# change model names to be more readable
-df.loc[df["Model"] == "oracle", "Model"] = "Oracle"
-df.loc[df["Model"] == "dialoGPT-finetuned-multiconan-beam10", "Model"] = "DialoGPT-finetuned"
-df.loc[df["Model"] == "dialoGPT-outofthebox-beam10", "Model"] = "DialoGPT-outofthebox"
-df.loc[df["Model"] == "GPS-3000epochs", "Model"] = "GPS"
-
-df["Model"] = pd.Categorical(df["Model"], ["DialoGPT-outofthebox", "GPS", "DialoGPT-finetuned", "Oracle"])
+df["Model"] = pd.Categorical(
+    df["Model"], ["dialoGPT-outofthebox-beam10", "GPS", "dialoGPT-finetuned-beam10", "oracle"]
+)
 df = df.sort_values(by=["Model"])
 
 df.to_csv(results_csv, index=False)

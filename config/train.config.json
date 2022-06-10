@@ -1,5 +1,5 @@
 {
-    "output_dir": "models/dialoGPT-finetuned-mtconan",
+    "output_dir": "models/dialoGPT-finetuned",
     "evaluation_strategy": "epoch",
     "logging_strategy": "epoch",
     "save_strategy": "epoch",

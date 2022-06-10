@@ -1,6 +1,6 @@
 from pathlib import Path
-from typing import List, Tuple
-from datasets import DatasetDict, load_dataset, Dataset
+from typing import List
+from datasets import DatasetDict, load_dataset
 from transformers import (
     AutoModelForCausalLM,
     AutoTokenizer,
@@ -77,13 +77,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
 
     DIALO_GPT_MEDIUM = "microsoft/DialoGPT-medium"
-    parser.add_argument(
-        "-m",
-        "--model_name_or_path",
-        type=str,
-        default=DIALO_GPT_MEDIUM,
-    )
-
+    parser.add_argument("-m", "--model_name_or_path", type=str, default=DIALO_GPT_MEDIUM)
     parser.add_argument("-c", "--config", dest="config_path", default="config/train.config.json", type=Path)
     parser.add_argument("-d", "--data_dir", type=Path, default="data/splits/multitarget-conan")
 

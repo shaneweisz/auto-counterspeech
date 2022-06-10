@@ -79,7 +79,7 @@ def generate_experiment_name(model_name_or_path: str) -> str:
     return NOW_AS_STR + "_" + model_name
 
 
-DEFAULT_MODEL = "models/dialoGPT-finetuned-multiconan"
+DEFAULT_MODEL = "models/dialoGPT-finetuned"
 DEFAULT_CONFIG = "config/decode.config.json"
 DEFAULT_INPUTS = "evaluation/test.inputs.txt"
 DEFAULT_BATCH_SIZE = 16
