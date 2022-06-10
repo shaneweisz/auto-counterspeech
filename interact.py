@@ -13,7 +13,7 @@ def main(args):
     print("Loading counterspeech model...")
     model = ResponseGenerator(args.model_name_or_path, decoding_config)
 
-    print("Model ready. Throw your worst at it, and see how it responds.")
+    print("Model ready. Enter some hate speech and see how the model responds.")
     model.interact()
 
 
