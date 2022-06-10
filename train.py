@@ -26,20 +26,23 @@ def main():
 
     print(f"Setting up training params using: {args.data_dir}")
     training_params = json.load(open((args.config_path)))
-    print(f"Training params: {training_params}")
     training_args = TrainingArguments(**training_params)
-    data_collator = DataCollatorForLanguageModeling(tokenizer=tokenizer, mlm=False)
+    print(f"Training params: {training_params}")
 
-    print(f"Loading and tokenizing train and val datasets stored in: {args.data_dir}")
-    train_dataset, val_dataset = prepare_data_for_training(args.data_dir, tokenizer)
+    print(f"Loading dataset from: {args.data_dir}")
+    dataset = load_dataset_dict(args.data_dir, splits=["train", "val"])
+
+    print("Tokenizing dataset")
+    tokenized_dataset = tokenize(dataset, tokenizer)
 
     print("Setup Trainer")
+    data_collator = DataCollatorForLanguageModeling(tokenizer=tokenizer, mlm=False)
     trainer = Trainer(
         model=model,
         args=training_args,
         data_collator=data_collator,
-        train_dataset=train_dataset,
-        eval_dataset=val_dataset,
+        train_dataset=tokenized_dataset["train"],
+        eval_dataset=tokenized_dataset["val"],
         tokenizer=tokenizer,
     )
 
@@ -50,20 +53,13 @@ def main():
     trainer.save_model()
 
 
-def prepare_data_for_training(data_dir: Path, tokenizer: AutoTokenizer) -> Tuple[Dataset, Dataset]:
-    raw_datasets = load_raw_datasets(data_dir)
-    tokenized_datasets = tokenize(raw_datasets, tokenizer)
-    train_dataset, val_dataset = tokenized_datasets["train"], tokenized_datasets["val"]
-    return train_dataset, val_dataset
-
-
-def load_raw_datasets(data_dir: Path, splits: List[str] = ["train", "val"]) -> DatasetDict:
+def load_dataset_dict(data_dir: Path, splits: List[str] = ["train", "val"]) -> DatasetDict:
     data_files = {split: str(data_dir / f"{split}.csv") for split in splits}
-    raw_datasets = load_dataset("csv", data_files=data_files)
-    return raw_datasets
+    dataset = load_dataset("csv", data_files=data_files)
+    return dataset
 
 
-def tokenize(raw_datasets: DatasetDict, tokenizer: AutoTokenizer) -> DatasetDict:
+def tokenize(dataset: DatasetDict, tokenizer: AutoTokenizer) -> DatasetDict:
     def tokenize_row(row):
         hs = row["hate_speech"]
         cs = row["counter_speech"]
@@ -74,7 +70,7 @@ def tokenize(raw_datasets: DatasetDict, tokenizer: AutoTokenizer) -> DatasetDict
 
         return tokenized_text
 
-    return raw_datasets.map(tokenize_row, remove_columns=raw_datasets["train"].column_names)
+    return dataset.map(tokenize_row, remove_columns=dataset["train"].column_names)
 
 
 if __name__ == "__main__":
