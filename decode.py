@@ -79,19 +79,25 @@ def generate_experiment_name(model_name_or_path: str) -> str:
     return NOW_AS_STR + "_" + model_name
 
 
+DEFAULT_MODEL = "models/dialoGPT-finetuned-multiconan"
+DEFAULT_CONFIG = "config/decode.config.json"
+DEFAULT_INPUTS = "evaluation/test.inputs.txt"
+DEFAULT_BATCH_SIZE = 16
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("-m", "--model", dest="model_name_or_path", type=str)
-    parser.add_argument("-c", "--config", dest="decoding_config_path", type=Path)
-    parser.add_argument("-i", "--inputs_path", type=Path, default="evaluation/test.inputs.txt")
-    parser.add_argument("-b", "--batch_size", type=int, default=16)
+
+    parser.add_argument("-m", "--model", dest="model_name_or_path", default=DEFAULT_MODEL, type=str)
+    parser.add_argument("-c", "--config", dest="decoding_config_path", default=DEFAULT_CONFIG, type=Path)
+    parser.add_argument("-i", "--inputs_path", type=Path, default=DEFAULT_INPUTS)
+    parser.add_argument("-b", "--batch_size", type=int, default=DEFAULT_BATCH_SIZE)
     parser.add_argument("-e", "--experiment_name", type=str)
     parser.add_argument(
         "-o",
         "--config_overrides",
         type=str,
         default="",
-        help="Override some default config settings. Example: num_beams=5,no_repeat_ngram_size=3",
+        help="Override some default config settings. Example: 'num_beams=5,no_repeat_ngram_size=3'",
     )
 
     args = parser.parse_args()

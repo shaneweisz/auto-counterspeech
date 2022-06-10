@@ -1,0 +1,1 @@
+{"max_new_tokens": 100, "no_repeat_ngram_size": 4, "num_beams": 10, "early_stopping": true}
