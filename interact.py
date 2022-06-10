@@ -26,7 +26,7 @@ if __name__ == "__main__":
         default="models/dialoGPT-mtconan",
     )
     parser.add_argument(
-        "-c", "--config", dest="decoding_config_path", type=Path, default="config/decode.best.config.json"
+        "-c", "--config", dest="decoding_config_path", type=Path, default="config/decode.config.json"
     )
     parser.add_argument(
         "-o",

@@ -21,10 +21,12 @@ def main():
 
     print(f"Loading tokenizer: {args.model_name_or_path}")
     tokenizer = AutoTokenizer.from_pretrained(args.model_name_or_path)
-    tokenizer.pad_token = tokenizer.eos_token
+    tokenizer.add_special_tokens({"pad_token": "[PAD]"})
+    model.resize_token_embeddings(len(tokenizer))
 
     print(f"Setting up training params using: {args.data_dir}")
     training_params = json.load(open((args.config_path)))
+    print(f"Training params: {training_params}")
     training_args = TrainingArguments(**training_params)
     data_collator = DataCollatorForLanguageModeling(tokenizer=tokenizer, mlm=False)
 

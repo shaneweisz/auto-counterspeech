@@ -23,7 +23,7 @@ df.loc[df["Model"] == "oracle", "BLEU-2(%)"] = "N/A"
 
 # change model names to be more readable
 df.loc[df["Model"] == "oracle", "Model"] = "Oracle"
-df.loc[df["Model"] == "dialoGPT-mtconan-beam10-lengthpen15_0.9", "Model"] = "DialoGPT-finetuned"
+df.loc[df["Model"] == "dialoGPT-finetuned-mtconan-beam10", "Model"] = "DialoGPT-finetuned"
 df.loc[df["Model"] == "dialoGPT-outofthebox-beam10", "Model"] = "DialoGPT-outofthebox"
 df.loc[df["Model"] == "GPS-3000epochs", "Model"] = "GPS"
 
