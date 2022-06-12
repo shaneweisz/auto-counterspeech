@@ -11,7 +11,7 @@ def main(args):
     print(f"Decoding parameters: {decoding_config}")
 
     print("Loading counterspeech model...")
-    model = ResponseGenerator(args.model_name_or_path, decoding_config)
+    model = ResponseGenerator(args.model_name_or_path, decoding_config, verbose=False)
 
     print("Model ready. Enter some hate speech and see how the model responds.")
     model.interact()
