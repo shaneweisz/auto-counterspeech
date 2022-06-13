@@ -36,6 +36,8 @@ class ResponseGenerator:
         inputs = [input_text + self.tokenizer.eos_token for input_text in inputs]
 
         self.tokenizer.padding_side = "left"
+        if not self.tokenizer.pad_token:
+            self.tokenizer.pad_token = self.tokenizer.eos_token
         tokenized_inputs = self.tokenizer(inputs, return_tensors="pt", padding=True).to(self.device)
 
         output_ids = self.model.generate(
