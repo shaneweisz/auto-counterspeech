@@ -12,11 +12,11 @@ def main(args):
     inputs = read_hate_speech_inputs(args.inputs_path)
 
     decoding_config = get_decoding_config(args.decoding_config_path, args.config_overrides)
+    print(f"Decoding config: {decoding_config}")
 
     print(f"Loading pretrained model from {args.model_name_or_path}")
     model = ResponseGenerator(args.model_name_or_path, decoding_config)
 
-    print(f"Decoding config: {decoding_config}")
     print("Generating responses to hate speech inputs")
     predictions = model.generate_responses(inputs, args.batch_size)
 
@@ -31,9 +31,6 @@ def read_hate_speech_inputs(file_path: Path) -> List[str]:
 
 def get_decoding_config(decoding_config_path: Path, config_overrides: str) -> Dict[str, Any]:
     decoding_config = json.load(open(decoding_config_path))
-    if "exponential_decay_length_penalty" in decoding_config:
-        # the tuple had to be stored as a string since tuples can't be stored in JSON
-        decoding_config["exponential_decay_length_penalty"] = eval(decoding_config["exponential_decay_length_penalty"])
     decoding_config = update_config_from_string(decoding_config, config_overrides)
     return decoding_config
 

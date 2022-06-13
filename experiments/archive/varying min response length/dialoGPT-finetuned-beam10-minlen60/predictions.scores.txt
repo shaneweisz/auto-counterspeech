@@ -1,0 +1,8 @@
+Fluency:     0.985
+BLEU-2:      0.067
+BERTScore:   0.047
+Toxicity:    0.107
+Dist-1:      0.046
+Dist-2:      0.178
+Ent-4:       8.648
+AvgLen:      51.756

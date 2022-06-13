@@ -22,7 +22,16 @@ df.loc[df["Model"] == "oracle", "BERTScore(%)"] = "N/A"
 df.loc[df["Model"] == "oracle", "BLEU-2(%)"] = "N/A"
 
 df["Model"] = pd.Categorical(
-    df["Model"], ["dialoGPT-outofthebox-beam10", "GPS", "dialoGPT-finetuned-beam10", "oracle"]
+    df["Model"],
+    [
+        "dialoGPT-outofthebox-beam10",
+        "GPS",
+        "dialoGPT-finetuned-beam10",
+        "dialoGPT-finetuned-beam10-minlen20",
+        "dialoGPT-finetuned-beam10-minlen30",
+        "dialoGPT-finetuned-beam10-minlen40",
+        "oracle",
+    ],
 )
 df = df.sort_values(by=["Model"])
 
