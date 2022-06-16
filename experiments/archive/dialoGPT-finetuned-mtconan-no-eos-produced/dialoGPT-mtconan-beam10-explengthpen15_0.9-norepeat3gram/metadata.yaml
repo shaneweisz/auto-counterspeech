@@ -1,8 +1,0 @@
-Date: 2022-06-09 15-04-07
-Args:
-	model_name_or_path: models/dialoGPT-mtconan
-	decoding_config_path: config/decode.default.config.json
-	inputs_path: evaluation/test.inputs.txt
-	batch_size: 16
-	experiment_name: dialoGPT-mtconan-beam10-explengthpen15_0.9-norepeat3gram
-	config_overrides: exponential_decay_length_penalty=(15,0.9);no_repeat_ngram_size=3

@@ -15,7 +15,7 @@ def main(args):
     print(f"Decoding config: {decoding_config}")
 
     print(f"Loading pretrained model from {args.model_name_or_path}")
-    model = ResponseGenerator(args.model_name_or_path, decoding_config)
+    model = ResponseGenerator(args.model_name_or_path, decoding_config.copy())
 
     print("Generating responses to hate speech inputs")
     predictions = model.generate_responses(inputs, args.batch_size)

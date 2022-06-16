@@ -1,0 +1,8 @@
+Date: 2022-06-16 15-17-19
+Args:
+	model_name_or_path: microsoft/DialoGPT-medium
+	decoding_config_path: config/decode.config.json
+	inputs_path: evaluation/test.inputs.txt
+	batch_size: 1
+	experiment_name: dialoGPT-outofthebox-beam10-repeatsallowed
+	config_overrides: 

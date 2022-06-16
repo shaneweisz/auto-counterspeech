@@ -1,8 +1,0 @@
-Date: 2022-06-10 11-09-05
-Args:
-	model_name_or_path: models/dialoGPT-finetuned-mtconan
-	decoding_config_path: config/decode.config.json
-	inputs_path: evaluation/test.inputs.txt
-	batch_size: 16
-	experiment_name: dialoGPT-finetuned-mtconan-beam10
-	config_overrides: num_beams=10
