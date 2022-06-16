@@ -9,6 +9,10 @@ from .min_new_tokens import MinNewTokensLogitsProcessor
 class ResponseGenerator:
     def __init__(self, pretrained_model_name_or_path: str, decoding_config: Dict[str, Any], seed=42, verbose=True):
         self.tokenizer = AutoTokenizer.from_pretrained(pretrained_model_name_or_path)
+
+        if "pad_token" not in self.tokenizer.special_tokens_map:
+            self.tokenizer.pad_token = self.tokenizer.eos_token
+
         self.model = AutoModelForCausalLM.from_pretrained(pretrained_model_name_or_path)
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         self.model = self.model.to(self.device)
@@ -36,8 +40,6 @@ class ResponseGenerator:
         inputs = [input_text + self.tokenizer.eos_token for input_text in inputs]
 
         self.tokenizer.padding_side = "left"
-        if not self.tokenizer.pad_token:
-            self.tokenizer.pad_token = self.tokenizer.eos_token
         tokenized_inputs = self.tokenizer(inputs, return_tensors="pt", padding=True).to(self.device)
 
         output_ids = self.model.generate(

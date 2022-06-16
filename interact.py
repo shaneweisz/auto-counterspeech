@@ -2,13 +2,14 @@ import argparse
 from pathlib import Path
 from response_generation import ResponseGenerator
 from decode import get_decoding_config, DEFAULT_CONFIG, DEFAULT_MODEL
+from colorama import Fore, Style
 
 
 def main(args):
-    print(f"Model: {args.model_name_or_path}")
+    print(f"{Fore.YELLOW}Model:{Style.RESET_ALL} {args.model_name_or_path}")
 
     decoding_config = get_decoding_config(args.decoding_config_path, args.config_overrides)
-    print(f"Decoding parameters: {decoding_config}")
+    print(f"{Fore.YELLOW}Decoding parameters:{Style.RESET_ALL} {decoding_config}")
 
     print("Loading counterspeech model...")
     model = ResponseGenerator(args.model_name_or_path, decoding_config, verbose=False)
