@@ -1,5 +1,3 @@
-# NB: Run from base directory
-
 RESULTS_CSV=experiments/results.csv
 
 # extract metrics from all words left of ":" using grep
@@ -21,5 +19,3 @@ for f in $EVAL_FILES; do
     scores=$(grep -oE '[0-9]+\.[0-9]+' $f)
     echo $scores | sed 's/ /,/g' >> $RESULTS_CSV
 done
-
-python experiments/scripts/format-results.py
