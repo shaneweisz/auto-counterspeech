@@ -32,18 +32,18 @@ def main(args):
         print("Saving scores:")
 
         scores_output_path = Path(args.predictions_path).with_suffix(".scores.txt")
-        write_list_to_file(scores_output_path, [str(metric) for metric in metrics], append=True)
+        write_list_to_file(scores_output_path, [str(metric) for metric in metrics], append=False)
         print(f"Saved aggregate scores to: {scores_output_path.absolute()}")
 
         if any(metric.individual_scores is not None for metric in metrics):
             detailed_scores_output_path = Path(args.predictions_path).with_suffix(".scores.detailed.csv")
             content = individual_scores_output(metrics, predictions)
-            write_text_to_file(detailed_scores_output_path, content, append=True)
+            write_text_to_file(detailed_scores_output_path, content, append=False)
             print(f"Saved detailed scores to: {detailed_scores_output_path.absolute()}")
 
             flagged_responses_output_path = Path(args.predictions_path).with_suffix(".scores.flagged.txt")
             content = responses_to_flag(metrics, predictions)
-            write_text_to_file(flagged_responses_output_path, content, append=True)
+            write_text_to_file(flagged_responses_output_path, content, append=False)
             print(f"Saved flagged responses to: {flagged_responses_output_path.absolute()}")
 
 

@@ -10,9 +10,9 @@ Responses with Toxicity >= 0.75:
 191,0.776,There is no evidence that blacks are less intelligent than non-blacks. Do you have any?
 268,0.815,It is not true that gay people are worse than nukes, they are just different from other people.
 454,0.897,There is no evidence that blacks are more genetically inferior than whites. What you are saying is just nonsense.
-======================================
-Responses with Grammaticality <= 0.75:
-======================================
+===============================
+Responses with Fluency <= 0.75:
+===============================
 238,0.728,It is not true that Jews have a big nose. It is more likely that they have a small one.
 375,0.524,Roma are our brothers. They have always been part of our society and we are proud of them.
 ================================
@@ -28,10 +28,10 @@ Responses with BERTScore >= 0.5:
 ==================================
 Responses with BERTScore <= -0.05:
 ==================================
-82,-0.067,Migrants come here to work and provide for their families. They are not rapists and pillagers.
+82,-0.066,Migrants come here to work and provide for their families. They are not rapists and pillagers.
 94,-0.053,Women are human beings with full human rights, and they have the right to choose how to live their lives.
 112,-0.073,There is no evidence that homosexuality is a "abusive" mental disorder. Do you have any?
-137,-0.055,Women are human beings with full human rights, and this includes the right to be treated with respect and dignity.
+137,-0.054,Women are human beings with full human rights, and this includes the right to be treated with respect and dignity.
 147,-0.086,I'm not sure what you mean by 'a rabble' of 'faggots'. Do you have any examples?
 227,-0.097,There is no evidence that children with Down syndrome are more likely to attend school than children without Down syndrome.
 236,-0.051,The West has always been and will always be about freedom, democracy, and the rule of law.
