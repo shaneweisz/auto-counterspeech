@@ -32,4 +32,4 @@ class Metric:
         raise NotImplementedError()
 
     def __str__(self) -> str:
-        return f"{self.name+':':<12} {self.score:.3f}"
+        return f"{self.name+':':<16} {self.score:.3f}"

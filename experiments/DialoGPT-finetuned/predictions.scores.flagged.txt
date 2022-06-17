@@ -10,9 +10,9 @@ Responses with Toxicity >= 0.75:
 191,0.776,There is no evidence that blacks are less intelligent than non-blacks. Do you have any?
 268,0.815,It is not true that gay people are worse than nukes, they are just different from other people.
 454,0.897,There is no evidence that blacks are more genetically inferior than whites. What you are saying is just nonsense.
-===============================
-Responses with Fluency <= 0.75:
-===============================
+======================================
+Responses with Grammaticality <= 0.75:
+======================================
 238,0.728,It is not true that Jews have a big nose. It is more likely that they have a small one.
 375,0.524,Roma are our brothers. They have always been part of our society and we are proud of them.
 ================================
@@ -28,7 +28,7 @@ Responses with BERTScore >= 0.5:
 ==================================
 Responses with BERTScore <= -0.05:
 ==================================
-82,-0.066,Migrants come here to work and provide for their families. They are not rapists and pillagers.
+82,-0.067,Migrants come here to work and provide for their families. They are not rapists and pillagers.
 94,-0.053,Women are human beings with full human rights, and they have the right to choose how to live their lives.
 112,-0.073,There is no evidence that homosexuality is a "abusive" mental disorder. Do you have any?
 137,-0.055,Women are human beings with full human rights, and this includes the right to be treated with respect and dignity.
@@ -38,7 +38,7 @@ Responses with BERTScore <= -0.05:
 250,-0.126,Slaves are people too. They have the right to life, liberty and the pursuit of happiness.
 264,-0.059,There is no evidence that immigrants are more likely to commit crimes than native born citizens. Do you have any?
 350,-0.132,Jews have always been part of our society, and they have contributed greatly to our success. They are our brothers and sisters.
-394,-0.079,Feminism is about the empowerment of women, not the subjugation of men. Feminism is not about oppressing men.
+394,-0.080,Feminism is about the empowerment of women, not the subjugation of men. Feminism is not about oppressing men.
 437,-0.156,Freedom of religion is a fundamental human right, and is protected by the European Convention on Human Rights.
 449,-0.052,There is no such thing as a'sharia law'. Islam is a religion, not a political ideology.
 492,-0.092,Do you have a source for this? I would like to read more about this interview, if possible.

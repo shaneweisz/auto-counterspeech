@@ -14,9 +14,9 @@ Responses with Toxicity >= 0.75:
 374,0.790,The statement 'black people are subhuman' is not true. They are human beings with a human value.
 440,0.988,You may be living in a society of imbeciles, but this doesn't give you the right to criticise all Muslims.
 491,0.835,While anal sex may be a more high risk practice than vaginal \(due to the lack of mucus\) that is not a reason to ban gay men, since other groups can also engage in anal sex.
-===============================
-Responses with Fluency <= 0.75:
-===============================
+======================================
+Responses with Grammaticality <= 0.75:
+======================================
 13,0.693,There exist a war with fundamentalists, not Islam. The followers of Islam do not promote violence and they are interested in peaceful coexistence in the world.
 16,0.643,What exactly are you talking about? Maybe you should stop spread racism.
 18,0.697,Feminists promote equality, and I don't see how equality between men and women would be called a 'problem'. Why do you?
@@ -176,7 +176,7 @@ Responses with BERTScore >= 0.5:
 129,1.000,This is a myth, immigrants are not taking our jobs. In fact, immigration has been a huge success story for the US economy.
 130,1.000,If you want to change the way society works, then you should try to change the way you live. Some more respect would help you.
 131,1.000,So how come the media doesn't report about Jewish power in the financial world? Maybe it's because they also control the media, the government, and have many powerful friends working for the Galactic Republic... #sarcasm
-132,1.001,This is a personal view, and has nothing to do with Islam. Can you find some evidence or some studies to support your point of view?
+132,1.000,This is a personal view, and has nothing to do with Islam. Can you find some evidence or some studies to support your point of view?
 133,1.000,You are completely wrong. The West has always been about freedom and democracy. Freedom and democracy is the rule of law, and not Islam.
 134,1.000,If you had to pick one thing to be angry at, why would it be Islam religion? It is just a faith different to yours.
 135,1.000,We all have the right to our beliefs, we just have to accept people who believe in Islam.
@@ -389,7 +389,7 @@ Responses with BERTScore >= 0.5:
 342,1.000,A statement like this only calls for misinformation. If you don't like the news, don't listen to the news. If you don't believe the news, seek the truth and examine your own experiences. If you feel judged for believing what you consider as nonsense, then find the courage to speak out.
 343,1.000,What exactly do you mean by 'killing'? The Jews are not 'diseased'. If you really cared about our children you could do some research and come up with some credible statistics showing the impact of anti-Semitism instead.
 344,1.000,There is a problem with Islam in this country, but the problem is not about Muslims. The problem is that people do not feel welcome here because of discrimination.
-345,1.000,We are proud to be an outward-looking country. We welcome people from all backgrounds, religions, and beliefs.
+345,0.999,We are proud to be an outward-looking country. We welcome people from all backgrounds, religions, and beliefs.
 346,1.000,If you want to isolate someone then there is only one "high-risk group" to focus on. It is made of all those who have frequent unprotected sex with different partners. Being gay does not make you a part of this by default.
 347,1.000,I wouldn't say that "women like bad men". What I would like to see is a man that is interested in a woman, respectful of women, and offers her more than an exchange of sexual favors. It would be nice if men had more respectful characteristics than sexual desire alone.
 348,1.000,By definition, refugees are fleeing out of fear for themselves and families, rather than thinking too much about their final destination. The majority still find safety in neighbouring countries.
@@ -499,7 +499,7 @@ Responses with BERTScore >= 0.5:
 452,1.000,Muslims are welcome to live and work in the UK, and many of them have done just that. This unfounded fear doesn't have to be at the expense of those 'different' from us.
 453,1.000,People have the right to practice whatever religion they want, as long as it respects the law and doesn't violate the dignity of other human beings.
 454,1.000,So are you saying that because black people are different from whites, they are inferior? I would be interested in knowing which parameters you would use to measure this alleged 'inferiority'.
-455,1.000,That intolerance and hatred is one of the biggest problems our country faces #spreadlovenothate.
+455,1.001,That intolerance and hatred is one of the biggest problems our country faces #spreadlovenothate.
 456,1.000,For a lot of people it is still their home country, and they are proud of it.
 457,1.000,Migrants pay taxes, earn money and take care of our sick and elderly.
 458,1.000,It is estimated that over the 50% of people committing domestic abuse were drunk. It's a complex issue but two things I know for sure: a drunk person is in no position to judge anyone's behaviour and beating a person is ALWAYS wrong.
@@ -509,11 +509,11 @@ Responses with BERTScore >= 0.5:
 462,0.999,Islam like any other religion, is not incompatible with a modern state.
 463,1.000,We must understand and address the true causes behind terrorist attacks, so that we can prevent future ones.
 464,1.000,Muslims already live in many European countries, and they are not banned. Why should we ban them from here?
-465,1.000,Islam is a religion. Do you actually think that it is safe to live in a country where people are persecuted for what they believe in?
+465,1.001,Islam is a religion. Do you actually think that it is safe to live in a country where people are persecuted for what they believe in?
 466,1.000,Not all Muslims are involved in terrorist activities. In fact many Muslims live in peaceful coexistence with their fellow citizens.
-467,1.001,The European Union is a much broader concept. It encompasses a huge range of people, including Muslims.
+467,1.000,The European Union is a much broader concept. It encompasses a huge range of people, including Muslims.
 468,1.000,Just because you dont like gays doesn't mean you have to hate them. What did they do to you? It seems to me that you still have all of your rights.
-469,0.999,Don't you agree that being inclusive towards immigrants is beneficial for the economy of the host country?
+469,1.000,Don't you agree that being inclusive towards immigrants is beneficial for the economy of the host country?
 470,1.000,A religion is only considered harmful or 'compromised' when someone is labelled, with eyes closed, a 'terrorist' for their faith.
 471,1.000,All immigrants have the same rights and we have a responsibility not to violate them.
 472,0.999,Islam is a religion of a people, not a lawless and violent menace.
@@ -538,7 +538,7 @@ Responses with BERTScore >= 0.5:
 491,1.000,While anal sex may be a more high risk practice than vaginal \(due to the lack of mucus\) that is not a reason to ban gay men, since other groups can also engage in anal sex.
 492,1.000,The newspaper did not specifically name the religion but it is fair to say the statement has been used to justify a lot of anti-Muslim prejudice. It is a myth that all Muslims are incompatible with Western society. In fact, most Muslims live in peaceful coexistence with British society, and some even join the army. The religion is therefore not incompatible with British society.
 493,1.000,The world belongs to everyone and helping someone in need wouldn't be a problem for a kind hearted human being.
-494,1.000,Violence on our streets is the result of many complex causes. Violence cannot simply be the fault of one race.
+494,0.999,Violence on our streets is the result of many complex causes. Violence cannot simply be the fault of one race.
 495,1.000,Many refugees come to Europe to work. Many of them do well in the labour market, also with lower qualifications.
 496,1.000,The refugee crisis is a global one. It has affected all continents, and refugees often come from countries which are at war: this is why we should help them. It is a moral duty.
 497,1.000,We shouldn't discriminate like that. Our culture is all about equality and inclusivity.
