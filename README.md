@@ -94,7 +94,7 @@ The supported metrics are:
 
 3. Fluency:
 
-    * `gruen`, `roberta-cola`
+    * `gruen`, `grammaticality`
 
 4. Response lengths:
 

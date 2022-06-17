@@ -129,7 +129,21 @@ if __name__ == "__main__":
         help="Path to file containing hate speech inputs that the predictions and references correspond to",
     )
 
-    DEFAULT_METRICS = ["roberta-cola", "bleu2", "bert-score", "toxicity", "dist1", "dist2", "ent4", "avg-len"]
+    DEFAULT_METRICS = [
+        "grammaticality",
+        "toxicity",
+        "bert-score",
+        "bleu1",
+        "bleu2",
+        "bleu4",
+        "rouge1",
+        "rouge2",
+        "rougeL",
+        "dist1",
+        "dist2",
+        "ent4",
+        "avg-len",
+    ]
     parser.add_argument(
         "-m",
         "--metrics",

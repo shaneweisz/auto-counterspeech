@@ -1,10 +1,10 @@
-from .fluency_classifier import RoBERTaColaFluencyClassifier
+from .grammaticality_classifier import RoBERTaColaFluencyClassifier
 
 
 class TestFluency:
     """These tests are slow because they use RoBERTa. Shoudln't take more than a minute though."""
 
-    metric = RoBERTaColaFluencyClassifier()
+    metric = RoBERTaColaGrammaticalityClassifier()
 
     def test_influent_sentences(self):
         influent_sentences = ["This not! fluent sentence is.", "Also sentence this not fluent is."]
