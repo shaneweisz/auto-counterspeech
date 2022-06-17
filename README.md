@@ -94,7 +94,7 @@ The supported metrics are:
 
 3. Fluency:
 
-    * `gruen`, `grammaticality`
+    * `gruen`, `fluency`
 
 4. Response lengths:
 

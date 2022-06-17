@@ -7,7 +7,7 @@ from ..metric import Metric
 from nltk.tokenize import sent_tokenize
 
 
-class RoBERTaColaGrammaticalityClassifier(Metric):
+class RoBERTaColaFluencyClassifier(Metric):
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
     def __init__(self) -> None:
@@ -19,7 +19,7 @@ class RoBERTaColaGrammaticalityClassifier(Metric):
 
     @property
     def name(self) -> str:
-        return "Grammaticality"
+        return "Fluency"
 
     def compute_score(self, predictions: List[str], verbose: bool = False, **kwargs) -> float:
         scores = []

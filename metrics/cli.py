@@ -4,7 +4,7 @@ from typing import List
 from .metric import Metric
 from .relevance import BLEU, ROUGE, BERTScore
 from .diversity import DistinctN, EntropyN, ResponseLengthSummaryStatistic
-from .fluency import GRUEN, RoBERTaColaGrammaticalityClassifier
+from .fluency import GRUEN, RoBERTaColaFluencyClassifier
 from .toxicity import UnbiasedRoBERTaToxicityClassifier
 
 
@@ -47,8 +47,8 @@ class MetricFactory:
         # Fluency metrics
         elif metric_name.lower().startswith("gruen"):
             return GRUEN()
-        elif metric_name.lower().startswith("grammaticality"):
-            return RoBERTaColaGrammaticalityClassifier()
+        elif metric_name.lower().startswith("fluency"):
+            return RoBERTaColaFluencyClassifier()
         # Response length metrics
         elif metric_name.lower().startswith("max-len"):
             return ResponseLengthSummaryStatistic("Max")

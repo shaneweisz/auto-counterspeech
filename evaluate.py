@@ -51,7 +51,7 @@ def responses_to_flag(computed_metrics: List[Metric], predictions: List[str]):
     flaggable_metrics = [
         ("Toxicity", 0.75, ">="),
         ("GRUEN", 0.5, "<="),
-        ("Grammaticality", 0.75, "<="),
+        ("Fluency", 0.75, "<="),
         ("BERTScore", 0.5, ">="),
         ("BERTScore", -0.05, "<="),
     ]
@@ -130,7 +130,7 @@ if __name__ == "__main__":
     )
 
     DEFAULT_METRICS = [
-        "grammaticality",
+        "fluency",
         "toxicity",
         "bert-score",
         "bleu1",

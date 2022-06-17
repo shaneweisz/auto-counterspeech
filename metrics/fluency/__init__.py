@@ -1,2 +1,2 @@
 from .gruen import GRUEN
-from .grammaticality_classifier import RoBERTaColaGrammaticalityClassifier
+from .fluency_classifier import RoBERTaColaFluencyClassifier

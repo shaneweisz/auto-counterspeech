@@ -6,7 +6,7 @@ results_csv = "experiments/results.csv"
 df = pd.read_csv(results_csv)
 
 # Extract only desired metrics
-PERCENTAGE_METRICS = ["Grammaticality", "Toxicity", "BERTScore", "Dist-2"]
+PERCENTAGE_METRICS = ["Fluency", "Toxicity", "BERTScore", "Dist-2"]
 OTHER_METRICS = ["AvgLen"]
 df = df[["Model"] + PERCENTAGE_METRICS + OTHER_METRICS]
 
