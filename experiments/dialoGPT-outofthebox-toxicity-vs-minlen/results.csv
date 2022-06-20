@@ -1,0 +1,8 @@
+Model,Fluency(%),Toxicity(%),BERTScore(%),Dist-2(%),AvgLen
+DialoGPT-outofthebox,95.5,6.7,8.7,17.7,4.5
+DialoGPT-outofthebox-minlen5,96.4,7.4,8.5,16.1,5.2
+DialoGPT-outofthebox-minlen10,98.4,10.6,3.8,15.3,8.3
+DialoGPT-outofthebox-minlen15,96.3,73.8,0.8,11.9,10.1
+DialoGPT-outofthebox-minlen20,97.0,70.9,3.7,17.1,14.5
+DialoGPT-outofthebox-minlen40,96.7,71.6,2.9,22.5,29.3
+DialoGPT-outofthebox-minlen80,92.2,72.4,-15.2,22.9,43.1
