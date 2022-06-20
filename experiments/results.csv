@@ -1,7 +1,0 @@
-Model,Fluency(%),Toxicity(%),BERTScore(%),Dist-2(%),AvgLen
-DialoGPT-finetuned,98.6,11.1,13.5,21.5,18.7
-DialoGPT-finetuned-nominlen,98.7,12.2,16.6,22.8,10.3
-Gold-standard,95.4,9.7,N/A,56.8,24.7
-DialoGPT-outofthebox-nominlen,95.5,6.7,8.7,17.7,4.5
-GPS,74.9,21.8,7.9,40.6,20.8
-DialoGPT-outofthebox,97.0,70.9,3.7,17.1,14.5
