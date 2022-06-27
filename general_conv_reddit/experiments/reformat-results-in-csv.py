@@ -2,15 +2,15 @@ import pandas as pd
 import sys
 
 experiments_dir = sys.argv[1]
-results_csv = f"experiments/{experiments_dir}/results.csv"
+results_csv = f"{experiments_dir}/results.csv"
 
 # Read in CSV
 df = pd.read_csv(results_csv)
 
 # Extract only desired metrics
 PERCENTAGE_METRICS = ["BLEU-2", "BLEU-4", "METEOR", "Dist-1", "Dist-2"]
-OTHER_METRICS = ["Ent-4", "AvgLen"]
-df = df[["Model", "BLEU-2", "BLEU-4", "METEOR", "Ent-4", "Dist-1", "Dist-2", "AvgLen"]]
+OTHER_METRICS = ["NIST-2", "NIST-4", "Ent-4", "AvgLen"]
+df = df[["Model", "NIST-2", "NIST-4", "BLEU-2", "BLEU-4", "METEOR", "Ent-4", "Dist-1", "Dist-2", "AvgLen"]]
 
 # Format the % metrics as percentages
 for col in PERCENTAGE_METRICS:

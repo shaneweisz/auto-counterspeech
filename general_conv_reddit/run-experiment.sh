@@ -1,8 +1,15 @@
 #!bin/bash
-EXPERIMENT_DIR="DialoGPT-vs-Finetuned-vs-Human"
+experiment_dir=$1
 
-python eval.py --ref_file experiments/$EXPERIMENT_DIR/Human/Human.txt --hyp_file refs.txt 2>&1 | tee experiments/$EXPERIMENT_DIR/Human/Human.scores.txt
+echo "Evaluating human predictions"
+python eval.py --ref_file refs.txt --hyp_file $experiment_dir/Human/predictions.txt > $experiment_dir/Human/scores.txt
+echo "Evaluating DialoGPT-outofthebox predictions"
+python eval.py --ref_file refs.txt --hyp_file  $experiment_dir/DialoGPT-outofthebox/predictions.txt > $experiment_dir/DialoGPT-outofthebox/scores.txt
+echo "Evaluating DialoGPT-finetuned predictions"
+python eval.py --ref_file refs.txt --hyp_file $experiment_dir/DialoGPT-finetuned/predictions.txt > $experiment_dir/DialoGPT-finetuned/scores.txt
 
-bash experiments/scrape-results-to-csv.sh $EXPERIMENT_DIR
+echo "Scraping results to csv"
+bash experiments/scrape-results-to-csv.sh $experiment_dir
 
-python experiments/reformat-results-in-csv.py $EXPERIMENT_DIR
+echo "Prettifying csv results"
+python experiments/reformat-results-in-csv.py $experiment_dir

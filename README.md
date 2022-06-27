@@ -121,8 +121,6 @@ This is mainly based on the code and experiments from Microsoft's DialoGPT paper
 
 All the necessary code and files are in the `general_conv_reddit` folder:
 
-
-
 ### Setup
 
 #### Conda environment
@@ -169,9 +167,11 @@ cpan install XML:Twig Sort:Naturally String:Util
 
 ### Evaluation
 
-To replicate the experimental results:
+To reproduce the experimental results:
 
 ```
 cd general_conv_reddit
-bash run-experiments.sh
+bash run-experiments.sh [experiment_dir]
 ```
+
+where `experiment_dir` is the relative path from `general_conv_reddit` to a directory containing the relevant `predictions.txt` files.
