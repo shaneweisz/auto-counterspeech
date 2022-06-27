@@ -1,8 +1,8 @@
 experiments_dir=$1
-RESULTS_CSV="experiments/$experiments_dir/results.csv"
+RESULTS_CSV="$experiments_dir/results.csv"
 
 # Extract all metric names from all words left of ":" in the scores file
-EVAL_FILES=`find experiments/$experiments_dir -name *predictions.scores.txt`
+EVAL_FILES=`find $experiments_dir -name *predictions.scores.txt`
 for f in $EVAL_FILES; do
     metric_names=$(cat $f | sed 's/:.*//g')
 done

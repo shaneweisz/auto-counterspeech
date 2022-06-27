@@ -17,12 +17,12 @@ Responses with Fluency <= 0.75:
 ================================
 Responses with BERTScore >= 0.5:
 ================================
-30,0.501,Immigrants are not stealing our jobs, they are contributing to our economy.
+30,0.502,Immigrants are not stealing our jobs, they are contributing to our economy.
 62,0.659,Rape is a crime regardless of religion.
 88,0.502,Islam is a religion of peace.
 111,0.511,Marriage is about love, not sex.
-129,0.530,There is no evidence that immigrants are taking our jobs.
-308,0.841,Women are human beings and deserve respect.
+129,0.529,There is no evidence that immigrants are taking our jobs.
+308,0.840,Women are human beings and deserve respect.
 457,0.537,Migrants pay taxes and contribute to our society.
 ==================================
 Responses with BERTScore <= -0.05:

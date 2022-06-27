@@ -1,5 +1,5 @@
 {
-    "output_dir": "models/dialoGPT-finetuned",
+    "output_dir": "models/DialoGPT-finetuned-multiCONAN-placeholder",
     "evaluation_strategy": "epoch",
     "logging_strategy": "epoch",
     "save_strategy": "epoch",

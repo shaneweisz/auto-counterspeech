@@ -43,13 +43,13 @@ Responses with Fluency <= 0.75:
 ================================
 Responses with BERTScore >= 0.5:
 ================================
-127,0.538,They're not all terrorists.
+127,0.539,They're not all terrorists.
 ==================================
 Responses with BERTScore <= -0.05:
 ==================================
 19,-0.063,I don't think you know what you're talking about.
 41,-0.107,I don't think you know what you're talking about.
-70,-0.051,What story?
+70,-0.052,What story?
 72,-0.081,No they're not.
 77,-0.231,Neither do you.
 82,-0.057,What weaknesses?
@@ -91,4 +91,4 @@ Responses with BERTScore <= -0.05:
 442,-0.094,That's not very nice.
 459,-0.063,I don't think that word means what you think it means.
 468,-0.065,Me too thanks
-492,-0.286,Source please?
+492,-0.285,Source please?

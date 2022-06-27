@@ -6,7 +6,7 @@ BLEU-2:           0.002
 BLEU-4:           0.000
 ROUGE-1:          0.040
 ROUGE-2:          0.004
-ROUGE-L:          0.058
+ROUGE-L:          0.057
 Dist-1:           0.086
 Dist-2:           0.177
 Ent-4:            4.992

@@ -1,8 +1,8 @@
-Date: 2022-06-19 19-16-20
+Date: 2022-06-27 16-34-06
 Args:
 	model_name_or_path: microsoft/DialoGPT-medium
 	decoding_config_path: config/decode.config.json
 	inputs_path: evaluation/test.inputs.txt
 	batch_size: 16
-	experiment_name: baselines/DialoGPT-outofthebox-nominlen
-	config_overrides: min_new_tokens=None
+	output_dir: experiments/dialoGPT-finetuned-vs-baselines/DialoGPT-outofthebox
+	config_overrides: 
