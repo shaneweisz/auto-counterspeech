@@ -1,6 +1,8 @@
 import pandas as pd
+import sys
 
-results_csv = "results.csv"
+experiments_dir = sys.argv[1]
+results_csv = f"experiments/{experiments_dir}/results.csv"
 
 # Read in CSV
 df = pd.read_csv(results_csv)

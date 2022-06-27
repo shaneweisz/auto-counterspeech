@@ -1,4 +1,5 @@
-RESULTS_CSV="results.csv"
+experiments_dir=$1
+RESULTS_CSV="experiments/$experiments_dir/results.csv"
 
 # Extract all metric names from all words left of ":" in the scores file
 EVAL_FILES=`find . -name *.scores.txt`
