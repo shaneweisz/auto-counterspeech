@@ -1,0 +1,2 @@
+Model,BLEU-2(%),BLEU-4(%),METEOR(%),Ent-4,Dist-1(%),Dist-2(%),AvgLen
+Human,100.0,100.0,100.0,11.0,14.55,62.96,13.1

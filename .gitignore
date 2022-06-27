@@ -143,3 +143,6 @@ models
 # hacky shell scripts
 experiments/fix-eval-formatting.sh
 experiments/run-new-metrics.sh
+
+# big metric scripts
+general_conv_reddit/metrics
