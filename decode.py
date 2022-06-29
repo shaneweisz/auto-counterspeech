@@ -34,7 +34,7 @@ def get_decoding_config(decoding_config_path: Path, config_overrides: str) -> Di
 
 def save_decoding_output(predictions, decoding_config, output_dir) -> Path:
     """Returns the path to the saved decoding output"""
-    output_dir.mkdir(exist_ok=True)
+    output_dir.mkdir(exist_ok=True, parents=True)
 
     # Save predictions
     preds_output_path = output_dir / "predictions.txt"

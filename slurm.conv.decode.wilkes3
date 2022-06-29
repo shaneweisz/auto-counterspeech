@@ -29,37 +29,19 @@ echo "Running on master node: `hostname`"
 echo "Start time: `date`"
 
 # Constants
-EXP_DIR="general_conv_reddit/experiments/DialoGPT-vs-Finetuned-vs-Human"
+EXP_DIR="general_conv_reddit/experiments/Vary-NoRepNGrams"
 DATA_DIR="general_conv_reddit/data"
 INPUTS_PATH="$DATA_DIR/inputs.6k.txt"
 REFS_DIR="$DATA_DIR/refs"
 
-################################ DGPT allowreps ##############################################
-SYSTEM_NAME=DialoGPT-outofthebox-allowreps
+################################ DGPT norep4 ##############################################
+SYSTEM_NAME=DialoGPT-outofthebox-norep4
 OUTPUT_DIR="$EXP_DIR/$SYSTEM_NAME"
 
-# Decode
-# module load python/3.8
-# source .venv/bin/activate
-# python decode.py -i $INPUTS_PATH -m "microsoft/DialoGPT-medium" -o $OUTPUT_DIR -co "no_repeat_ngram_size=None"
-# deactivate
-# module remove python/3.8
-
-# Evaluate
-conda activate LSP
-python general_conv_reddit/util/clean-str.py $OUTPUT_DIR/predictions.txt
-echo "Evaluating predictions from $OUTPUT_DIR/predictions.cleaned.txt against references in $REFS_DIR"
-python general_conv_reddit/evaluate.py --refs_dir $REFS_DIR --hyp_file $OUTPUT_DIR/predictions.cleaned.txt > $OUTPUT_DIR/scores.txt
-conda deactivate
-
-################################ DGPT-MC allowreps #################################
-SYSTEM_NAME=DialoGPT-finetuned-allowreps
-OUTPUT_DIR="$EXP_DIR/$SYSTEM_NAME"
-
-# Decode
+Decode
 module load python/3.8
 source .venv/bin/activate
-python decode.py -i $INPUTS_PATH -m "models/DialoGPT-finetuned-multiCONAN" -o $OUTPUT_DIR -co "no_repeat_ngram_size=None"
+python decode.py -i $INPUTS_PATH -m "microsoft/DialoGPT-medium" -o $OUTPUT_DIR -co "no_repeat_ngram_size=4"
 deactivate
 module remove python/3.8
 
@@ -70,14 +52,14 @@ echo "Evaluating predictions from $OUTPUT_DIR/predictions.cleaned.txt against re
 python general_conv_reddit/evaluate.py --refs_dir $REFS_DIR --hyp_file $OUTPUT_DIR/predictions.cleaned.txt > $OUTPUT_DIR/scores.txt
 conda deactivate
 
-################################ DGPT ##############################################
-SYSTEM_NAME=DialoGPT-outofthebox
+################################ DGPT-MC norep4 #################################
+SYSTEM_NAME=DialoGPT-finetuned-norep4
 OUTPUT_DIR="$EXP_DIR/$SYSTEM_NAME"
 
 # Decode
 module load python/3.8
 source .venv/bin/activate
-python decode.py -i $INPUTS_PATH -m "microsoft/DialoGPT-medium" -o $OUTPUT_DIR
+python decode.py -i $INPUTS_PATH -m "models/DialoGPT-finetuned-multiCONAN" -o $OUTPUT_DIR -co "no_repeat_ngram_size=4"
 deactivate
 module remove python/3.8
 
@@ -88,14 +70,14 @@ echo "Evaluating predictions from $OUTPUT_DIR/predictions.cleaned.txt against re
 python general_conv_reddit/evaluate.py --refs_dir $REFS_DIR --hyp_file $OUTPUT_DIR/predictions.cleaned.txt > $OUTPUT_DIR/scores.txt
 conda deactivate
 
-################################ DGPT-MC ##############################################
-SYSTEM_NAME=DialoGPT-finetuned
+################################ DGPT norep5 ##############################################
+SYSTEM_NAME=DialoGPT-outofthebox-norep5
 OUTPUT_DIR="$EXP_DIR/$SYSTEM_NAME"
 
-# Decode
+Decode
 module load python/3.8
 source .venv/bin/activate
-python decode.py -i $INPUTS_PATH -m "models/DialoGPT-finetuned-multiCONAN" -o $OUTPUT_DIR
+python decode.py -i $INPUTS_PATH -m "microsoft/DialoGPT-medium" -o $OUTPUT_DIR -co "no_repeat_ngram_size=5"
 deactivate
 module remove python/3.8
 
@@ -106,14 +88,58 @@ echo "Evaluating predictions from $OUTPUT_DIR/predictions.cleaned.txt against re
 python general_conv_reddit/evaluate.py --refs_dir $REFS_DIR --hyp_file $OUTPUT_DIR/predictions.cleaned.txt > $OUTPUT_DIR/scores.txt
 conda deactivate
 
-################################ Human ##############################################
-SYSTEM_NAME=Human
+################################ DGPT-MC norep5 #################################
+SYSTEM_NAME=DialoGPT-finetuned-norep5
 OUTPUT_DIR="$EXP_DIR/$SYSTEM_NAME"
+
+# Decode
+module load python/3.8
+source .venv/bin/activate
+python decode.py -i $INPUTS_PATH -m "models/DialoGPT-finetuned-multiCONAN" -o $OUTPUT_DIR -co "no_repeat_ngram_size=5"
+deactivate
+module remove python/3.8
 
 # Evaluate
 conda activate LSP
-echo "Evaluating predictions from $OUTPUT_DIR/predictions.txt against references in $REFS_DIR"
-python general_conv_reddit/evaluate.py --refs_dir $REFS_DIR --hyp_file $OUTPUT_DIR/predictions.txt > $OUTPUT_DIR/scores.txt
+python general_conv_reddit/util/clean-str.py $OUTPUT_DIR/predictions.txt
+echo "Evaluating predictions from $OUTPUT_DIR/predictions.cleaned.txt against references in $REFS_DIR"
+python general_conv_reddit/evaluate.py --refs_dir $REFS_DIR --hyp_file $OUTPUT_DIR/predictions.cleaned.txt > $OUTPUT_DIR/scores.txt
+conda deactivate
+
+################################ DGPT norep6 ##############################################
+SYSTEM_NAME=DialoGPT-outofthebox-norep6
+OUTPUT_DIR="$EXP_DIR/$SYSTEM_NAME"
+
+Decode
+module load python/3.8
+source .venv/bin/activate
+python decode.py -i $INPUTS_PATH -m "microsoft/DialoGPT-medium" -o $OUTPUT_DIR -co "no_repeat_ngram_size=6"
+deactivate
+module remove python/3.8
+
+# Evaluate
+conda activate LSP
+python general_conv_reddit/util/clean-str.py $OUTPUT_DIR/predictions.txt
+echo "Evaluating predictions from $OUTPUT_DIR/predictions.cleaned.txt against references in $REFS_DIR"
+python general_conv_reddit/evaluate.py --refs_dir $REFS_DIR --hyp_file $OUTPUT_DIR/predictions.cleaned.txt > $OUTPUT_DIR/scores.txt
+conda deactivate
+
+################################ DGPT-MC norep6 #################################
+SYSTEM_NAME=DialoGPT-finetuned-norep6
+OUTPUT_DIR="$EXP_DIR/$SYSTEM_NAME"
+
+# Decode
+module load python/3.8
+source .venv/bin/activate
+python decode.py -i $INPUTS_PATH -m "models/DialoGPT-finetuned-multiCONAN" -o $OUTPUT_DIR -co "no_repeat_ngram_size=6"
+deactivate
+module remove python/3.8
+
+# Evaluate
+conda activate LSP
+python general_conv_reddit/util/clean-str.py $OUTPUT_DIR/predictions.txt
+echo "Evaluating predictions from $OUTPUT_DIR/predictions.cleaned.txt against references in $REFS_DIR"
+python general_conv_reddit/evaluate.py --refs_dir $REFS_DIR --hyp_file $OUTPUT_DIR/predictions.cleaned.txt > $OUTPUT_DIR/scores.txt
 conda deactivate
 
 
