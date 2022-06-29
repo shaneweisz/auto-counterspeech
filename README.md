@@ -167,11 +167,12 @@ cpan install XML:Twig Sort:Naturally String:Util
 
 ### Evaluation
 
-To reproduce the experimental results:
+To evaluate a set of predictions:
 
 ```
 cd general_conv_reddit
-bash run-experiments.sh [experiment_dir]
+python util/clean-str.py path_to_predictions.txt
+python evaluate.py --refs_dir path_to_refs_dir --hyp_file path_to_predictions.cleaned.txt
 ```
 
-where `experiment_dir` is the relative path from `general_conv_reddit` to a directory containing the relevant `predictions.txt` files.
+Note: `clean-str.py` tokenizes a set of predictions into a cleaned format expected by the `evaluate.py` script.

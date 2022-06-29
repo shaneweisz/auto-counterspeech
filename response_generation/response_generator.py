@@ -7,16 +7,16 @@ from .min_new_tokens import MinNewTokensLogitsProcessor
 
 
 class ResponseGenerator:
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-
     def __init__(self, pretrained_model_name_or_path: str, decoding_config: Dict[str, Any], seed=42, verbose=True):
+        self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         self.model = AutoModelForCausalLM.from_pretrained(pretrained_model_name_or_path).to(self.device)
         self.tokenizer = AutoTokenizer.from_pretrained(pretrained_model_name_or_path)
-        if "pad_token" not in self.tokenizer.special_tokens_map:
-            self.tokenizer.pad_token = self.tokenizer.eos_token  # A pad token needs to be set for batch decoding
         self.decoding_config = decoding_config
         self.verbose = verbose
         torch.manual_seed(seed)
+
+        if "pad_token" not in self.tokenizer.special_tokens_map:
+            self.tokenizer.pad_token = self.tokenizer.eos_token # set a pad token to enable batch decoding
 
     def generate_responses(self, inputs: List[str], batch_size=1) -> List[str]:
         responses = []
@@ -60,7 +60,10 @@ class ResponseGenerator:
         return params_for_generate
 
     def respond(self, input_text: str) -> str:
-        """Respond to a single hate speech input."""
+        """Respond to an input text, which can be a single utterance or a history of utterances from a conversation.
+
+        For a conversation, `input_text` should be a list of utterances separated by `<|endoftext|>` tokens.
+        """
         return self.generate_responses([input_text])[0]
 
     def interact(self):

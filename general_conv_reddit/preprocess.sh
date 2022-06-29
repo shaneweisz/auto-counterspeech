@@ -1,11 +1,17 @@
 # This script
-# 1) extracts inputs.6k.txt from refs.6k.txt
+# 1a) extracts inputs.6k.txt from refs.6k.txt
+# 1b) replaces EOS with <|endoftext|> in inputs.6k.txt as expected by DialoGPT
 # 2) separates refs.6k.txt to individual files in refs directory
 
 DATA_DIR=data
 
-# 1)
-cat $DATA_DIR/test.refs.txt | cut -f 1 > $DATA_DIR/inputs.6k.txt
+# 1a)
+cat $DATA_DIR/test.refs.txt | cut -f 1 > $DATA_DIR/inputs.orig.6k.txt
+
+# 1b)
+#  replaces EOS with <|endoftext|> in inputs.6k.txt as expected by DialoGPT
+sed -i 's/ EOS / <\|endoftext\|> /g' $DATA_DIR/inputs.6k.txt
+
 
 # 2)
 mkdir -p $DATA_DIR/refs

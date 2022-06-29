@@ -1,8 +1,8 @@
-Date: 2022-06-28 13-59-38
+Date: 2022-06-29 13-43-35
 Args:
 	model_name_or_path: microsoft/DialoGPT-medium
 	decoding_config_path: config/decode.config.json
-	inputs_path: general_conv_reddit/inputs.6k.txt
+	inputs_path: general_conv_reddit/data/inputs.6k.txt
 	batch_size: 16
 	output_dir: general_conv_reddit/experiments/DialoGPT-vs-Finetuned-vs-Human/DialoGPT-outofthebox
 	config_overrides: 
