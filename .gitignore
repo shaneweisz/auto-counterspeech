@@ -138,7 +138,7 @@ tmp*
 metrics/fluency/cola_model
 wandb
 models
-*slurm*
+slurm_logs
 
 # hacky shell scripts
 experiments/fix-eval-formatting.sh

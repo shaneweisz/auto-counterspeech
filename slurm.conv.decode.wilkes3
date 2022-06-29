@@ -1,0 +1,127 @@
+#!/bin/bash
+#SBATCH -J conv
+#SBATCH -A MLMI-SW984-SL2-GPU
+#! How many whole nodes should be allocated?
+#SBATCH --nodes=1
+#! How many (MPI) tasks will there be in total?
+#! Note probably this should not exceed the total number of GPUs in use.
+#SBATCH --ntasks=1
+#! Specify the number of GPUs per node (between 1 and 4; must be 4 if nodes>1).
+#! Note that the job submission script will enforce no more than 32 cpus per GPU.
+#SBATCH --gres=gpu:1
+#SBATCH --time=02:00:00
+#SBATCH -p ampere
+#SBATCH --output=slurm_logs/%j.%x.out
+#SBATCH --error=slurm_logs/%j.%x.err
+
+#! Optionally modify the environment seen by the application
+#! (note that SLURM reproduces the environment at submission irrespective of ~/.bashrc):
+. /etc/profile.d/modules.sh                # Leave this line (enables the module command)
+module purge                               # Removes all modules still loaded
+module load rhel8/default-amp              # REQUIRED - loads the basic environment
+
+# Additional environment setup
+eval "$(conda shell.bash hook)"
+
+# Start logs
+echo -e "JobID: $SLURM_JOB_ID\n======"
+echo "Running on master node: `hostname`"
+echo "Start time: `date`"
+
+# Constants
+EXP_DIR="general_conv_reddit/experiments/DialoGPT-vs-Finetuned-vs-Human"
+DATA_DIR="general_conv_reddit/data"
+INPUTS_PATH="$DATA_DIR/inputs.6k.txt"
+REFS_DIR="$DATA_DIR/refs"
+
+################################ DGPT allowreps ##############################################
+SYSTEM_NAME=DialoGPT-outofthebox-allowreps
+OUTPUT_DIR="$EXP_DIR/$SYSTEM_NAME"
+
+# Decode
+# module load python/3.8
+# source .venv/bin/activate
+# python decode.py -i $INPUTS_PATH -m "microsoft/DialoGPT-medium" -o $OUTPUT_DIR -co "no_repeat_ngram_size=None"
+# deactivate
+# module remove python/3.8
+
+# Evaluate
+conda activate LSP
+python general_conv_reddit/util/clean-str.py $OUTPUT_DIR/predictions.txt
+echo "Evaluating predictions from $OUTPUT_DIR/predictions.cleaned.txt against references in $REFS_DIR"
+python general_conv_reddit/evaluate.py --refs_dir $REFS_DIR --hyp_file $OUTPUT_DIR/predictions.cleaned.txt > $OUTPUT_DIR/scores.txt
+conda deactivate
+
+################################ DGPT-MC allowreps #################################
+SYSTEM_NAME=DialoGPT-finetuned-allowreps
+OUTPUT_DIR="$EXP_DIR/$SYSTEM_NAME"
+
+# Decode
+module load python/3.8
+source .venv/bin/activate
+python decode.py -i $INPUTS_PATH -m "models/DialoGPT-finetuned-multiCONAN" -o $OUTPUT_DIR -co "no_repeat_ngram_size=None"
+deactivate
+module remove python/3.8
+
+# Evaluate
+conda activate LSP
+python general_conv_reddit/util/clean-str.py $OUTPUT_DIR/predictions.txt
+echo "Evaluating predictions from $OUTPUT_DIR/predictions.cleaned.txt against references in $REFS_DIR"
+python general_conv_reddit/evaluate.py --refs_dir $REFS_DIR --hyp_file $OUTPUT_DIR/predictions.cleaned.txt > $OUTPUT_DIR/scores.txt
+conda deactivate
+
+################################ DGPT ##############################################
+SYSTEM_NAME=DialoGPT-outofthebox
+OUTPUT_DIR="$EXP_DIR/$SYSTEM_NAME"
+
+# Decode
+module load python/3.8
+source .venv/bin/activate
+python decode.py -i $INPUTS_PATH -m "microsoft/DialoGPT-medium" -o $OUTPUT_DIR
+deactivate
+module remove python/3.8
+
+# Evaluate
+conda activate LSP
+python general_conv_reddit/util/clean-str.py $OUTPUT_DIR/predictions.txt
+echo "Evaluating predictions from $OUTPUT_DIR/predictions.cleaned.txt against references in $REFS_DIR"
+python general_conv_reddit/evaluate.py --refs_dir $REFS_DIR --hyp_file $OUTPUT_DIR/predictions.cleaned.txt > $OUTPUT_DIR/scores.txt
+conda deactivate
+
+################################ DGPT-MC ##############################################
+SYSTEM_NAME=DialoGPT-finetuned
+OUTPUT_DIR="$EXP_DIR/$SYSTEM_NAME"
+
+# Decode
+module load python/3.8
+source .venv/bin/activate
+python decode.py -i $INPUTS_PATH -m "models/DialoGPT-finetuned-multiCONAN" -o $OUTPUT_DIR
+deactivate
+module remove python/3.8
+
+# Evaluate
+conda activate LSP
+python general_conv_reddit/util/clean-str.py $OUTPUT_DIR/predictions.txt
+echo "Evaluating predictions from $OUTPUT_DIR/predictions.cleaned.txt against references in $REFS_DIR"
+python general_conv_reddit/evaluate.py --refs_dir $REFS_DIR --hyp_file $OUTPUT_DIR/predictions.cleaned.txt > $OUTPUT_DIR/scores.txt
+conda deactivate
+
+################################ Human ##############################################
+SYSTEM_NAME=Human
+OUTPUT_DIR="$EXP_DIR/$SYSTEM_NAME"
+
+# Evaluate
+conda activate LSP
+echo "Evaluating predictions from $OUTPUT_DIR/predictions.txt against references in $REFS_DIR"
+python general_conv_reddit/evaluate.py --refs_dir $REFS_DIR --hyp_file $OUTPUT_DIR/predictions.txt > $OUTPUT_DIR/scores.txt
+conda deactivate
+
+
+# Extract results
+module load python/3.8
+source .venv/bin/activate
+cd general_conv_reddit
+bash extract-experiment-results.sh "experiments/DialoGPT-vs-Finetuned-vs-Human"
+
+# Final logs
+echo "Finish time: `date`"
