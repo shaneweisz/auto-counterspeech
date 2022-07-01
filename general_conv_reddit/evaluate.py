@@ -295,7 +295,9 @@ def main():
     else:
         refs_files = list(map(str, Path(args.refs_dir).glob("ref_*.txt")))
     # print("references: ", refs_files)
-    nist, bleu, meteor, entropy, div, avg_len = nlp_metrics(refs_files, args.hyp_file, args.fld_out)
+
+    fld_out = args.fld_out + "/" + str(Path(args.hyp_file).parent.stem)
+    nist, bleu, meteor, entropy, div, avg_len = nlp_metrics(refs_files, args.hyp_file, fld_out)
 
     print("NIST-2:", nist[1])
     print("NIST-4:", nist[3])

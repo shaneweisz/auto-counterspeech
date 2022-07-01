@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH -J conv
+#SBATCH -J temp_batch
 #SBATCH -A MLMI-SW984-SL2-GPU
 #! How many whole nodes should be allocated?
 #SBATCH --nodes=1
@@ -11,8 +11,9 @@
 #SBATCH --gres=gpu:1
 #SBATCH --time=04:00:00
 #SBATCH -p ampere
-#SBATCH --output=slurm_logs/%j.%x.out
-#SBATCH --error=slurm_logs/%j.%x.err
+#SBATCH --output=slurm_logs/%j.%x_%a.out
+#SBATCH --error=slurm_logs/%j.%x_%a.err
+#SBATCH --array=0
 
 #! Optionally modify the environment seen by the application
 #! (note that SLURM reproduces the environment at submission irrespective of ~/.bashrc):
@@ -29,19 +30,26 @@ echo "Running on master node: `hostname`"
 echo "Start time: `date`"
 
 # Constants
-EXP_DIR="general_conv_reddit/experiments/MinLen"
+EXP_NAME="Finetuned-vs-Baselines"
+EXP_DIR="general_conv_reddit/experiments/$EXP_NAME"
 DATA_DIR="general_conv_reddit/data"
 INPUTS_PATH="$DATA_DIR/inputs.6k.txt"
 REFS_DIR="$DATA_DIR/refs"
 
-################################ DGPT minlen20 norep3 ##############################################
-SYSTEM_NAME=DialoGPT-outofthebox-minlen20-norep3
+NO_REP=5
+MIN_LEN=12
+
+MODEL_NAME=models/DialoGPT-finetuned-multiCONAN
+MODEL_SHORTHAND=DGPT-MC
+
+##############################################################################
+SYSTEM_NAME=$MODEL_SHORTHAND-minlen$MIN_LEN-norep$NO_REP
 OUTPUT_DIR="$EXP_DIR/$SYSTEM_NAME"
 
 # Decode
 module load python/3.8
 source .venv/bin/activate
-python decode.py -i $INPUTS_PATH -m "microsoft/DialoGPT-medium" -o $OUTPUT_DIR -co "no_repeat_ngram_size=3;min_new_tokens=20"
+python decode.py -i $INPUTS_PATH -m $MODEL_NAME -o $OUTPUT_DIR -co "no_repeat_ngram_size=$NO_REP;min_new_tokens=$MIN_LEN"
 deactivate
 module remove python/3.8
 
@@ -52,30 +60,13 @@ echo "Evaluating predictions from $OUTPUT_DIR/predictions.cleaned.txt against re
 python general_conv_reddit/evaluate.py --refs_dir $REFS_DIR --hyp_file $OUTPUT_DIR/predictions.cleaned.txt > $OUTPUT_DIR/scores.txt
 conda deactivate
 
-################################ DGPT-MC minlen20 norep3 #################################
-SYSTEM_NAME=DialoGPT-finetuned-minlen20-norep3
-OUTPUT_DIR="$EXP_DIR/$SYSTEM_NAME"
-
-# Decode
-module load python/3.8
-source .venv/bin/activate
-python decode.py -i $INPUTS_PATH -m "models/DialoGPT-finetuned-multiCONAN" -o $OUTPUT_DIR -co "no_repeat_ngram_size=3;min_new_tokens=20"
-deactivate
-module remove python/3.8
-
-# Evaluate
-conda activate LSP
-python general_conv_reddit/util/clean-str.py $OUTPUT_DIR/predictions.txt
-echo "Evaluating predictions from $OUTPUT_DIR/predictions.cleaned.txt against references in $REFS_DIR"
-python general_conv_reddit/evaluate.py --refs_dir $REFS_DIR --hyp_file $OUTPUT_DIR/predictions.cleaned.txt > $OUTPUT_DIR/scores.txt
-conda deactivate
-
+##############################################################################
 
 # Extract results
 module load python/3.8
 source .venv/bin/activate
 cd general_conv_reddit
-bash extract-experiment-results.sh "experiments/DialoGPT-vs-Finetuned-vs-Human"
+bash extract-experiment-results.sh "experiments/$EXP_NAME"
 
 # Final logs
 echo "Finish time: `date`"
