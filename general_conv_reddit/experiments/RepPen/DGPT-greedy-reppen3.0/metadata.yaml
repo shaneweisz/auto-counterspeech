@@ -1,8 +1,8 @@
-Date: 2022-07-01 15-13-05
+Date: 2022-07-01 15-43-38
 Args:
 	model_name_or_path: microsoft/DialoGPT-medium
 	decoding_config_path: config/decode.config.json
 	inputs_path: general_conv_reddit/data/inputs.6k.txt
 	batch_size: 16
 	output_dir: general_conv_reddit/experiments/RepPen/DGPT-greedy-reppen3.0
-	config_overrides: repetition_penalty=3.0;num_beams=1
+	config_overrides: repetition_penalty=3.0;num_beams=1;no_repeat_ngram_size=None

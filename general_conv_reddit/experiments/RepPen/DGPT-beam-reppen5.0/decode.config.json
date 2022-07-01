@@ -1,1 +1,1 @@
-{"max_new_tokens": 100, "no_repeat_ngram_size": 3, "num_beams": 10, "repetition_penalty": 5.0}
+{"max_new_tokens": 100, "no_repeat_ngram_size": null, "num_beams": 10, "repetition_penalty": 5.0}
