@@ -1,8 +1,0 @@
-Date: 2022-06-29 20-09-05
-Args:
-	model_name_or_path: microsoft/DialoGPT-medium
-	decoding_config_path: config/decode.config.json
-	inputs_path: general_conv_reddit/data/inputs.6k.txt
-	batch_size: 16
-	output_dir: general_conv_reddit/experiments/Temperature/DialoGPT-outofthebox-temp1_5
-	config_overrides: no_repeat_ngram_size=None;temp=1.5

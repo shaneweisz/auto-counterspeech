@@ -1,0 +1,6 @@
+mteval-v14c.pl returns unexpected message
+cmd = ['perl', 'general_conv_reddit/metrics/mteval-v14.pl', '-s', 'tmp/src.xml', '-t', 'tmp/hyp.xml', '-r', 'tmp/ref.xml']
+MT evaluation scorer began on 2022 Jun 30 at 16:50:06
+
+command line:  general_conv_reddit/metrics/mteval-v14.pl -s tmp/src.xml -t tmp/hyp.xml -r tmp/ref.xml
+

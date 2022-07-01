@@ -1,7 +1,7 @@
 Model,NIST-2,NIST-4,BLEU-2(%),BLEU-4(%),METEOR(%),Ent-4,Dist-1(%),Dist-2(%),AvgLen
-DialoGPT-outofthebox-temp3,1.12,1.16,22.5,9.14,8.98,9.68,13.66,49.97,7.57
-DialoGPT-outofthebox-temp1_2,1.12,1.16,22.5,9.14,8.98,9.68,13.66,49.97,7.57
-DialoGPT-outofthebox-temp2,1.12,1.16,22.5,9.14,8.98,9.68,13.66,49.97,7.57
-DialoGPT-outofthebox-temp1,1.12,1.16,22.5,9.14,8.98,9.68,13.66,49.97,7.57
-DialoGPT-outofthebox-temp0.5,1.12,1.16,22.5,9.14,8.98,9.68,13.66,49.97,7.57
-DialoGPT-outofthebox-temp1_5,1.12,1.16,22.5,9.14,8.98,9.68,13.66,49.97,7.57
+DialoGPT-outofthebox-norep5,0.15,0.16,19.73,6.84,7.65,8.85,13.02,42.52,5.48
+DialoGPT-outofthebox-norep5-temp2,0.15,0.16,19.73,6.84,7.65,8.85,13.02,42.52,5.48
+DialoGPT-outofthebox-norep5-temp1_2,,,,,,,,,
+DialoGPT-outofthebox-norep5-temp1_5,,,,,,,,,
+DialoGPT-outofthebox-norep5-temp3,0.15,0.16,19.73,6.84,7.65,8.85,13.02,42.52,5.48
+DialoGPT-outofthebox-norep5-temp0_5,0.15,0.16,19.73,6.84,7.65,8.85,13.02,42.52,5.48
