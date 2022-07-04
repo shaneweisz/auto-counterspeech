@@ -1,0 +1,8 @@
+Date: 2022-07-04 15-44-47
+Args:
+	model_name_or_path: microsoft/DialoGPT-medium
+	decoding_config_path: config/decode.config.json
+	inputs_path: general_conv_reddit/data/inputs.6k.txt
+	batch_size: 16
+	output_dir: general_conv_reddit/experiments/DiverseBeam/DGPT-beamgrps2-divpen1.0-minlen12
+	config_overrides: min_new_tokens=12;num_beam_groups=2;diversity_penalty=1.0;num_beams=10;no_repeat_ngram_size=5
