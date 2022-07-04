@@ -43,10 +43,15 @@ python preprocess.py -i data/unprocessed/<data>.csv [-o <output_file_path>]
 
 ### Train-Val-Test Split
 
-To replicate the train-val-test split, run:
+To replicate the multi-conan train-val-test split, run:
 
 ```bash
-python split_train_val_test.py -i <path_to_csv> -o <output_dir>
+python split_multiconan.py -i <path_to_multiconan_csv> -o <output_dir>
+```
+
+To replicate the gab or reddit train-val-test split, run:
+```bash
+python split_gab.py -i <path_to_gab_csv> -o <output_dir>
 ```
 
 ### Exploratory Data Analysis (EDA)
