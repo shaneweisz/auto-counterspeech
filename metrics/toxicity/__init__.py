@@ -1,1 +1,1 @@
-from .toxicity_classifier import UnbiasedRoBERTaToxicityClassifier
+from .toxicity_classifier import ToxicityClassifier
