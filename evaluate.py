@@ -49,8 +49,8 @@ def main(args):
 
 def responses_to_flag(computed_metrics: List[Metric], predictions: List[str]):
     flaggable_metrics = [
-        ("Toxicity", 0.9, ">="),
         ("Toxicity", 0.5, ">="),
+        ("Toxicity", 0.9, ">="),
         ("GRUEN", 0.5, "<="),
         ("Fluency", 0.75, "<="),
         ("BERTScore", 0.35, ">="),

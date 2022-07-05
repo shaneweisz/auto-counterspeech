@@ -11,8 +11,9 @@
 #SBATCH --gres=gpu:1
 #SBATCH --time=02:00:00
 #SBATCH -p ampere
-#SBATCH --output=slurm_logs/%j.%x.out
-#SBATCH --error=slurm_logs/%j.%x.err
+#SBATCH --output=slurm_logs/%j.%x_%a.out
+#SBATCH --error=slurm_logs/%j.%x_%a.err
+#SBATCH --array=0-3
 
 #! Optionally modify the environment seen by the application
 #! (note that SLURM reproduces the environment at submission irrespective of ~/.bashrc):
@@ -29,26 +30,29 @@ echo -e "JobID: $SLURM_JOB_ID\n======"
 echo "Running on master node: `hostname`"
 echo "Start time: `date`"
 
-# New experiments
-################################
-EXP_DIR="experiments/dialoGPT-finetuned-vs-baselines"
+#################################
 
-# Baseline experiments
-# ################################
+EXP_DIR="experiments/DGPT-MC-vs-baselines"
+NO_REP=5
 
-OUTPUT_DIR="$EXP_DIR/DialoGPT-outofthebox"
-python decode.py -m "microsoft/DialoGPT-medium" -o $OUTPUT_DIR
-python evaluate.py -p "$OUTPUT_DIR/predictions.txt" -v
+#################################
 
-OUTPUT_DIR="$EXP_DIR/DialoGPT-finetuned"
-python decode.py -o $OUTPUT_DIR
-python evaluate.py -p "$OUTPUT_DIR/predictions.txt" -v
+SYSTEM_NAMES=(DGPT-norep$NO_REP DGPT-MC-norep$NO_REP GPS Gold-standard)
+MODEL_NAMES=(microsoft/DialoGPT-medium models/DialoGPT-finetuned-multiCONAN NA NA)
+DECODE_OR_NOT_ARRAY=(false false false false) #(true true false false)
 
-OUTPUT_DIR="$EXP_DIR/GPS"
-python evaluate.py -p "$OUTPUT_DIR/predictions.txt" -v
+SYSTEM_NAME=${SYSTEM_NAMES[$SLURM_ARRAY_TASK_ID]}
+MODEL_NAME=${MODEL_NAMES[$SLURM_ARRAY_TASK_ID]}
+SHOULD_DECODE=${DECODE_OR_NOT_ARRAY[$SLURM_ARRAY_TASK_ID]}
 
-OUTPUT_DIR="$EXP_DIR/Gold-standard"
-python evaluate.py -p "$OUTPUT_DIR/predictions.txt" -v
+OUTPUT_DIR="$EXP_DIR/$SYSTEM_NAME"
+if [ $SHOULD_DECODE = true ]; then
+    CONFIG_OVERRIDES="no_repeat_ngram_size=$NO_REP"
+    python decode.py -m $MODEL_NAME -o $OUTPUT_DIR -co $CONFIG_OVERRIDES
+fi
+
+PREDICTIONS_FILE="$OUTPUT_DIR/predictions.txt"
+python evaluate.py -p $PREDICTIONS_FILE -v
 
 ################################
 
