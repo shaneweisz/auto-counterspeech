@@ -1,8 +1,0 @@
-Date: 2022-07-01 10-49-41
-Args:
-	model_name_or_path: models/DialoGPT-finetuned-multiCONAN
-	decoding_config_path: config/decode.config.json
-	inputs_path: general_conv_reddit/data/inputs.6k.txt
-	batch_size: 16
-	output_dir: general_conv_reddit/experiments/Finetuned-vs-Baselines/DGPT-MC-greedy-norep5
-	config_overrides: no_repeat_ngram_size=5;num_beams=1

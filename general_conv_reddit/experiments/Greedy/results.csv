@@ -1,9 +1,0 @@
-Model,NIST-2,NIST-4,BLEU-2(%),BLEU-4(%),METEOR(%),Ent-4,Dist-1(%),Dist-2(%),AvgLen
-DialoGPT-outofthebox-greedy-norep5-minlen12,2.99,3.04,15.62,3.8,10.43,9.81,5.88,24.19,15.7
-DialoGPT-outofthebox-greedy-norep5-minlen10,3.1,3.15,16.21,4.0,10.23,9.65,6.21,25.04,14.23
-DialoGPT-outofthebox-greedy-norep3,2.85,2.88,15.88,3.13,9.38,9.2,6.81,26.16,11.49
-DialoGPT-outofthebox-greedy-norep5,3.01,3.06,17.32,4.49,9.71,9.23,6.98,26.93,11.52
-DialoGPT-outofthebox-greedy-norep6,3.03,3.09,17.46,4.6,9.78,9.23,7.1,27.24,11.53
-DialoGPT-outofthebox-greedy-allowreps,3.12,3.19,17.82,5.39,9.93,9.22,7.15,27.39,11.74
-DialoGPT-outofthebox-greedy-norep4,2.94,2.99,16.86,3.99,9.61,9.21,6.93,26.61,11.46
-DialoGPT-outofthebox-greedy-norep8,3.06,3.12,17.69,4.99,9.85,9.23,7.17,27.46,11.52

@@ -1,8 +1,0 @@
-Date: 2022-06-29 19-34-26
-Args:
-	model_name_or_path: microsoft/DialoGPT-medium
-	decoding_config_path: config/decode.config.json
-	inputs_path: general_conv_reddit/data/inputs.6k.txt
-	batch_size: 16
-	output_dir: general_conv_reddit/experiments/Greedy/DialoGPT-outofthebox-greedy-norep5
-	config_overrides: no_repeat_ngram_size=5;num_beams=1

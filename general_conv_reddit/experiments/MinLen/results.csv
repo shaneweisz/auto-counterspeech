@@ -1,6 +1,0 @@
-Model,NIST-2,NIST-4,BLEU-2(%),BLEU-4(%),METEOR(%),Ent-4,Dist-1(%),Dist-2(%),AvgLen
-DialoGPT-outofthebox-minlen20-norep3,2.98,3.02,14.98,3.21,11.28,10.22,5.77,24.53,18.51
-DialoGPT-outofthebox-minlen12-norep5,3.49,3.57,19.87,5.88,10.6,10.04,9.01,34.96,11.69
-DialoGPT-outofthebox-minlen11-norep5,3.22,3.29,20.37,5.98,10.41,9.97,9.41,35.89,10.87
-DialoGPT-outofthebox-minlen10-norep5,2.78,2.85,21.21,6.54,10.23,9.87,9.87,37.11,10.0
-DialoGPT-finetuned-minlen20-norep3,2.83,2.86,12.99,2.42,11.13,9.92,6.18,25.98,20.4

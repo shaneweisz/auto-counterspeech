@@ -1,8 +1,0 @@
-Date: 2022-07-06 12-52-54
-Args:
-	model_name_or_path: models/DialoGPT-finetuned-gab-then-multiCONAN
-	decoding_config_path: config/decode.config.json
-	inputs_path: general_conv_reddit/data/inputs.6k.txt
-	batch_size: 16
-	output_dir: general_conv_reddit/experiments/Gab/DGPT-Gab-MC-norep5
-	config_overrides: no_repeat_ngram_size=5
