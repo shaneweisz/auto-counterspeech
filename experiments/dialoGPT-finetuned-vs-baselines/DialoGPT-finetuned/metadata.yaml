@@ -1,8 +1,0 @@
-Date: 2022-06-27 16-36-30
-Args:
-	model_name_or_path: models/DialoGPT-finetuned-multiCONAN
-	decoding_config_path: config/decode.config.json
-	inputs_path: evaluation/test.inputs.txt
-	batch_size: 16
-	output_dir: experiments/dialoGPT-finetuned-vs-baselines/DialoGPT-finetuned
-	config_overrides: 

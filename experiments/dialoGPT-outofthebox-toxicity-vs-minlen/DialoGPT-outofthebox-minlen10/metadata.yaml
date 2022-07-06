@@ -1,8 +1,0 @@
-Date: 2022-06-20 13-49-38
-Args:
-	model_name_or_path: microsoft/DialoGPT-medium
-	decoding_config_path: config/decode.config.json
-	inputs_path: evaluation/test.inputs.txt
-	batch_size: 16
-	experiment_name: toxicity-vs-minlen/DialoGPT-outofthebox-minlen10
-	config_overrides: min_new_tokens=10
