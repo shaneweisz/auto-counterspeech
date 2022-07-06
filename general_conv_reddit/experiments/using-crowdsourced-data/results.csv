@@ -1,0 +1,4 @@
+Model,NIST-2,NIST-4,BLEU-2(%),BLEU-4(%),METEOR(%),Ent-4,Dist-1(%),Dist-2(%),AvgLen
+DGPT-MC-beam-minlen12-norep5,3.33,3.38,16.33,4.17,10.9,9.89,8.46,33.37,14.97
+DGPT-Gab-MC-norep5,3.03,3.07,14.36,3.38,10.01,9.36,7.52,28.57,14.33
+DGPT-Gab-norep5,1.67,1.67,5.36,0.11,6.15,3.3,0.22,0.35,18.69
