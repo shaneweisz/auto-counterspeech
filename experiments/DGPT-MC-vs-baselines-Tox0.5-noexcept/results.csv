@@ -1,5 +1,0 @@
-Model,Fluency(%),Toxicity(%),BERTScore(%),Dist-2(%),AvgLen
-Gold-standard,95.4,4.8,N/A,56.8,24.7
-DGPT-norep5,95.2,7.6,9.9,26.3,4.6
-DGPT-MC-norep5,98.8,9.8,17.8,24.9,10.4
-GPS,74.9,16.6,7.9,40.6,20.8

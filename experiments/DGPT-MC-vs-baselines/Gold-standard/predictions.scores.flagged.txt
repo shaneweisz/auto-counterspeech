@@ -1,11 +1,37 @@
 ===============================
-Responses with Toxicity >= 0.5:
-===============================
-440,0.988,You may be living in a society of imbeciles, but this doesn't give you the right to criticise all Muslims.
-===============================
 Responses with Toxicity >= 0.9:
 ===============================
+19,0.992,They were smart enough understand the true nature of Nazi Germany. Those you called idiots fought with their whole lives for people's freedom.
+177,0.919,I do not know why you would describe gay people as insane. If you were told to go back in the closet you would probably go insane too.
+271,0.921,Islam is a religion of peace. I wouldn't say any religion is trash.
 440,0.988,You may be living in a society of imbeciles, but this doesn't give you the right to criticise all Muslims.
+===============================
+Responses with Toxicity >= 0.5:
+===============================
+15,0.721,Violent people are not always Muslim, and violent Muslims exist just as violent Christians do.
+19,0.992,They were smart enough understand the true nature of Nazi Germany. Those you called idiots fought with their whole lives for people's freedom.
+37,0.774,You are being cruel. You are accusing Muslims of harboring rape fantasies. This is not how Muslims in the UK think.
+41,0.724,Why do so many British people associate Muslims with rape? Islam is about sharing values, tolerance and understanding. It is not about sharing non-consensual sex.
+54,0.896,Fag, or faggot, is not a code word for gay, it's a slur. If you wanted to call them by their original name, that would be a problem, because you will have to learn the first names of many people.
+62,0.535,Rape is always a crime, regardless of the religion of the rapist. This discrimination shouldn't continue.
+92,0.552,Do you really think it is fair to restrict people's existence just because they are trans or because of their genitalia?
+128,0.523,Not all people are "civilised" in Europe. Some are deeply racist and sexist.
+147,0.849,This is not true. Being gay is not synonymous with being bisexual, pansexual, intersex, transgender, queer, deviant, lesbian, tranny, queermetaphysical, or whatever term you want to use... We should try to respect people for who they are instead.
+171,0.762,The people you are referring to are rapists and drug dealers, not migrants.
+177,0.919,I do not know why you would describe gay people as insane. If you were told to go back in the closet you would probably go insane too.
+210,0.663,It's not going to do you any good to think about a Muslim massacre.
+269,0.806,Do you really think all the immigrants that enter the US are rapists, sexual predators, or just plain lazy? Can you provide any statistics on that?
+271,0.921,Islam is a religion of peace. I wouldn't say any religion is trash.
+306,0.649,Homosexuality is a way of loving, not a disease. To suggest that being gay is a health risk is just scaremongering.
+314,0.521,The sad truth is that homosexuals are more likely to abuse drugs and alcohol (as a reaction to homophobia, discrimination, or violence they experienced).
+341,0.802,It's a myth that all Muslims are terrorists. We need to understand that all religions have had terrorists in them.
+357,0.766,Are you calling for the total extermination of the black population? Do you know that what you suggest is completely illegal and hate crime?
+374,0.790,The statement 'black people are subhuman' is not true. They are human beings with a human value.
+375,0.695,The Roma do not deserve hatred, discrimination and violence.
+396,0.518,I find it hard to accept that Islam is dangerous, when most Muslim have nothing to do with terrorism.
+440,0.988,You may be living in a society of imbeciles, but this doesn't give you the right to criticise all Muslims.
+454,0.629,So are you saying that because black people are different from whites, they are inferior? I would be interested in knowing which parameters you would use to measure this alleged 'inferiority'.
+491,0.835,While anal sex may be a more high risk practice than vaginal \(due to the lack of mucus\) that is not a reason to ban gay men, since other groups can also engage in anal sex.
 ===============================
 Responses with Fluency <= 0.75:
 ===============================
@@ -71,7 +97,7 @@ Responses with BERTScore >= 0.35:
 32,1.000,Being soft and emotional is not a bad thing in itself. And it is not an attribute of only women.
 33,0.999,This is an attack on a specific community. If you consider them incompatible with modern culture, it is very likely that the incompatibility comes out of a racist branch of modern culture.
 34,1.000,You have an impression. Many Jews operate in this field of finance, TV and so on, but that doesn't mean that they control it.
-35,0.999,The solution to Islamophobia is to stop Islamophobia. It is not to ban Muslims.
+35,1.000,The solution to Islamophobia is to stop Islamophobia. It is not to ban Muslims.
 36,1.000,Women are obliged to obey the laws and rules of society, just as men are obliged to obey the laws and rules of society. Not to their partners'.
 37,1.000,You are being cruel. You are accusing Muslims of harboring rape fantasies. This is not how Muslims in the UK think.
 38,1.000,We are all guilty of this if we fail to condemn hate.
@@ -127,7 +153,7 @@ Responses with BERTScore >= 0.35:
 88,1.000,Islam is a religion of peace, it is important that people feel at home here. How would you feel if the government banned your religion today?
 89,1.000,The concept of 'religion of death and rape' is a distortion of how people understand the religion.
 90,1.000,Jews suffered and have been persecuted more than anyone else, even though they are only a tiny part of the world's population. Nonetheless a few of them are still around and alive: maybe this really is the "problem" for some antisemites.
-91,1.000,Islam is not about oppressing women. Instead it is about love and respect for all human beings.
+91,1.001,Islam is not about oppressing women. Instead it is about love and respect for all human beings.
 92,1.000,Do you really think it is fair to restrict people's existence just because they are trans or because of their genitalia?
 93,1.000,Were the Nazis right?? Really??
 94,1.000,Women tend to do the majority of housework while having a job outside as well. If by 'childlike' you mean having to be creative because of multitasking and managing their whole family, yes, otherwise, there is no doubt about the extra workload women are handling in the rigours of modern life.
@@ -163,12 +189,12 @@ Responses with BERTScore >= 0.35:
 124,1.000,LGBT people are people, and deserve the full and equal human rights of all other citizens.
 125,1.000,Why should we? All religions are welcome here.
 126,1.000,They are not subhuman, they are just people with different sexual orientations.
-127,1.000,Not all terrorist attacks are caused by Muslims. And not all Muslims are terrorists.
+127,1.001,Not all terrorist attacks are caused by Muslims. And not all Muslims are terrorists.
 128,0.999,Not all people are "civilised" in Europe. Some are deeply racist and sexist.
 129,1.000,This is a myth, immigrants are not taking our jobs. In fact, immigration has been a huge success story for the US economy.
 130,1.000,If you want to change the way society works, then you should try to change the way you live. Some more respect would help you.
 131,1.000,So how come the media doesn't report about Jewish power in the financial world? Maybe it's because they also control the media, the government, and have many powerful friends working for the Galactic Republic... #sarcasm
-132,1.000,This is a personal view, and has nothing to do with Islam. Can you find some evidence or some studies to support your point of view?
+132,1.001,This is a personal view, and has nothing to do with Islam. Can you find some evidence or some studies to support your point of view?
 133,1.000,You are completely wrong. The West has always been about freedom and democracy. Freedom and democracy is the rule of law, and not Islam.
 134,1.000,If you had to pick one thing to be angry at, why would it be Islam religion? It is just a faith different to yours.
 135,1.000,We all have the right to our beliefs, we just have to accept people who believe in Islam.
@@ -188,7 +214,7 @@ Responses with BERTScore >= 0.35:
 149,1.001,Women are significantly more likely to be victims of violence, rather than perpetrators of crimes.
 150,1.000,I can argue that the 'trouble' of the past hundred years has more to do with extremism in general, rather than with a particular religion.
 151,1.000,Although the evidence is not present, it is hard to see why it would be harmful to children. Homosexuals may be able to feel more at home in a society that does not condemn homosexuality.
-152,1.000,As your words clearly show, obesity is perceived as the outcome of poor lifestyle decisions or weak power of will. This builds bias against obese people.
+152,0.999,As your words clearly show, obesity is perceived as the outcome of poor lifestyle decisions or weak power of will. This builds bias against obese people.
 153,1.000,I don't think we can be 'bad' if we want to live in a diverse and interactive society. If you really wanted that, you could start your own community.
 154,1.000,The English language is a very powerful language for spreading knowledge, experience and love. Why should we use it to spread hate?
 155,1.000,Islam is very far from being an ideology and it does not need serious reforms. There are many Muslims in our country that would welcome the opportunity to join the debate on faith and society.
@@ -259,7 +285,7 @@ Responses with BERTScore >= 0.35:
 220,1.000,The world is better off without antisemitism, racism, sexism, ableism and intolerance. Don't you think so?
 221,1.000,To live in a diverse and equal society encourages children into increased inclusiveness rather than radicalisation.
 222,1.000,The solution is not to keep the Mideast mired in civil war but to find and expose the terrorists that try to stoke fear and division among the populations.
-223,1.000,people who pose no threat (regardless of religion) should have their beliefs challenged but their rights respected
+223,1.001,people who pose no threat (regardless of religion) should have their beliefs challenged but their rights respected
 224,1.000,Does the 'solution' for the economic crisis revolve around paying the migrants to leave? It is not clear how this could solve to the real problems of our country.
 225,1.000,This is not true. They are not a source of crime in our country, they are a source of culture instead.
 226,1.000,There are enough empty homes in the UK for both migrants and veterans. Migrants deserve to be treated humanely. Try having some empathy. What if you had to expatriate and had to live in poor conditions?
@@ -331,7 +357,7 @@ Responses with BERTScore >= 0.35:
 292,1.000,Islam is a religion, usually peaceful coexisting with other cultures and religions. It promotes peace and justice and has a very positive impact on a lot of the world's societies.
 293,1.000,Let's look at the data: by 2020, over 40% of women in the US have encountered sexual violence. This is something to be scared of.
 294,1.000,What do you mean by being forced fed? I haven't seen anything like this.
-295,0.999,We should treat all people with dignity, regardless of their religion, culture, skin colour, or sexual orientation.
+295,1.000,We should treat all people with dignity, regardless of their religion, culture, skin colour, or sexual orientation.
 296,1.000,If we were to welcome refugees from the Middle East, Africa, and other countries with which we are not always culturally linked, then we would be welcomed by all. It's called 'reciprocation'!
 297,1.000,Hitler wanted to create a new racial elite in Europe, that would rule over all others. Do you really think that Jews are planning the same after what they suffered?
 298,1.000,Jews are not a 'detestable race'; they are a collection of people with different traditions from all over the world.
@@ -381,7 +407,7 @@ Responses with BERTScore >= 0.35:
 342,1.000,A statement like this only calls for misinformation. If you don't like the news, don't listen to the news. If you don't believe the news, seek the truth and examine your own experiences. If you feel judged for believing what you consider as nonsense, then find the courage to speak out.
 343,1.000,What exactly do you mean by 'killing'? The Jews are not 'diseased'. If you really cared about our children you could do some research and come up with some credible statistics showing the impact of anti-Semitism instead.
 344,1.000,There is a problem with Islam in this country, but the problem is not about Muslims. The problem is that people do not feel welcome here because of discrimination.
-345,1.000,We are proud to be an outward-looking country. We welcome people from all backgrounds, religions, and beliefs.
+345,0.999,We are proud to be an outward-looking country. We welcome people from all backgrounds, religions, and beliefs.
 346,1.000,If you want to isolate someone then there is only one "high-risk group" to focus on. It is made of all those who have frequent unprotected sex with different partners. Being gay does not make you a part of this by default.
 347,1.000,I wouldn't say that "women like bad men". What I would like to see is a man that is interested in a woman, respectful of women, and offers her more than an exchange of sexual favors. It would be nice if men had more respectful characteristics than sexual desire alone.
 348,1.000,By definition, refugees are fleeing out of fear for themselves and families, rather than thinking too much about their final destination. The majority still find safety in neighbouring countries.
@@ -503,7 +529,7 @@ Responses with BERTScore >= 0.35:
 464,1.000,Muslims already live in many European countries, and they are not banned. Why should we ban them from here?
 465,1.001,Islam is a religion. Do you actually think that it is safe to live in a country where people are persecuted for what they believe in?
 466,1.000,Not all Muslims are involved in terrorist activities. In fact many Muslims live in peaceful coexistence with their fellow citizens.
-467,1.001,The European Union is a much broader concept. It encompasses a huge range of people, including Muslims.
+467,1.000,The European Union is a much broader concept. It encompasses a huge range of people, including Muslims.
 468,1.000,Just because you dont like gays doesn't mean you have to hate them. What did they do to you? It seems to me that you still have all of your rights.
 469,0.999,Don't you agree that being inclusive towards immigrants is beneficial for the economy of the host country?
 470,1.000,A religion is only considered harmful or 'compromised' when someone is labelled, with eyes closed, a 'terrorist' for their faith.
