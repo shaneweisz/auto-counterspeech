@@ -22,7 +22,7 @@ AGREEMENT_PHRASES += [r"(I am|I'm) (with you|in agreement)"]
 AGREEMENT_PHRASES += [rf"({HATE_TARGET}) here, can confirm"]
 
 AGREEMENT_EXCEPTIONS = [
-    rf"I (don\'t|do not) (think|believe|feel|agree) (this is|it is|that is|that's|it's|you're|you are) ({ADVERB})?"
+    rf"I (don\'t|do not) (think|believe|feel|agree) (this is|it is|that is|that's|it's|you're|you are)({ADVERB})?"
     rf" (true|accurate|{AGREEMENT_NOUN})",
     r"If (.*?) then I agree",
     r"I agree (.*?) but",

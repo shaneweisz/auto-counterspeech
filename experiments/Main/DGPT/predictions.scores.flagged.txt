@@ -102,7 +102,7 @@ Responses with BERTScore >= 0.35:
 270,0.470,Islam is a religion.
 274,0.353,It's not an illness.
 341,0.457,They are all terrorists.
-384,0.406,He is an imam.
+384,0.407,He is an imam.
 445,0.379,I'm not racist.
 ==================================
 Responses with BERTScore <= -0.05:
