@@ -1,0 +1,8 @@
+Date: 2022-07-05 10-35-47
+Args:
+	model_name_or_path: microsoft/DialoGPT-medium
+	decoding_config_path: config/decode.config.json
+	inputs_path: evaluation/test.inputs.txt
+	batch_size: 16
+	output_dir: experiments/DGPT-MC-vs-baselines/DGPT-norep5
+	config_overrides: no_repeat_ngram_size=5

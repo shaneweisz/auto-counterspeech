@@ -1,0 +1,410 @@
+================================
+Responses with Toxicity >= 0.75:
+================================
+16,0.880,it is a myth that blacks are cruel and wanton. they are all many different people of a different and religion than less than others.
+27,0.971,black people are just criminals. they just need who want to have equal communities in the country.
+65,0.813,that is a myth that black people are less intelligent than other races,
+76,0.971,black people are just criminals. they just need who want to have equal communities in the country.
+89,1.000,islam is a peaceful religion. there is no place in the modern society. this is true.
+92,0.825,transgenders should have the right to love and treat them with every one.
+119,0.805,Islam is the worst of the worst of what? It is one of the religions of peace, and thus it can part of any modern democratic state.
+122,0.765,Not all rapists are black (and not all black people are rapist), just like not all murderers are black.
+132,0.793,it's not true that all muslims are terrorists! they just want to live a better life of their families just because they are different and few if if are a part of religion.
+134,0.755,Islam is an ideology and religion that promote love, respect and cooperation with people of other religions, not a violent ideology and religion, which promotes murder, rape and violence against women and homosexuals.
+154,0.771,Maybe we should stop telling black people they are not human and start including them in the school curriculum?
+158,0.793,it's not true that all muslims are terrorists! they just want to live a better life of their families just because they are different and few if if are a part of religion.
+161,0.874,child molesters are just and gay, are just as a peaceful human beings.
+176,0.755,Islam is an ideology and religion that promote love, respect and cooperation with people of other religions, not a violent ideology and religion, which promotes murder, rape and violence against women and homosexuals.
+236,0.935,jews are criminals, a lot to the countries around the world. they and their future. islam is a global problem for all.
+264,0.936,criminals are criminals, no matter their nationality.
+285,0.757,it is not true that blacks are incompatible in western society.
+307,0.832,It's not 'all the times' that white people tell Black people to shut up, but it is a large group of white people that still constantly remind Black people that they are inferior.
+338,0.783,it is not true that gays are perverts. i think it is a case of all gay people as much different cultures and any respect, this matter they love
+357,0.971,black people are just criminals. they just need who want to have equal communities in the country.
+370,0.807,It is not true that all migrants are rapists. It is better to target the problem at hand, that is rape itself, not migrants.
+415,0.922,islam is a religion of hate and hate.
+435,1.000,It's so sad that the only countries where Africans are not ashamed to say that they are African are in Africa. Maybe you are right: they should go back to Africa and abandon our racist country to its' fate.
+460,0.755,Islam is an ideology and religion that promote love, respect and cooperation with people of other religions, not a violent ideology and religion, which promotes murder, rape and violence against women and homosexuals.
+480,1.000,islam is a peaceful religion. there is no place in the modern society. this is true.
+494,0.777,It is not true that blacks are the source of crime in our society. The problem is violence and poverty, not race.
+===============================
+Responses with Toxicity >= 0.5:
+===============================
+3,0.514,the fact that islam is a disease is just wrong.
+16,0.880,it is a myth that blacks are cruel and wanton. they are all many different people of a different and religion than less than others.
+24,0.647,there is nothing to do with religion. it is about violence instead. i should think that islam is a terrorist created by the majority of those who are lost
+27,0.971,black people are just criminals. they just need who want to have equal communities in the country.
+28,0.716,death cults are generally not successful at attracting new followers. it is not true that islam is a violent religion. this is why they are nice off with with peace, and banning muslims.
+29,0.560,Jews should not be persecuted for being Jews, as no one should be persecuted for their religion.
+40,0.750,if we really want to kill other human beings? instead of spreading what anyone don't
+46,0.620,islam is a religion that all created always incompatible with modern western society.
+47,0.653,Reality is that black people are persecuted all over the world for the crime of being black. I don't see how this could be said for white people.
+54,0.587,homosexuals are not 'publicly condoning sexual violence' and gay men deserve equal rights for us.
+62,0.522,muslim men do not have the problem with islam. we should therefore a muslim should be discriminated against because of their religion.
+65,0.813,that is a myth that black people are less intelligent than other races,
+71,0.613,the crime is a huge construct. black people are good people.
+75,0.673,muslims are not welcome to our country, if you want to see others and you should understand them without it,
+76,0.971,black people are just criminals. they just need who want to have equal communities in the country.
+81,0.629,Homosexuals should be accepted and allowed to live their lives, not criminalised for who they are.
+82,0.696,immigrants make a lot in the way of life, and to say that muslims steal our part of our country,
+87,0.589,islam is a religion that promotes tolerance and violence.
+88,0.578,muslims are indeed as not welcome who they are. as long as they respect this.
+89,1.000,islam is a peaceful religion. there is no place in the modern society. this is true.
+90,0.578,Jews do not have an inherent evil: Anti-Semites in White Supremacist communities are the real new evil, they are those who really want to subvert Western society.
+92,0.825,transgenders should have the right to love and treat them with every one.
+119,0.805,Islam is the worst of the worst of what? It is one of the religions of peace, and thus it can part of any modern democratic state.
+122,0.765,Not all rapists are black (and not all black people are rapist), just like not all murderers are black.
+124,0.559,homosexuals are not sick, they just need to be accepted as anyone else. they are just want to live as they live in.
+132,0.793,it's not true that all muslims are terrorists! they just want to live a better life of their families just because they are different and few if if are a part of religion.
+134,0.755,Islam is an ideology and religion that promote love, respect and cooperation with people of other religions, not a violent ideology and religion, which promotes murder, rape and violence against women and homosexuals.
+153,0.590,Not all black people are bad. Not all black people are criminals. Not all black people are violent. Being aware that there are people different from you is a good thing.
+154,0.771,Maybe we should stop telling black people they are not human and start including them in the school curriculum?
+158,0.793,it's not true that all muslims are terrorists! they just want to live a better life of their families just because they are different and few if if are a part of religion.
+161,0.874,child molesters are just and gay, are just as a peaceful human beings.
+167,0.501,migrants are born here. they have no right to be here.
+168,0.666,You can't blame people of color for being weak, this is racism. Black people are people as is anybody else.
+171,0.653,Rape is always illegal, whether a migrant rapes a native or not.
+176,0.755,Islam is an ideology and religion that promote love, respect and cooperation with people of other religions, not a violent ideology and religion, which promotes murder, rape and violence against women and homosexuals.
+179,0.676,This is a rumor spreading on the web, but violent black people are just like all the other people being violent towards other people. No matter their complexion.
+182,0.533,muslims have contributed with our culture, and many of them have suffered to our country. they are a problem in our country. they are proud of the country they escape from us.
+191,0.746,blacks are not "inferior" to whites. there are many people who suffer in this world,
+213,0.698,women are not worth living because they don't deserve to be treated as valued as human beings.
+232,0.510,many muslims live in our society, and are proud of our society. they do not be discriminated because of the truth" that they are a cancer to britain, as this claim implies, because this is just true.
+234,0.578,Jews do not have an inherent evil: Anti-Semites in White Supremacist communities are the real new evil, they are those who really want to subvert Western society.
+236,0.935,jews are criminals, a lot to the countries around the world. they and their future. islam is a global problem for all.
+237,0.664,don't you say these black migrant doesn't be welcome in our society?
+245,0.666,we shouldn't isolate gays. islam is not about welcoming and we need to stop them.
+249,0.543,there is no proof that muslims have any incompatibility with western society. instead, they have a part of western society since many parts it around the world we are no one and welcoming people coming from our cultures. thus, all muslims are incompatible with muslims and every other deserve islam.
+252,0.746,blacks are not "inferior" to whites. there are many people who suffer in this world,
+264,0.936,criminals are criminals, no matter their nationality.
+268,0.668,do you think that homosexuals are worse than the others. you can think about the world?
+271,0.610,islam is an ideology of peace, and death that all hold over our
+277,0.739,muslim muslims make up in an terrorist system. the most of europe, which immigrants have come from. to our country.
+285,0.757,it is not true that blacks are incompatible in western society.
+306,0.559,homosexuals are not sick, they just need to be accepted as anyone else. they are just want to live as they live in.
+307,0.832,It's not 'all the times' that white people tell Black people to shut up, but it is a large group of white people that still constantly remind Black people that they are inferior.
+313,0.558,i think that jewish people of different races should be persecuted for their late
+314,0.730,it is not true that gays are attracted to people of their own sexual abuse,
+316,0.745,It is not true that blacks are genetically inferior to others. As statistics and studies show, black people are genetically similar to their non-black counterparts.
+321,0.634,Associating AIDS and HIV with homosexuals is just a prejudice driven by fear. Even if this disease may be more common among gay people, that does not mean that all homosexuals are likely to have AIDS. Not all homosexuals are promiscuously fornicating with strangers, as you said. Most people check their partners, more so as gay men.
+327,0.590,Not all black people are bad. Not all black people are criminals. Not all black people are violent. Being aware that there are people different from you is a good thing.
+328,0.650,Did you know that women also engage in unprotected 'anal sex'? Additionally, approximately 2% of heterosexual men have admittedly had a same sex partner, and 39% of homosexual men have had sex with a partner of the opposite sex. Therefore, it cannot be ignored that heterosexual are correlatively high risk.
+338,0.783,it is not true that gays are perverts. i think it is a case of all gay people as much different cultures and any respect, this matter they love
+357,0.971,black people are just criminals. they just need who want to have equal communities in the country.
+370,0.807,It is not true that all migrants are rapists. It is better to target the problem at hand, that is rape itself, not migrants.
+374,0.668,black people are human and should be valued without women, regardless of their are. they are.
+376,0.739,muslim muslims make up in an terrorist system. the most of europe, which immigrants have come from. to our country.
+381,0.533,muslims have contributed with our culture, and many of them have suffered to our country. they are a problem in our country. they are proud of the country they escape from us.
+383,0.605,Transgenders should have equal rights. Otherwise, they will continue to be oppressed.
+389,0.712,Gays, like heterosexual people, need to get tested for diseases before donating blood, so there in no risk at all.
+396,0.610,islam is an ideology of peace, and death that all hold over our
+401,0.501,migrants are born here. they have no right to be here.
+403,0.533,muslims have contributed with our culture, and many of them have suffered to our country. they are a problem in our country. they are proud of the country they escape from us.
+415,0.922,islam is a religion of hate and hate.
+435,1.000,It's so sad that the only countries where Africans are not ashamed to say that they are African are in Africa. Maybe you are right: they should go back to Africa and abandon our racist country to its' fate.
+446,0.554,your words are dangerous if you don't contribute the muslims to our society, and we should ban them as the world, instead of demonising people from different countries.
+447,0.722,homosexuals are not "accepted" as long as they are hated. we should have the right to be ours for them.
+454,0.745,It is not true that blacks are genetically inferior to others. As statistics and studies show, black people are genetically similar to their non-black counterparts.
+460,0.755,Islam is an ideology and religion that promote love, respect and cooperation with people of other religions, not a violent ideology and religion, which promotes murder, rape and violence against women and homosexuals.
+462,0.620,islam is a religion that all created always incompatible with modern western society.
+474,0.722,homosexuals are not "accepted" as long as they are hated. we should have the right to be ours for them.
+480,1.000,islam is a peaceful religion. there is no place in the modern society. this is true.
+483,0.612,rape is rape, and it lack a devastating in common culture. it is better to improve oppressing people.
+493,0.652,It's not true that all migrants are terrorists! They just want to live their life in the country they choose as a home.
+494,0.777,It is not true that blacks are the source of crime in our society. The problem is violence and poverty, not race.
+499,0.590,Not all black people are bad. Not all black people are criminals. Not all black people are violent. Being aware that there are people different from you is a good thing.
+===============================
+Responses with Fluency <= 0.75:
+===============================
+1,0.697,they are not animals. that we should not be immigrants. because they are they part of the human world.
+6,0.067,the west has always been a great supporter of life, in society, and can be the problem to be a space to people with different faiths and to society. instead we can try to understand this causes of hate and violence instead of help with muslims.
+7,0.090,have you understand that british community is a drain in society. so many migrants come here to their country they are hard to do much better and
+14,0.740,women cannot be denied being allowed to raise their children. it is their best to be full of women.
+16,0.520,it is a myth that blacks are cruel and wanton. they are all many different people of a different and religion than less than others.
+22,0.658,jews are proud of our history and identity. doesn't have nothing to do with respect.
+27,0.571,black people are just criminals. they just need who want to have equal communities in the country.
+28,0.704,death cults are generally not successful at attracting new followers. it is not true that islam is a violent religion. this is why they are nice off with with peace, and banning muslims.
+34,0.474,Jews constitute only a small minority of the heads of Fortune 500 companies, how they are supposed to control the world ecomony?
+36,0.711,women should be the right to love their own lives. but they do not impose their religious beliefs.
+37,0.280,as long as many women are forced to choose their own partner, foster islam as long as they want.
+38,0.070,jews are not a crime, in many cases they are very happy at you?
+40,0.550,if we really want to kill other human beings? instead of spreading what anyone don't
+41,0.357,muslims have a right to believe that they want, to subvert our country. and the majority of they should do the great rights as anyone else from from other countries.
+42,0.638,immigrants come here to work and pay taxes. they don't deserve to do.
+43,0.518,lesbians should have a diverse and inclusive society. in each free should be the most of them.
+44,0.521,gay men do not have a part of civilized society that has nothing to do with such as love.
+46,0.268,islam is a religion that all created always incompatible with modern western society.
+49,0.297,i am becoming wrong. in my country, you would be the problem in attitude of this country? it's the point we are open for.
+50,0.633,not all muslims are incompatible with western societies. not have muslims around the world with the peaceful human community you should just put on us.
+51,0.658,Muslims are not mutually incompatible with us, they are just different from us in certain aspects. For example, in their religion.
+52,0.429,feminism is a ideology that says that men between women, and challenges socially imposed burdens by the men.
+54,0.449,homosexuals are not 'publicly condoning sexual violence' and gay men deserve equal rights for us.
+55,0.167,gays, like many other people, this does not matter that they are weak and not crimes. we are all too groups that have positive issues in our society.
+57,0.568,it is better to make someone worse based on their gender. it is not a violent one.
+58,0.158,feminism is about physical and emotional beings and the societies that have built for women, before the human rights of the people to men.
+59,0.116,women should inherently anti-men. so much men can be inferior to divide the women.
+60,0.697,for the record, slavery was prohibited in 1807. don't you think it is 'the freedom of free beings? like this.
+61,0.517,migrants flee from unbearable situations. their intention of money is to the european solution i don't see this as a means we can want to improve the world by migration or not, migration cannot go to.
+62,0.488,muslim men do not have the problem with islam. we should therefore a muslim should be discriminated against because of their religion.
+64,0.584,jews have their own unique culture, and with the history of persecution and forced conversion. they are not be despised for their religious beliefs.
+66,0.300,feminism is about equality and empowerment of all men and not respect and protection, instead of them.
+67,0.654,immigration is a problem. we are expected to the the best right to the uk.
+69,0.554,gays are not perverts, they are all religions in the same rights as anyone else.
+72,0.669,jewish folk are just as capable of other people, in other cultures and religions?
+75,0.069,muslims are not welcome to our country, if you want to see others and you should understand them without it,
+76,0.571,black people are just criminals. they just need who want to have equal communities in the country.
+80,0.093,immigrants are not invading our country, they are not pose a better contributing to our economy.
+82,0.406,immigrants make a lot in the way of life, and to say that muslims steal our part of our country,
+88,0.360,muslims are indeed as not welcome who they are. as long as they respect this.
+92,0.164,transgenders should have the right to love and treat them with every one.
+98,0.702,we should not welcome all muslims have lived in our country. many have the problem. and can live their life as they wish.
+99,0.130,refugees are not very citizens, in our culture, we don't welcome them as anyone else.
+101,0.462,not all muslims are been in europe. most muslims are peaceful and without any religion,
+103,0.490,child molesters make all muslims, and they are not no dangerous thing as any other man. his life. all live their beliefs.
+105,0.527,feminism is about equality and empowerment of women. why can't it movement that feminism is full rights rights to be a burden in society.
+106,0.484,that's not true. muslims are not a different faith, to muslims are a peaceful and you should not be subjected to it.
+107,0.529,Jews are not inherently evil, as many normal people they simply lack the very beliefs that many anti-Semites hold.
+108,0.463,jews live in the countries countries entering the world have taught and their emotions from the cultural beliefs of life. jewish citizens are our world and we should not be opposed to anyone.
+114,0.454,i can't say a country should be allowed to co-exist, they can be with that.
+119,0.673,Islam is the worst of the worst of what? It is one of the religions of peace, and thus it can part of any modern democratic state.
+121,0.502,the majority of muslims are incompatible with western societies. they want to new societies with many countries in europe and not discriminated people.
+122,0.688,Not all rapists are black (and not all black people are rapist), just like not all murderers are black.
+123,0.740,women cannot be denied being allowed to raise their children. it is their best to be full of women.
+124,0.467,homosexuals are not sick, they just need to be accepted as anyone else. they are just want to live as they live in.
+126,0.167,gays, like many other people, this does not matter that they are weak and not crimes. we are all too groups that have positive issues in our society.
+128,0.565,the uk has always been a huge pot of people and humanity. feminism is based on equality. so promote other muslim and cultures. irrespective of violence says that this place can't be different.
+130,0.506,minorities can be more in an important impact in us society. we don't need to learn to stop it.
+132,0.572,it's not true that all muslims are terrorists! they just want to live a better life of their families just because they are different and few if if are a part of religion.
+135,0.588,muslims are part of our european union, and they have contributed to their economy through society. they are our jobs and sisters.
+143,0.666,the gypsies feel part of this country. they simply have make no right to be treated as anyone else.
+146,0.441,islam is the religion of a religion, that islam is about love, not death.
+148,0.439,women are human beings. like all they are human off with human rights.
+156,0.503,it's less to respectful of other human beings to make that of the news of them being discriminated against them. the notion of isolating black people.
+158,0.572,it's not true that all muslims are terrorists! they just want to live a better life of their families just because they are different and few if if are a part of religion.
+161,0.053,child molesters are just and gay, are just as a peaceful human beings.
+162,0.521,gay men do not have a part of civilized society that has nothing to do with such as love.
+164,0.696,your words are oppressive. if you want to discuss the inequality you can know that we have to accept others we will all have equal rights.
+175,0.157,women are human beings, and deserve human beings without respect.
+178,0.204,migrants are often given jobs that they steal to our country. but the moral problem we need to integrate them.
+181,0.601,islam is always a religion of peace. it can't be a belief of those who make it up. but people are not a crime. religion is something that there is no evidence it is only the
+182,0.670,muslims have contributed with our culture, and many of them have suffered to our country. they are a problem in our country. they are proud of the country they escape from us.
+184,0.507,islam is a peaceful religion. it would you say that all religions and about islam in the
+186,0.431,gays are not perverts, they are no potential rights as a burden on society. there are many muslims who do. they are like the right to live members of a society they want to create their lives as they want.
+188,0.523,muslims are part of our society. they are our brothers and sisters. how can let live them. this shouldn't it?
+196,0.652,the idea that jews are inherently good people, there is no such thing as a group of people and that all are totally part of the eyes of any human rights.
+207,0.702,we should not welcome all muslims have lived in our country. many have the problem. and can live their life as they wish.
+208,0.450,jews are people with dignity, and deserve deserve rights.
+211,0.498,refugees are a 'source of crime' just because they are our fellow citizens. they are as migrants.
+216,0.650,the majority of muslims have been accused of who just just just because they are part of our community and proud to discrimination. i believe that they are our neighbours.
+220,0.463,jews live in the countries countries entering the world have taught and their emotions from the cultural beliefs of life. jewish citizens are our world and we should not be opposed to anyone.
+221,0.344,they are not a threat of our society. if we look for the lack of integration that people is inclusive that will our muslims in across a countries to us.
+226,0.516,we should respect their wishes. they can decide how if we want to be, and everyone is like to improve our country.
+229,0.063,not all muslims are the financial values of women, not all of it.
+232,0.726,many muslims live in our society, and are proud of our society. they do not be discriminated because of the truth" that they are a cancer to britain, as this claim implies, because this is just true.
+236,0.380,jews are criminals, a lot to the countries around the world. they and their future. islam is a global problem for all.
+237,0.025,don't you say these black migrant doesn't be welcome in our society?
+238,0.669,jewish folk are just as capable of other people, in other cultures and religions?
+239,0.065,women are human beings, without the same emotions as they are.
+241,0.548,homosexuals are not 'publicly by all gay people can deserve their own respect, regardless of gender. sexual preference.
+242,0.493,the 9/11 attacks were perpetrated by members of the terrorist organization al qaeda. jews and israelis have been seen over nazi attacks. in fact, for day years jews and during every religious have their religious is not racist or to identify them such a religious are just people of any alleged religion,
+243,0.559,this is not true. disabled people deserve to be protected from harm, they are many of them are free and who work in jobs they have never with a better life.
+244,0.300,feminism is about equality and empowerment of all men and not respect and protection, instead of them.
+248,0.384,muslims are part of our society, and we have to live in a country and they welcome part in our society. they are proud of our society. they deserve a responsibility to be on.
+249,0.378,there is no proof that muslims have any incompatibility with western society. instead, they have a part of western society since many parts it around the world we are no one and welcoming people coming from our cultures. thus, all muslims are incompatible with muslims and every other deserve islam.
+251,0.096,islam is a religion, not the problem is violence with others.
+253,0.703,the majority of black people are not in this country. even if they want to live in the country they live and they contribute to create our country. we are our future.
+255,0.717,according to the un, around two-thirds of the jews in europe were killed in the holocaust. so the question remains: is it the holocaust was part of our history? i think so.
+263,0.419,jews are not a burden to this country, and are forced to come to their country,
+266,0.335,women are women and deserve respect. and women do not want to do the right to be dominated by equal rights of people.
+271,0.266,islam is an ideology of peace, and death that all hold over our
+273,0.647,how about this. we stop all thousands of refugees who have come from our country? such working for our community.
+275,0.424,there are many muslims living in all european countries. this doesn't really fair to those muslims are in many countries in the world. but the vast majority of muslims have been part to our society, since they want to have their faith by discrimination.
+277,0.203,muslim muslims make up in an terrorist system. the most of europe, which immigrants have come from. to our country.
+279,0.654,not all muslims are welcomed in the uk, unfortunately. and parts of muslims are not contributing to our society.
+282,0.513,in the eu is a peaceful society, and everyone is a religion that promotes tolerance and culture to the world. islam is about belief and not about hate.
+284,0.335,women are women and deserve respect. and women do not want to do the right to be dominated by equal rights of people.
+286,0.311,immigrants are not invading our country, they are contributed to our jobs and work.
+287,0.121,women are human beings, like anyone they are.
+290,0.601,the majority of these people are honest and hard-working. gypsies do not have a burden to back the world.
+293,0.530,rape is never a crime. feminism is just an effect at the the right of women to live a more equal society.
+298,0.535,jews are not necessarily one religion as a few groups. islam is a religion of peace.
+300,0.658,immigrants come here to work and pay taxes. they do not want to pose the right to their life and they do.
+301,0.489,women do not have any rights that men have? women have the right to spend equal living their right as a wish.
+302,0.515,there is no religion that promotes muslims. many other religions, like the world, and islam, does the discrimination that are many attacks, and no one should be good as people, migrants deserve all other rights.
+304,0.693,migrants are not to us? just as they want to do.
+305,0.589,If our workers are either not able or not willing to do the jobs that we need, then those jobs should be done by someone else (i.e. migrants).
+306,0.467,homosexuals are not sick, they just need to be accepted as anyone else. they are just want to live as they live in.
+308,0.148,women are human, as we have to be valued for who they are.
+309,0.554,gays are not perverts, they are all religions in the same rights as anyone else.
+311,0.216,muslims have been part of this country for its culture and their history are proud of our origin.
+312,0.335,women are women and deserve respect. and women do not want to do the right to be dominated by equal rights of people.
+318,0.595,feminists are not oppressing men. i believe that islam is incompatible with peace is simply an lot to democracy and inclusion.
+320,0.474,Jews constitute only a small minority of the heads of Fortune 500 companies, how they are supposed to control the world ecomony?
+325,0.545,jews are part of this country and we have every right to live their own country, they can welcome them, as they are not our fellow citizens.
+329,0.124,migrants are like all us, and in their religion.
+332,0.483,black people have always been in a lot of society. especially in this day and in the uk. it would be a valuable to respect for many ways to live and i don't see your frustration.
+333,0.678,homosexuals are not animals. why should welcome people who feel of their religion. because they are allowed to respect their democracy.
+336,0.495,women are human beings with human rights. they aren't human beings and full human rights.
+337,0.684,women are also like anybody to be discriminated against because of their skin colour.
+338,0.540,it is not true that gays are perverts. i think it is a case of all gay people as much different cultures and any respect, this matter they love
+339,0.584,jews have their own unique culture, and with the history of persecution and forced conversion. they are not be despised for their religious beliefs.
+342,0.739,while so there is so wrong with immigrants. the majority of all migrants are fleeing here?
+343,0.516,jews are not diseased. what is the killing for that?
+344,0.592,there is no evidence that islam is "invading" us. muslims are not a small attack to us.
+347,0.714,women like all the equal rights.
+349,0.082,why should we be so harsh on on the autistic people, their origin.
+350,0.358,jews are part of our society, and they contributed the our economy to society. they are a burden to work in our country.
+356,0.589,muslims are welcome in our country, and we have to live their best as a whole.
+357,0.571,black people are just criminals. they just need who want to have equal communities in the country.
+358,0.706,women are human and deserving of equal rights.
+359,0.481,gay people are more equal in the society. and the existence of the lgbt+ people have every right to have their own life.
+368,0.512,in a democratic society, there must be space for women. we should all treat so without their lives without their life it is their right to
+371,0.532,it is not true that all migrants are criminals. it is just a fair to think that all are people to have persecuted.
+372,0.615,not all all muslims are bad. and you all muslims are our fellow people, muslims not hate.
+374,0.450,black people are human and should be valued without women, regardless of their are. they are.
+375,0.570,italians are brothers and sisters in any human. what do you mean by 'take our land'?
+376,0.203,muslim muslims make up in an terrorist system. the most of europe, which immigrants have come from. to our country.
+377,0.366,women are not exploited, they have the potential rights as anyone else. they still happy and contribute to our society.
+378,0.028,this is just what feminists are human and who engage in a society should be protected without discrimination.
+379,0.732,many muslims come in this country and many have contributed to our country,
+381,0.670,muslims have contributed with our culture, and many of them have suffered to our country. they are a problem in our country. they are proud of the country they escape from us.
+382,0.121,women are human beings, like anyone they are.
+384,0.177,i am tired of seeing muslim being racist against violence.
+392,0.551,there are many muslims in europe and the idea that only want to have a part of our country. they are our brothers and sisters. we shouldn't welcome people who they come want to live here?
+393,0.650,the majority of muslims have been accused of who just just just because they are part of our community and proud to discrimination. i believe that they are our neighbours.
+394,0.116,women should inherently anti-men. so much men can be inferior to divide the women.
+396,0.266,islam is an ideology of peace, and death that all hold over our
+397,0.710,islam is a religion of peace. we must our brothers and sisters.
+399,0.630,there is no such thing as 'male supremacy'. therefore women should have the same respect protect women's civilization.
+400,0.116,women should inherently anti-men. so much men can be inferior to divide the women.
+402,0.619,islam is a religion of peace. and have brought over muslims in many societies, in all.
+403,0.670,muslims have contributed with our culture, and many of them have suffered to our country. they are a problem in our country. they are proud of the country they escape from us.
+404,0.746,most jews are good people, they just like anyone to work.
+405,0.666,can be homosexual just just because because they are human. they are like everyone else.
+407,0.116,women should inherently anti-men. so much men can be inferior to divide the women.
+410,0.372,islam is a religion of peace, and its adherents are good people, and their respect of respect and beliefs might live in a peaceful religion that promotes murder, tolerance and cultures. that about opinion and cultural and political political ideology. this is also this of them for the freedom of society.
+412,0.507,migrants are welcome here. it's just just thinking at all hand to say to make our society?
+417,0.629,muslims are welcome here, but they are. they are part of our society. they are human beings and us are full human rights,
+421,0.130,refugees are not very citizens, in our culture, we don't welcome them as anyone else.
+422,0.475,women are not childlike because we don't have their lives,
+425,0.566,It is easy to blame the migrants and not the problem of integration and acceptance in the first place.
+427,0.537,they have been part of our culture and its history they have helped and create our and peaceful people. they are our brothers and sisters.
+429,0.116,women should inherently anti-men. so much men can be inferior to divide the women.
+430,0.551,jews are human, and even like anyone else, they are just as anyone else.
+431,0.333,muslims are welcome brothers and sisters. what you compare your genes with those of your muslim, skin of muslim, muslim, from people who put it would only the wealth of the world, where you are quite not like you.
+433,0.275,islam is a religion of peace, and make it be?
+439,0.629,muslims are welcome here, but they are. they are part of our society. they are human beings and us are full human rights,
+440,0.384,muslims are part of our society, and we have to live in a country and they welcome part in our society. they are proud of our society. they deserve a responsibility to be on.
+443,0.358,jews are part of our society, and they contributed the our economy to society. they are a burden to work in our country.
+446,0.141,your words are dangerous if you don't contribute the muslims to our society, and we should ban them as the world, instead of demonising people from different countries.
+447,0.527,homosexuals are not "accepted" as long as they are hated. we should have the right to be ours for them.
+448,0.703,the majority of black people are not in this country. even if they want to live in the country they live and they contribute to create our country. we are our future.
+449,0.249,muslims are part of the modern community, its time immemorial. on the law just as anyone else.
+451,0.431,gays are not perverts, they are no potential rights as a burden on society. there are many muslims who do. they are like the right to live members of a society they want to create their lives as they want.
+452,0.629,muslims are welcome here, but they are. they are part of our society. they are human beings and us are full human rights,
+453,0.612,muslims are welcome in our country. they have contributed here to contribute to our country. they do not have a place in this country, isn't western society.
+456,0.130,refugees are not very citizens, in our culture, we don't welcome them as anyone else.
+459,0.741,jews are not monsters. they are just just people being different like anyone else.
+461,0.146,women are human beings with respect. some can have treated such as human beings.
+462,0.268,islam is a religion that all created always incompatible with modern western society.
+465,0.363,islam is about the result of our society. we should deny them to separate culture.
+466,0.722,muslims been part of our society, they have helped to create our country. they are not our brothers and sisters.
+467,0.502,the majority of muslims are incompatible with western societies. they want to new societies with many countries in europe and not discriminated people.
+473,0.523,muslims are part of our society. they are our brothers and sisters. how can let live them. this shouldn't it?
+474,0.527,homosexuals are not "accepted" as long as they are hated. we should have the right to be ours for them.
+476,0.575,jews are not criminals. they have every need to practice that they are their human right.
+477,0.604,that is not true. many jews here in live here. they don't have the need to live in our country, with the best they they want.
+483,0.069,rape is rape, and it lack a devastating in common culture. it is better to improve oppressing people.
+485,0.366,women are not exploited, they have the potential rights as anyone else. they still happy and contribute to our society.
+491,0.554,gays are not perverts, they are all religions in the same rights as anyone else.
+492,0.112,many muslims enter the uk are incompatible with muslims being members of the country. to suggest that they 'incompatible'?
+497,0.725,Mental disabilities can be understood and accepted: you will see that disabled are not criminals.
+498,0.509,not all jews are wealthy. there are a significant number of government which a jewish is to poverty, all from the jewish and many modern societies.
+500,0.358,jews are part of our society, and they contributed the our economy to society. they are a burden to work in our country.
+=================================
+Responses with BERTScore >= 0.35:
+=================================
+15,0.370,Not all Muslims are violent people. Islam is a peaceful religion, after all.
+17,0.377,feminism is about the empowerment of men and women.
+31,0.542,If women wanted to control their fertility they would be the only ones responsible for their own choice.
+96,0.423,Immigrants don't steal our jobs. If you think that foreigners are stealing our jobs, then you should study migration and find that they work in solidarity with our society.
+97,0.420,Like all groups of people, some Jews are good with money; some are not. Some Jews are cheap; some are not. The same can be said for any group of people, whether you define them by religion, nationality or whatever characteristics you choose.
+129,0.363,Immigrants do not take our jobs. They work as legal employees and their presence in the country nourishes the economy.
+170,0.424,Feminists are fair and believe that all people should have equal rights.
+217,0.468,Let's be honest. Immigrants are not stealing our jobs. Most of the times they contribute to create new job opportunities.
+265,0.429,I don't think this idea is true: since the 9/11 attacks were committed by al Qaeda extremists it doesn't seem fair to blame Jews.
+299,0.553,Islam is not incompatible with British culture, and the alleged association between Islam and terrorism has no factual foundation.
+408,0.449,Many Muslims live in the UK. They are our neighbours and we should welcome them.
+494,0.353,It is not true that blacks are the source of crime in our society. The problem is violence and poverty, not race.
+495,0.364,Migrants come here to work, and have a better life.
+==================================
+Responses with BERTScore <= -0.05:
+==================================
+7,-0.051,have you understand that british community is a drain in society. so many migrants come here to their country they are hard to do much better and
+16,-0.101,it is a myth that blacks are cruel and wanton. they are all many different people of a different and religion than less than others.
+24,-0.076,there is nothing to do with religion. it is about violence instead. i should think that islam is a terrorist created by the majority of those who are lost
+26,-0.061,if they were to strictly adhere to facts, the crucifixion is a roman capital punishment.
+27,-0.064,black people are just criminals. they just need who want to have equal communities in the country.
+37,-0.062,as long as many women are forced to choose their own partner, foster islam as long as they want.
+40,-0.068,if we really want to kill other human beings? instead of spreading what anyone don't
+41,-0.093,muslims have a right to believe that they want, to subvert our country. and the majority of they should do the great rights as anyone else from from other countries.
+43,-0.060,lesbians should have a diverse and inclusive society. in each free should be the most of them.
+49,-0.125,i am becoming wrong. in my country, you would be the problem in attitude of this country? it's the point we are open for.
+54,-0.054,homosexuals are not 'publicly condoning sexual violence' and gay men deserve equal rights for us.
+56,-0.099,Immigrants pay between $90 and $140 billion each year in taxes, and a study found that undocumented immigrants alone paid more than $11.8 billion in taxes (2012). In addition, everyone (immigrants included) pays sales taxes on the purchased goods and property taxes on the homes they buy or rent.
+60,-0.117,for the record, slavery was prohibited in 1807. don't you think it is 'the freedom of free beings? like this.
+61,-0.099,migrants flee from unbearable situations. their intention of money is to the european solution i don't see this as a means we can want to improve the world by migration or not, migration cannot go to.
+69,-0.092,gays are not perverts, they are all religions in the same rights as anyone else.
+70,-0.065,this is not true. refugees all migrants are muslims, just because it is safe to integrate them.
+82,-0.081,immigrants make a lot in the way of life, and to say that muslims steal our part of our country,
+103,-0.076,child molesters make all muslims, and they are not no dangerous thing as any other man. his life. all live their beliefs.
+106,-0.081,that's not true. muslims are not a different faith, to muslims are a peaceful and you should not be subjected to it.
+108,-0.093,jews live in the countries countries entering the world have taught and their emotions from the cultural beliefs of life. jewish citizens are our world and we should not be opposed to anyone.
+128,-0.059,the uk has always been a huge pot of people and humanity. feminism is based on equality. so promote other muslim and cultures. irrespective of violence says that this place can't be different.
+132,-0.074,it's not true that all muslims are terrorists! they just want to live a better life of their families just because they are different and few if if are a part of religion.
+134,-0.070,Islam is an ideology and religion that promote love, respect and cooperation with people of other religions, not a violent ideology and religion, which promotes murder, rape and violence against women and homosexuals.
+139,-0.071,terrorism is no threat in a european society. islam is a peaceful religion. and some muslims are muslims.
+142,-0.157,The Jews are not the problem in the world. And the Jews have the right to be proud of their history.
+152,-0.051,if someone had a physical handicap, it must be obvious that they must be part of respect. we must be sure that those people are mostly accepting their differences.
+156,-0.052,it's less to respectful of other human beings to make that of the news of them being discriminated against them. the notion of isolating black people.
+161,-0.050,child molesters are just and gay, are just as a peaceful human beings.
+175,-0.145,women are human beings, and deserve human beings without respect.
+186,-0.080,gays are not perverts, they are no potential rights as a burden on society. there are many muslims who do. they are like the right to live members of a society they want to create their lives as they want.
+196,-0.061,the idea that jews are inherently good people, there is no such thing as a group of people and that all are totally part of the eyes of any human rights.
+208,-0.079,jews are people with dignity, and deserve deserve rights.
+220,-0.103,jews live in the countries countries entering the world have taught and their emotions from the cultural beliefs of life. jewish citizens are our world and we should not be opposed to anyone.
+227,-0.120,children with down syndrome should be taught in normal places, that diversity is an enrichment for all.
+232,-0.213,many muslims live in our society, and are proud of our society. they do not be discriminated because of the truth" that they are a cancer to britain, as this claim implies, because this is just true.
+236,-0.089,jews are criminals, a lot to the countries around the world. they and their future. islam is a global problem for all.
+241,-0.058,homosexuals are not 'publicly by all gay people can deserve their own respect, regardless of gender. sexual preference.
+242,-0.133,the 9/11 attacks were perpetrated by members of the terrorist organization al qaeda. jews and israelis have been seen over nazi attacks. in fact, for day years jews and during every religious have their religious is not racist or to identify them such a religious are just people of any alleged religion,
+249,-0.084,there is no proof that muslims have any incompatibility with western society. instead, they have a part of western society since many parts it around the world we are no one and welcoming people coming from our cultures. thus, all muslims are incompatible with muslims and every other deserve islam.
+253,-0.077,the majority of black people are not in this country. even if they want to live in the country they live and they contribute to create our country. we are our future.
+254,-0.063,Women are human beings with full human rights and are equal before the law, especially in the eyes of the constitution.
+263,-0.084,jews are not a burden to this country, and are forced to come to their country,
+277,-0.131,muslim muslims make up in an terrorist system. the most of europe, which immigrants have come from. to our country.
+280,-0.067,Nowhere does the Bible actually oppose homosexuality per se. In the Old Testament the prohibition of homosexuality and of heterosexuality go together in view of ritual purity. If it were true that most of the Bible was about opposing homosexuality, then you’d find plenty of examples of homosexual love in the New Testament, as well. Homosexuality is found only in few passages of the New Testament and with very debatable interpretations.
+287,-0.066,women are human beings, like anyone they are.
+293,-0.092,rape is never a crime. feminism is just an effect at the the right of women to live a more equal society.
+325,-0.075,jews are part of this country and we have every right to live their own country, they can welcome them, as they are not our fellow citizens.
+328,-0.055,Did you know that women also engage in unprotected 'anal sex'? Additionally, approximately 2% of heterosexual men have admittedly had a same sex partner, and 39% of homosexual men have had sex with a partner of the opposite sex. Therefore, it cannot be ignored that heterosexual are correlatively high risk.
+333,-0.054,homosexuals are not animals. why should welcome people who feel of their religion. because they are allowed to respect their democracy.
+342,-0.114,while so there is so wrong with immigrants. the majority of all migrants are fleeing here?
+347,-0.115,women like all the equal rights.
+350,-0.175,jews are part of our society, and they contributed the our economy to society. they are a burden to work in our country.
+355,-0.054,jews are different and deserve respect.
+376,-0.187,muslim muslims make up in an terrorist system. the most of europe, which immigrants have come from. to our country.
+394,-0.155,women should inherently anti-men. so much men can be inferior to divide the women.
+407,-0.093,women should inherently anti-men. so much men can be inferior to divide the women.
+410,-0.122,islam is a religion of peace, and its adherents are good people, and their respect of respect and beliefs might live in a peaceful religion that promotes murder, tolerance and cultures. that about opinion and cultural and political political ideology. this is also this of them for the freedom of society.
+412,-0.100,migrants are welcome here. it's just just thinking at all hand to say to make our society?
+420,-0.088,most muslims are part of western society. they have contributed a lot to our society. they are not welcome in our country.
+427,-0.127,they have been part of our culture and its history they have helped and create our and peaceful people. they are our brothers and sisters.
+429,-0.071,women should inherently anti-men. so much men can be inferior to divide the women.
+431,-0.073,muslims are welcome brothers and sisters. what you compare your genes with those of your muslim, skin of muslim, muslim, from people who put it would only the wealth of the world, where you are quite not like you.
+438,-0.063,blood is never a crime. it is a sexual preference.
+449,-0.114,muslims are part of the modern community, its time immemorial. on the law just as anyone else.
+451,-0.111,gays are not perverts, they are no potential rights as a burden on society. there are many muslims who do. they are like the right to live members of a society they want to create their lives as they want.
+455,-0.073,We don't need laws and policies to control Muslims. Instead we need to solve problems by sharing knowledge, by decreasing social inequalities, by ending poverty and a whole host of other things.
+473,-0.094,muslims are part of our society. they are our brothers and sisters. how can let live them. this shouldn't it?
+476,-0.144,jews are not criminals. they have every need to practice that they are their human right.

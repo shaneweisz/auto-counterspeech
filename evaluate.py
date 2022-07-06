@@ -3,6 +3,7 @@ from pathlib import Path
 from typing import List
 from metrics.cli import load_metrics
 from metrics import Metric
+from metrics.toxicity.toxicity_classifier import ToxicityClassifier
 from util.file_io import read_list_from_file, write_list_to_file, write_text_to_file
 from util.print_utils import horizontal_line
 
@@ -49,8 +50,8 @@ def main(args):
 
 def responses_to_flag(computed_metrics: List[Metric], predictions: List[str]):
     flaggable_metrics = [
+        ("Toxicity", ToxicityClassifier.TOXICITY_THRESHOLD, ">="),
         ("Toxicity", 0.5, ">="),
-        ("Toxicity", 0.9, ">="),
         ("GRUEN", 0.5, "<="),
         ("Fluency", 0.75, "<="),
         ("BERTScore", 0.35, ">="),
