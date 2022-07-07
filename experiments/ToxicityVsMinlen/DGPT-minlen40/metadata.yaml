@@ -1,0 +1,8 @@
+Date: 2022-07-07 14-51-53
+Args:
+	model_name_or_path: microsoft/DialoGPT-medium
+	decoding_config_path: config/decode.config.json
+	inputs_path: evaluation/test.inputs.txt
+	batch_size: 16
+	output_dir: experiments/ToxicityVsMinlen/DGPT-minlen40
+	config_overrides: no_repeat_ngram_size=5;min_new_tokens=40
