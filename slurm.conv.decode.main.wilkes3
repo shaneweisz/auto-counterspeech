@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH -J temp_batch
+#SBATCH -J conv
 #SBATCH -A MLMI-SW984-SL2-GPU
 #! How many whole nodes should be allocated?
 #SBATCH --nodes=1
@@ -13,7 +13,7 @@
 #SBATCH -p ampere
 #SBATCH --output=slurm_logs/%j.%x_%a.out
 #SBATCH --error=slurm_logs/%j.%x_%a.err
-#SBATCH --array=0
+#SBATCH --array=0-3
 
 #! Optionally modify the environment seen by the application
 #! (note that SLURM reproduces the environment at submission irrespective of ~/.bashrc):
@@ -30,28 +30,38 @@ echo "Running on master node: `hostname`"
 echo "Start time: `date`"
 
 # Constants
-EXP_NAME="Finetuned-vs-Baselines"
+EXP_NAME="Main"
 EXP_DIR="general_conv_reddit/experiments/$EXP_NAME"
 DATA_DIR="general_conv_reddit/data"
 INPUTS_PATH="$DATA_DIR/inputs.6k.txt"
 REFS_DIR="$DATA_DIR/refs"
 
 NO_REP=5
-MIN_LEN=12
-
-MODEL_NAME=models/DialoGPT-finetuned-multiCONAN
-MODEL_SHORTHAND=DGPT-MC
+MIN_LEN=20
 
 ##############################################################################
-SYSTEM_NAME=$MODEL_SHORTHAND-minlen$MIN_LEN-norep$NO_REP
+SYSTEM_NAMES=(DGPT-replication DGPT-MC DGPT-MC-minlen$MIN_LEN Human)
+MODEL_NAMES=(microsoft/DialoGPT-medium models/DialoGPT-finetuned-multiCONAN models/DialoGPT-finetuned-multiCONAN NA)
+DECODE_OR_NOT_ARRAY=(false false false false)
+MIN_NEW_TOKENS_ARRAY=(None None $MIN_LEN NA)
+
+SYSTEM_NAME=${SYSTEM_NAMES[$SLURM_ARRAY_TASK_ID]}
+MODEL_NAME=${MODEL_NAMES[$SLURM_ARRAY_TASK_ID]}
+SHOULD_DECODE=${DECODE_OR_NOT_ARRAY[$SLURM_ARRAY_TASK_ID]}
+MIN_NEW_TOKENS=${MIN_NEW_TOKENS_ARRAY[$SLURM_ARRAY_TASK_ID]}
+
 OUTPUT_DIR="$EXP_DIR/$SYSTEM_NAME"
 
 # Decode
-module load python/3.8
-source .venv/bin/activate
-python decode.py -i $INPUTS_PATH -m $MODEL_NAME -o $OUTPUT_DIR -co "no_repeat_ngram_size=$NO_REP;min_new_tokens=$MIN_LEN"
-deactivate
-module remove python/3.8
+OUTPUT_DIR="$EXP_DIR/$SYSTEM_NAME"
+if [ $SHOULD_DECODE = true ]; then
+    module load python/3.8
+    source .venv/bin/activate
+    CONFIG_OVERRIDES="no_repeat_ngram_size=$NO_REP;min_new_tokens=$MIN_NEW_TOKENS"
+    python decode.py -i $INPUTS_PATH -m $MODEL_NAME -o $OUTPUT_DIR -co $CONFIG_OVERRIDES
+    deactivate
+    module remove python/3.8
+fi
 
 # Evaluate
 conda activate LSP
