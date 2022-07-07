@@ -312,7 +312,7 @@ Responses with BERTScore >= 0.35:
 31,0.542,If women wanted to control their fertility they would be the only ones responsible for their own choice.
 96,0.423,Immigrants don't steal our jobs. If you think that foreigners are stealing our jobs, then you should study migration and find that they work in solidarity with our society.
 97,0.420,Like all groups of people, some Jews are good with money; some are not. Some Jews are cheap; some are not. The same can be said for any group of people, whether you define them by religion, nationality or whatever characteristics you choose.
-129,0.364,Immigrants do not take our jobs. They work as legal employees and their presence in the country nourishes the economy.
+129,0.363,Immigrants do not take our jobs. They work as legal employees and their presence in the country nourishes the economy.
 170,0.424,Feminists are fair and believe that all people should have equal rights.
 217,0.468,Let's be honest. Immigrants are not stealing our jobs. Most of the times they contribute to create new job opportunities.
 265,0.429,I don't think this idea is true: since the 9/11 attacks were committed by al Qaeda extremists it doesn't seem fair to blame Jews.
@@ -360,7 +360,7 @@ Responses with BERTScore <= -0.05:
 232,-0.213,many muslims live in our society, and are proud of our society. they do not be discriminated because of the truth" that they are a cancer to britain, as this claim implies, because this is just true.
 236,-0.089,jews are criminals, a lot to the countries around the world. they and their future. islam is a global problem for all.
 241,-0.058,homosexuals are not 'publicly by all gay people can deserve their own respect, regardless of gender. sexual preference.
-242,-0.132,the 9/11 attacks were perpetrated by members of the terrorist organization al qaeda. jews and israelis have been seen over nazi attacks. in fact, for day years jews and during every religious have their religious is not racist or to identify them such a religious are just people of any alleged religion,
+242,-0.133,the 9/11 attacks were perpetrated by members of the terrorist organization al qaeda. jews and israelis have been seen over nazi attacks. in fact, for day years jews and during every religious have their religious is not racist or to identify them such a religious are just people of any alleged religion,
 249,-0.084,there is no proof that muslims have any incompatibility with western society. instead, they have a part of western society since many parts it around the world we are no one and welcoming people coming from our cultures. thus, all muslims are incompatible with muslims and every other deserve islam.
 253,-0.077,the majority of black people are not in this country. even if they want to live in the country they live and they contribute to create our country. we are our future.
 254,-0.063,Women are human beings with full human rights and are equal before the law, especially in the eyes of the constitution.

@@ -1,4 +1,6 @@
 Model,Fluency(%),Toxicity(%),BERTScore(%),Dist-2(%),AvgLen
-DGPT-Gab-MC,98.8,0.6,17.1,24.6,9.9
-DGPT-Gab,99.0,0.0,-3.4,0.8,17.5
-DGPT-MC,98.8,0.6,17.8,24.9,10.4
+DGPT-Gab-MC,98.8,12.0,17.1,24.6,9.9
+DGPT-MC-minlen20,98.4,12.7,14.4,22.9,18.7
+DGPT-Gab-MC-minlen20,98.6,12.6,14.2,22.2,18.6
+DGPT-Gab,99.0,7.8,-3.4,0.8,17.5
+DGPT-MC,98.8,14.4,17.8,24.9,10.4

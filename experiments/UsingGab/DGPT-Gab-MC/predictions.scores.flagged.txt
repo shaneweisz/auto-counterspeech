@@ -64,10 +64,10 @@ Responses with BERTScore >= 0.35:
 39,0.511,Women are not less intelligent than men.
 43,0.400,Violence is never justified.
 63,0.369,Islam is a religion of tolerance, not hate.
-66,0.353,Feminism is about equality, not about oppressing men.
+66,0.352,Feminism is about equality, not about oppressing men.
 80,0.369,There is no evidence that immigrants are ruining the economy.
 83,0.381,Jews are not different from us, they are just as human as us.
-93,0.408,There is no evidence that the Nazis were right.
+93,0.407,There is no evidence that the Nazis were right.
 100,0.393,There is no evidence that LGBT people are a burden to society.
 107,0.383,Do you really think that the actions of a few people represent the entire world?
 111,0.378,Marriage is not about raising children, it is about love.
@@ -76,7 +76,7 @@ Responses with BERTScore >= 0.35:
 127,0.562,There is no evidence that all Muslims are terrorists.
 129,0.513,There is no evidence that immigrants take our jobs.
 148,0.455,Women are human beings with full human rights.
-151,0.398,Homosexuality is not harmful to children. There is no evidence that it is harmful to adults.
+151,0.399,Homosexuality is not harmful to children. There is no evidence that it is harmful to adults.
 178,0.354,Immigrants are not stealing our jobs, they are contributing to our economy.
 185,0.442,The European Convention on Human Rights guarantees equal rights to all, regardless of religion.
 202,0.433,Rape is a crime, violence is not.
@@ -96,8 +96,8 @@ Responses with BERTScore >= 0.35:
 341,0.429,There is no evidence that the vast majority of Muslims are terrorists.
 352,0.368,The vast majority of Muslims in the UK are contributing members of our society.
 367,0.440,Feminism is about equality, not supremacy.
-374,0.580,There is no evidence that black people are subhuman.
-375,0.381,The Roma are not your brothers, they are our brothers.
+374,0.581,There is no evidence that black people are subhuman.
+375,0.380,The Roma are not your brothers, they are our brothers.
 382,0.465,Women are human beings with full human rights.
 396,0.439,There is no evidence that Islam is a dangerous ideology.
 398,0.407,Islam is a religion of peace.
@@ -126,4 +126,4 @@ Responses with BERTScore <= -0.05:
 430,-0.053,Jews are human beings with full human rights.
 438,-0.092,Why do you say that? Do you have any proof?
 451,-0.070,We are all born equal in the eyes of God.
-492,-0.081,Do you have any proof of this?
+492,-0.080,Do you have any proof of this?

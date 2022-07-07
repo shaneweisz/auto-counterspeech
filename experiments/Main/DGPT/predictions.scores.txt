@@ -1,5 +1,5 @@
 Fluency:          0.952
-Toxicity:         0.044
+Toxicity:         0.101
 BERTScore:        0.099
 BLEU-1:           0.009
 BLEU-2:           0.003

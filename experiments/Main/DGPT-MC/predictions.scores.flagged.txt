@@ -78,14 +78,14 @@ Responses with BERTScore >= 0.35:
 83,0.357,Jews are not different from us in that they are not a race.
 88,0.502,Islam is a religion of peace.
 89,0.368,Islam is not a religion of death, it is a religion of peace.
-93,0.355,There is no evidence that the Nazis were right about anything.
+93,0.354,There is no evidence that the Nazis were right about anything.
 100,0.388,There is no evidence that LGBT+ people are a burden to society.
 117,0.454,Islam is a religion of peace.
-120,0.624,It is not ok to be racist against anyone.
+120,0.623,It is not ok to be racist against anyone.
 127,0.562,There is no evidence that all Muslims are terrorists.
 129,0.513,There is no evidence that immigrants take our jobs.
 138,0.556,There is no evidence that migration is a negative for the economy.
-148,0.455,Women are human beings with full human rights.
+148,0.456,Women are human beings with full human rights.
 151,0.398,Homosexuality is not harmful to children. There is no evidence that it is harmful to adults.
 163,0.389,There is no evidence that Muslims are spreading cancer.
 178,0.354,Immigrants are not stealing our jobs, they are contributing to our economy.
@@ -121,12 +121,12 @@ Responses with BERTScore >= 0.35:
 ==================================
 Responses with BERTScore <= -0.05:
 ==================================
-56,-0.092,Immigrants pay more in taxes than they receive in taxes.
+56,-0.093,Immigrants pay more in taxes than they receive in taxes.
 147,-0.069,I'm not sure what you mean by 'a rabble of fags'.
 227,-0.051,There is no evidence that children with Down syndrome are less able to cope with normal education.
 228,-0.053,Do you have any proof of this?
 232,-0.061,Rape is a crime, regardless of the religion of the perpetrator.
-300,-0.072,How can you be sure that they are here illegally?
+300,-0.071,How can you be sure that they are here illegally?
 342,-0.050,There is no evidence that refugees are more likely to commit crimes than native born citizens.
 473,-0.114,What do you mean by'machete attacks'?
 492,-0.081,Do you have any proof of this?

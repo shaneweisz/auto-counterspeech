@@ -133,7 +133,7 @@ Responses with BERTScore >= 0.35:
 68,1.000,Is it really the case that you think that the Koran is incompatible with our country? Have you t ever read it?
 69,1.000,I don't know about you, but I haven't ever heard of a country being democratic and at the same time banning gays. I don't understand how both can be true.
 70,1.000,A story is a snapshot of our time, the majority of stories are about positive aspects of society. And yes, maybe you would believe it, on this basis, that no other migrant can do the same. But the story you claimed you read is the proof that being a migrant or not doesn't matter when it comes to save lives.
-71,1.000,To be honest, I find this line of thinking rather offensive. Why would it be like that?
+71,1.001,To be honest, I find this line of thinking rather offensive. Why would it be like that?
 72,1.000,I don't see how "different" can be defined so broadly. What do you think "different" means to you?
 73,1.000,It seems to me that your statement shows that you are really concerned about peoples' integration. Still, it is not a solution to deport those you don't like.
 74,1.000,Wait, what do you mean "most religious organizations"? That's a new canard to me!
@@ -237,7 +237,7 @@ Responses with BERTScore >= 0.35:
 172,1.000,The argument that the only reason the Jews are not being assimilated is because of the way they are represented in politics is untenable. In fact if Jews were represented objectively, they wouldn't have had suffered in the historical crimes against humanity.
 173,1.000,It is no secret that many people in the UK have suffered from racism. There are also people of colour who face racism daily. It is not a matter of 'accepting' it, it is a matter of fighiting it.
 174,1.000,The Koran is not questioning the core values of the British constitution.
-175,1.001,You should be very, very careful what you wish for. Would you wish that for your mother or your daughter?
+175,1.000,You should be very, very careful what you wish for. Would you wish that for your mother or your daughter?
 176,1.000,What are you talking about? Islam does not promote these crimes. The Quran, Hadith, Sunnah and the like condemn or at least warn against these heinous crimes.
 177,1.000,I do not know why you would describe gay people as insane. If you were told to go back in the closet you would probably go insane too.
 178,1.000,The European Commission is working on ways to make the labour market more inclusive. This does not mean that they are stealing our jobs.
@@ -285,7 +285,7 @@ Responses with BERTScore >= 0.35:
 220,1.000,The world is better off without antisemitism, racism, sexism, ableism and intolerance. Don't you think so?
 221,1.000,To live in a diverse and equal society encourages children into increased inclusiveness rather than radicalisation.
 222,1.000,The solution is not to keep the Mideast mired in civil war but to find and expose the terrorists that try to stoke fear and division among the populations.
-223,1.001,people who pose no threat (regardless of religion) should have their beliefs challenged but their rights respected
+223,1.000,people who pose no threat (regardless of religion) should have their beliefs challenged but their rights respected
 224,1.000,Does the 'solution' for the economic crisis revolve around paying the migrants to leave? It is not clear how this could solve to the real problems of our country.
 225,1.000,This is not true. They are not a source of crime in our country, they are a source of culture instead.
 226,1.000,There are enough empty homes in the UK for both migrants and veterans. Migrants deserve to be treated humanely. Try having some empathy. What if you had to expatriate and had to live in poor conditions?
@@ -342,7 +342,7 @@ Responses with BERTScore >= 0.35:
 277,1.000,If you truly cared about terrorist attacks in our country you would call for the prosecution of the perpetrators, not blame all Muslims.
 278,1.000,Muslims have been a part of this country since its beginnings and have always been a part of our society. They are our brothers and sisters.
 279,1.000,Muslims have contributed greatly to our country and are proud of that. They are our brothers and sisters. Why should we be afraid of a religious minority?
-280,1.000,We are accepting of gay, lesbian and trans people because we have God's laws on our side.
+280,1.001,We are accepting of gay, lesbian and trans people because we have God's laws on our side.
 281,1.000,The problem isn't the migrants, it is with the culture of hate towards who is born in another country.
 282,1.000,Why are you talking about tolerance while you are equating it with discrimination?
 283,1.000,No one in their right mind would not want to see asian actors in action movies.The ancient tradition of Asian martial arts would be a huge loss!
@@ -517,7 +517,7 @@ Responses with BERTScore >= 0.35:
 452,1.000,Muslims are welcome to live and work in the UK, and many of them have done just that. This unfounded fear doesn't have to be at the expense of those 'different' from us.
 453,1.000,People have the right to practice whatever religion they want, as long as it respects the law and doesn't violate the dignity of other human beings.
 454,1.000,So are you saying that because black people are different from whites, they are inferior? I would be interested in knowing which parameters you would use to measure this alleged 'inferiority'.
-455,1.000,That intolerance and hatred is one of the biggest problems our country faces #spreadlovenothate.
+455,1.001,That intolerance and hatred is one of the biggest problems our country faces #spreadlovenothate.
 456,1.000,For a lot of people it is still their home country, and they are proud of it.
 457,1.000,Migrants pay taxes, earn money and take care of our sick and elderly.
 458,1.000,It is estimated that over the 50% of people committing domestic abuse were drunk. It's a complex issue but two things I know for sure: a drunk person is in no position to judge anyone's behaviour and beating a person is ALWAYS wrong.
