@@ -66,7 +66,7 @@ Responses with BERTScore >= 0.35:
 34,0.425,It is not true that Jews control the financial world. There are many Jews working in finance and in other fields of life.
 101,0.567,The vast majority of Muslims live in Europe, and are part of our society. They are our brothers and sisters.
 117,0.474,Islam is not a violent religion. It is a religion of peace. It is about love, not violence.
-120,0.422,It is not okay to be racist against anyone, regardless of their skin colour, ethnicity, or national origin.
+120,0.423,It is not okay to be racist against anyone, regardless of their skin colour, ethnicity, or national origin.
 126,0.411,Homosexuality is not a disease, it is a sexual preference. It has nothing to do with being subhuman.
 127,0.569,There is no evidence that all Muslims are terrorists. There is also no evidence that all terrorists are Muslims.
 129,0.397,Immigrants are not taking our jobs. They are contributing to our economy by working hard and paying taxes.
@@ -79,7 +79,7 @@ Responses with BERTScore >= 0.35:
 279,0.478,The vast majority of Muslims live in the UK and are proud to be British. They are our brothers and sisters.
 301,0.409,Women have the right to choose what to do with their bodies, and this is what they should do.
 303,0.529,Feminism is not about oppressing men. Feminism is about the equality of the sexes.
-306,0.474,Homosexuality is not a perversion. Homosexuality is a choice, not a disease.
+306,0.473,Homosexuality is not a perversion. Homosexuality is a choice, not a disease.
 308,0.579,This is not true. Women are human beings with full human rights, and should be treated as such.
 358,0.413,Women are human beings with full human rights, and they should have the same rights as anyone else.
 367,0.350,Feminism is about the equality of the sexes, not about subversion of the will of men.
@@ -105,7 +105,7 @@ Responses with BERTScore <= -0.05:
 232,-0.091,Rape is a crime, regardless of the religion of the perpetrator. It is a crime regardless of the victim.
 239,-0.062,Women are human beings with full human rights. They have the same rights as any other human being.
 294,-0.101,The vast majority of Muslims in the UK are good people who have contributed to our country. They are our brothers and sisters.
-331,-0.090,The majority of people in the U.S. are black, and the vast majority of them live in urban areas.
+331,-0.089,The majority of people in the U.S. are black, and the vast majority of them live in urban areas.
 347,-0.054,Women are human beings with full human rights, and they have the right to be treated as such.
 350,-0.175,Jews have always been part of our society. They are our brothers and sisters. They are our neighbours. They are our friends.
 351,-0.063,There is no such thing as 'Afro-European'. It is a myth perpetuated by racists.

@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH -J decode
+#SBATCH -J main-exp
 #SBATCH -A MLMI-SW984-SL2-GPU
 #! How many whole nodes should be allocated?
 #SBATCH --nodes=1
@@ -13,7 +13,7 @@
 #SBATCH -p ampere
 #SBATCH --output=slurm_logs/%j.%x_%a.out
 #SBATCH --error=slurm_logs/%j.%x_%a.err
-#SBATCH --array=0-5
+#SBATCH --array=0-8
 
 #! Optionally modify the environment seen by the application
 #! (note that SLURM reproduces the environment at submission irrespective of ~/.bashrc):
@@ -38,10 +38,10 @@ MIN_LEN=20
 
 #################################
 
-SYSTEM_NAMES=(DGPT DGPT-MC GPS Gold-standard DGPT-minlen$MIN_LEN DGPT-MC-minlen$MIN_LEN)
-MODEL_NAMES=(microsoft/DialoGPT-medium models/DialoGPT-finetuned-multiCONAN NA NA microsoft/DialoGPT-medium models/DialoGPT-finetuned-multiCONAN)
-DECODE_OR_NOT_ARRAY=(false false false false false false)
-MIN_NEW_TOKENS_ARRAY=(None None NA NA $MIN_LEN $MIN_LEN)
+SYSTEM_NAMES=(DGPT DGPT-MC GPS Gold-standard DGPT-minlen$MIN_LEN DGPT-MC-minlen$MIN_LEN DGPT-Gab DGPT-Gab-MC DGPT-Gab-MC-minlen$MIN_LEN)
+MODEL_NAMES=(microsoft/DialoGPT-medium models/DialoGPT-finetuned-multiCONAN NA NA microsoft/DialoGPT-medium models/DialoGPT-finetuned-multiCONAN models/DialoGPT-finetuned-gab models/DialoGPT-finetuned-gab-then-multiCONAN models/DialoGPT-finetuned-gab-then-multiCONAN)
+DECODE_OR_NOT_ARRAY=(false false false false false false false false false)
+MIN_NEW_TOKENS_ARRAY=(None None NA NA $MIN_LEN $MIN_LEN None None $MIN_LEN)
 
 SYSTEM_NAME=${SYSTEM_NAMES[$SLURM_ARRAY_TASK_ID]}
 MODEL_NAME=${MODEL_NAMES[$SLURM_ARRAY_TASK_ID]}

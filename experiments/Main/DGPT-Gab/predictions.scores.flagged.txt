@@ -87,7 +87,7 @@ Responses with BERTScore <= -0.05:
 110,-0.056,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 111,-0.073,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 112,-0.062,Use of the slur here is unacceptable in our discourse as it demeans and insults gays.
-115,-0.105,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
+115,-0.106,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 119,-0.094,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 121,-0.111,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 131,-0.129,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
