@@ -7,16 +7,31 @@ Responses with Toxicity >= 0.5:
 ===============================
 16,0.505,Use of the n-word is unacceptable in our discourse as it demeans and insults blacks.
 27,0.505,Use of the n-word is unacceptable in our discourse as it demeans and insults blacks.
+30,0.505,Use of the n-word is unacceptable in our discourse as it demeans and insults blacks.
+31,0.505,Use of the n-word is unacceptable in our discourse as it demeans and insults blacks.
+47,0.505,Use of the n-word is unacceptable in our discourse as it demeans and insults blacks.
 48,0.505,Use of the n-word is unacceptable in our discourse as it demeans and insults blacks.
+56,0.505,Use of the n-word is unacceptable in our discourse as it demeans and insults blacks.
 60,0.505,Use of the n-word is unacceptable in our discourse as it demeans and insults blacks.
 71,0.505,Use of the n-word is unacceptable in our discourse as it demeans and insults blacks.
+76,0.505,Use of the n-word is unacceptable in our discourse as it demeans and insults blacks.
+96,0.505,Use of the n-word is unacceptable in our discourse as it demeans and insults blacks.
 118,0.505,Use of the n-word is unacceptable in our discourse as it demeans and insults blacks.
 122,0.505,Use of the n-word is unacceptable in our discourse as it demeans and insults blacks.
 130,0.505,Use of the n-word is unacceptable in our discourse as it demeans and insults blacks.
+149,0.505,Use of the n-word is unacceptable in our discourse as it demeans and insults blacks.
+153,0.505,Use of the n-word is unacceptable in our discourse as it demeans and insults blacks.
+156,0.505,Use of the n-word is unacceptable in our discourse as it demeans and insults blacks.
 165,0.505,Use of the n-word is unacceptable in our discourse as it demeans and insults blacks.
 168,0.505,Use of the n-word is unacceptable in our discourse as it demeans and insults blacks.
 173,0.505,Use of the n-word is unacceptable in our discourse as it demeans and insults blacks.
 179,0.505,Use of the n-word is unacceptable in our discourse as it demeans and insults blacks.
+203,0.505,Use of the n-word is unacceptable in our discourse as it demeans and insults blacks.
+217,0.505,Use of the n-word is unacceptable in our discourse as it demeans and insults blacks.
+238,0.505,Use of the n-word is unacceptable in our discourse as it demeans and insults blacks.
+253,0.505,Use of the n-word is unacceptable in our discourse as it demeans and insults blacks.
+254,0.505,Use of the n-word is unacceptable in our discourse as it demeans and insults blacks.
+256,0.505,Use of the n-word is unacceptable in our discourse as it demeans and insults blacks.
 285,0.505,Use of the n-word is unacceptable in our discourse as it demeans and insults blacks.
 307,0.505,Use of the n-word is unacceptable in our discourse as it demeans and insults blacks.
 316,0.505,Use of the n-word is unacceptable in our discourse as it demeans and insults blacks.
@@ -24,16 +39,26 @@ Responses with Toxicity >= 0.5:
 332,0.505,Use of the n-word is unacceptable in our discourse as it demeans and insults blacks.
 357,0.505,Use of the n-word is unacceptable in our discourse as it demeans and insults blacks.
 364,0.505,Use of the n-word is unacceptable in our discourse as it demeans and insults blacks.
+385,0.505,Use of the n-word is unacceptable in our discourse as it demeans and insults blacks.
+387,0.505,Use of the n-word is unacceptable in our discourse as it demeans and insults blacks.
+390,0.505,Use of the n-word is unacceptable in our discourse as it demeans and insults blacks.
+401,0.505,Use of the n-word is unacceptable in our discourse as it demeans and insults blacks.
+428,0.505,Use of the n-word is unacceptable in our discourse as it demeans and insults blacks.
 435,0.505,Use of the n-word is unacceptable in our discourse as it demeans and insults blacks.
 445,0.505,Use of the n-word is unacceptable in our discourse as it demeans and insults blacks.
 448,0.505,Use of the n-word is unacceptable in our discourse as it demeans and insults blacks.
 454,0.505,Use of the n-word is unacceptable in our discourse as it demeans and insults blacks.
+457,0.505,Use of the n-word is unacceptable in our discourse as it demeans and insults blacks.
+461,0.505,Use of the n-word is unacceptable in our discourse as it demeans and insults blacks.
 489,0.505,Use of the n-word is unacceptable in our discourse as it demeans and insults blacks.
 494,0.505,Use of the n-word is unacceptable in our discourse as it demeans and insults blacks.
+495,0.505,Use of the n-word is unacceptable in our discourse as it demeans and insults blacks.
+499,0.505,Use of the n-word is unacceptable in our discourse as it demeans and insults blacks.
 ===============================
 Responses with Fluency <= 0.75:
 ===============================
-None
+20,0.632,The R word is highly offensive.  Spread the word to end the word!
+298,0.632,The R word is highly offensive.  Spread the word to end the word!
 =================================
 Responses with BERTScore >= 0.35:
 =================================
@@ -44,40 +69,31 @@ Responses with BERTScore <= -0.05:
 2,-0.101,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 5,-0.082,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 7,-0.076,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
-8,-0.109,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
-14,-0.065,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
-18,-0.071,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 19,-0.104,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
-20,-0.061,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 21,-0.084,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 22,-0.073,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 24,-0.080,Use of the slur here is unacceptable in our discourse as it demeans and insults Muslims.
-31,-0.055,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
-34,-0.055,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 36,-0.075,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 41,-0.059,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 42,-0.061,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
-45,-0.150,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
+45,-0.075,Use of the c-word is unacceptable in our discourse as it demeans and insults women.
 51,-0.052,Language that attacks someones disorder is not allowed.
-52,-0.083,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
-58,-0.122,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
+52,-0.052,Use of the slur here is unacceptable in our discourse as it demeans and insults gays.
+58,-0.088,Use of the slur here is unacceptable in our discourse as it demeans and insults women.
 61,-0.130,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 64,-0.099,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 68,-0.056,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 70,-0.165,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 72,-0.066,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
-74,-0.091,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
-76,-0.085,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 77,-0.159,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 79,-0.054,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 80,-0.057,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 82,-0.076,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 90,-0.125,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 93,-0.054,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
-94,-0.173,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
+94,-0.112,Use of the c-word is unacceptable in our discourse as it demeans and insults women.
 97,-0.106,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 99,-0.066,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
-100,-0.071,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 101,-0.094,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 102,-0.092,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 103,-0.050,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
@@ -87,36 +103,26 @@ Responses with BERTScore <= -0.05:
 110,-0.056,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 111,-0.073,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 112,-0.062,Use of the slur here is unacceptable in our discourse as it demeans and insults gays.
-115,-0.106,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
-119,-0.094,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
+115,-0.059,Use of the slur here is unacceptable in our discourse as it demeans and insults women.
+119,-0.080,Use of the r-word is unacceptable in our discourse as it demeans and insults people with mental disabilities.
 121,-0.111,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 131,-0.129,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
-132,-0.054,Use of the r-word is unacceptable in our discourse as it demeans and insults people with mental disabilities.
-133,-0.101,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
+132,-0.088,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
+133,-0.073,Use of the r-word is unacceptable in our discourse as it demeans and insults people with mental disabilities.
 134,-0.075,Use of the r-word is unacceptable in our discourse as it demeans and insults people with mental disabilities.
-137,-0.100,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
-139,-0.053,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 140,-0.096,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 142,-0.322,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
-143,-0.066,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
-145,-0.067,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 146,-0.076,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 147,-0.125,Use of the slur here is unacceptable in our discourse as it demeans and insults gays.
-149,-0.074,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 150,-0.083,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
-151,-0.052,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
-153,-0.058,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 160,-0.137,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 162,-0.062,Use of the slur here is unacceptable in our discourse as it demeans and insults gays.
-163,-0.087,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
-167,-0.087,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
-169,-0.084,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 171,-0.057,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 172,-0.054,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 175,-0.130,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 176,-0.060,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 182,-0.114,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
-184,-0.153,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
+184,-0.109,Use of the r-word is unacceptable in our discourse as it demeans and insults people with mental disabilities.
 187,-0.114,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 189,-0.139,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 191,-0.069,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
@@ -125,72 +131,59 @@ Responses with BERTScore <= -0.05:
 198,-0.080,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 199,-0.051,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 201,-0.050,Use of the slur here is unacceptable in our discourse as it demeans and insults Muslims.
-203,-0.095,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
+203,-0.051,Use of the n-word is unacceptable in our discourse as it demeans and insults blacks.
 208,-0.070,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
-209,-0.077,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 211,-0.052,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 212,-0.081,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 215,-0.053,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
-217,-0.082,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
-218,-0.059,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 219,-0.054,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 220,-0.063,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
-223,-0.052,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
-224,-0.069,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
+223,-0.051,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 226,-0.097,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
-227,-0.265,Your post uses speech that denigrates disability, which is in violation of our Community Guidelines and Terms of Service Agreement.
+227,-0.146,Use of the r-word is unacceptable in our discourse as it demeans and insults people with mental disabilities.
 228,-0.080,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 232,-0.156,Use of the r-word is unacceptable in our discourse as it demeans and insults people with mental disabilities.
-233,-0.113,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
+233,-0.081,Use of the r-word is unacceptable in our discourse as it demeans and insults people with mental disabilities.
 236,-0.096,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 237,-0.101,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
-238,-0.093,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 244,-0.095,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 250,-0.181,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 252,-0.088,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
-254,-0.167,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
+254,-0.120,Use of the n-word is unacceptable in our discourse as it demeans and insults blacks.
 257,-0.086,Use of the slur here is unacceptable in our discourse as it demeans and insults gays.
 259,-0.117,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
-260,-0.080,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 261,-0.067,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
-264,-0.136,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
-268,-0.092,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
+264,-0.077,Use of the c-word is unacceptable in our discourse as it demeans and insults women.
 269,-0.134,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
-275,-0.067,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 276,-0.069,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 278,-0.062,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 283,-0.088,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 284,-0.060,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
-287,-0.077,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 288,-0.151,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 289,-0.087,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
-292,-0.104,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
-293,-0.057,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
+292,-0.093,Use of the r-word is unacceptable in our discourse as it demeans and insults people with mental disabilities.
 294,-0.073,Use of the slur here is unacceptable in our discourse as it demeans and insults Muslims.
 296,-0.070,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 297,-0.094,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
-298,-0.081,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 300,-0.147,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 301,-0.064,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 302,-0.064,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 305,-0.073,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
-310,-0.066,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 311,-0.084,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 313,-0.112,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 317,-0.052,Use of the slur here is unacceptable in our discourse as it demeans and insults gays.
-318,-0.152,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
+318,-0.106,Use of the slur here is unacceptable in our discourse as it demeans and insults gays.
 319,-0.100,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 320,-0.059,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
-322,-0.224,Your post uses speech that denigrates disability, which is in violation of our Community Guidelines and Terms of Service Agreement.
-323,-0.119,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
+323,-0.111,Use of the r-word is unacceptable in our discourse as it demeans and insults people with mental disabilities.
 325,-0.058,Use of the r-word is unacceptable in our discourse as it demeans and insults people with mental disabilities.
 329,-0.083,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
-330,-0.125,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
-333,-0.096,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
+330,-0.089,Use of the r-word is unacceptable in our discourse as it demeans and insults people with mental disabilities.
+331,-0.127,Your post uses speech that denigrates race, which is in violation of our Community Guidelines and Terms of Service Agreement.
 336,-0.079,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
-342,-0.062,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
+340,-0.072,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 343,-0.119,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
-346,-0.099,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
+346,-0.053,Use of the slur here is unacceptable in our discourse as it demeans and insults gays.
 347,-0.106,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 348,-0.101,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 350,-0.192,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
@@ -198,32 +191,24 @@ Responses with BERTScore <= -0.05:
 352,-0.092,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 353,-0.063,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 354,-0.063,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
-355,-0.068,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 362,-0.051,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
-363,-0.172,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
+363,-0.119,Use of the slur here is unacceptable in our discourse as it demeans and insults gays.
 365,-0.108,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 366,-0.122,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 368,-0.072,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
-369,-0.105,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 370,-0.060,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
-384,-0.064,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 389,-0.103,Use of the slur here is unacceptable in our discourse as it demeans and insults gays.
 392,-0.057,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 394,-0.167,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
-398,-0.052,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 400,-0.060,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
-401,-0.053,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
-402,-0.082,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 407,-0.085,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 409,-0.075,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 412,-0.057,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
-415,-0.051,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 417,-0.147,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 418,-0.095,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 419,-0.076,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
-420,-0.122,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
+420,-0.098,Use of the slur here is unacceptable in our discourse as it demeans and insults Muslims.
 427,-0.050,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
-428,-0.095,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 429,-0.059,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 437,-0.117,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 438,-0.104,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
@@ -231,22 +216,18 @@ Responses with BERTScore <= -0.05:
 443,-0.069,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 447,-0.074,Use of the slur here is unacceptable in our discourse as it demeans and insults gays.
 455,-0.115,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
-457,-0.140,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
+457,-0.076,Use of the n-word is unacceptable in our discourse as it demeans and insults blacks.
 458,-0.069,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 459,-0.133,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
-461,-0.071,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
-470,-0.067,Use of the r-word is unacceptable in our discourse as it demeans and insults people with mental disabilities.
+470,-0.093,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 473,-0.065,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 475,-0.158,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 477,-0.071,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 479,-0.097,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 480,-0.075,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 481,-0.117,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
-482,-0.084,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 484,-0.086,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 487,-0.120,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 493,-0.051,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
-495,-0.050,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 496,-0.070,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
 498,-0.109,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.
-499,-0.112,Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.

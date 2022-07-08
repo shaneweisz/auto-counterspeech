@@ -1,0 +1,36 @@
+#!/bin/bash
+#SBATCH -J gab-mc-train
+#SBATCH -A MLMI-SW984-SL2-GPU
+#! How many whole nodes should be allocated?
+#SBATCH --nodes=1
+#! How many (MPI) tasks will there be in total?
+#! Note probably this should not exceed the total number of GPUs in use.
+#SBATCH --ntasks=1
+#! Specify the number of GPUs per node (between 1 and 4; must be 4 if nodes>1).
+#! Note that the job submission script will enforce no more than 32 cpus per GPU.
+#SBATCH --gres=gpu:1
+#SBATCH --time=05:00:00
+#SBATCH -p ampere
+#SBATCH --output=slurm_logs/%j.%x.out
+#SBATCH --error=slurm_logs/%j.%x.err
+
+#! Optionally modify the environment seen by the application
+#! (note that SLURM reproduces the environment at submission irrespective of ~/.bashrc):
+. /etc/profile.d/modules.sh                # Leave this line (enables the module command)
+module purge                               # Removes all modules still loaded
+module load rhel8/default-amp              # REQUIRED - loads the basic environment
+
+# Additional environment setup
+module load python/3.8
+source .venv/bin/activate
+
+# Start logs
+echo -e "JobID: $SLURM_JOB_ID\n======"
+echo "Running on master node: `hostname`"
+echo "Start time: `date`"
+
+# Scripts to run
+python train.py -m models/DialoGPT-finetuned-gab
+
+# Final logs
+echo "Finish time: `date`"

@@ -32,6 +32,6 @@ class Preprocessor(ABC):
                 for i, col in enumerate(row):
                     if type(col) == str:
                         # escape quotes in strings to avoid errors when writing to csv
-                        col = col.replace('"', '""')
+                        col = col.replace('"', '""').replace("\n", " ")
                         row[i] = f'"{col}"'
                 f.write(",".join(row) + "\n")

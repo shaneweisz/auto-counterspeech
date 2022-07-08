@@ -13,7 +13,7 @@
 #SBATCH -p ampere
 #SBATCH --output=slurm_logs/%j.%x_%a.out
 #SBATCH --error=slurm_logs/%j.%x_%a.err
-#SBATCH --array=0-3
+#SBATCH --array=0
 
 #! Optionally modify the environment seen by the application
 #! (note that SLURM reproduces the environment at submission irrespective of ~/.bashrc):
@@ -32,31 +32,27 @@ echo "Start time: `date`"
 
 #################################
 
-EXP_DIR="experiments/Main"
+# Config
+MODEL_NAME=models/DialoGPT-finetuned-gab
+SYSTEM_NAME=DGPT-Gab
+OUTPUT_DIR=$SYSTEM_NAME
+
+INPUTS=data/splits/gab/test.inputs.txt
+REFS=data/splits/gab/test.references.txt
+
+BATCH_SIZE=8
+
 NO_REP=5
+CONFIG_OVERRIDES="no_repeat_ngram_size=$NO_REP"
 
-#################################
+# Predict
+python decode.py -m $MODEL_NAME -o $OUTPUT_DIR -co $CONFIG_OVERRIDES -i $INPUTS -b $BATCH_SIZE
 
-SYSTEM_NAMES=(DGPT DGPT-MC GPS Gold-standard)
-MODEL_NAMES=(microsoft/DialoGPT-medium models/DialoGPT-finetuned-multiCONAN NA NA)
-DECODE_OR_NOT_ARRAY=(false false false false) #(true true false false)
-
-SYSTEM_NAME=${SYSTEM_NAMES[$SLURM_ARRAY_TASK_ID]}
-MODEL_NAME=${MODEL_NAMES[$SLURM_ARRAY_TASK_ID]}
-SHOULD_DECODE=${DECODE_OR_NOT_ARRAY[$SLURM_ARRAY_TASK_ID]}
-
-OUTPUT_DIR="$EXP_DIR/$SYSTEM_NAME"
-if [ $SHOULD_DECODE = true ]; then
-    CONFIG_OVERRIDES="no_repeat_ngram_size=$NO_REP"
-    python decode.py -m $MODEL_NAME -o $OUTPUT_DIR -co $CONFIG_OVERRIDES
-fi
-
+# Evaluate
 PREDICTIONS_FILE="$OUTPUT_DIR/predictions.txt"
-python evaluate.py -p $PREDICTIONS_FILE -v
+python evaluate.py -p $PREDICTIONS_FILE -r $REFS -i $INPUTS -v
 
 ################################
-
-bash extract-experiment-results.sh $EXP_DIR
 
 # Final logs
 echo "Finish time: `date`"

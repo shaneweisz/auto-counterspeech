@@ -85,7 +85,7 @@ Responses with BERTScore >= 0.35:
 127,0.562,There is no evidence that all Muslims are terrorists.
 129,0.513,There is no evidence that immigrants take our jobs.
 138,0.556,There is no evidence that migration is a negative for the economy.
-148,0.456,Women are human beings with full human rights.
+148,0.455,Women are human beings with full human rights.
 151,0.398,Homosexuality is not harmful to children. There is no evidence that it is harmful to adults.
 163,0.389,There is no evidence that Muslims are spreading cancer.
 178,0.354,Immigrants are not stealing our jobs, they are contributing to our economy.
@@ -93,7 +93,7 @@ Responses with BERTScore >= 0.35:
 217,0.382,There is no evidence that immigrants steal our jobs.
 235,0.386,There is no evidence that Islam is a threat to us.
 238,0.379,There is no evidence that Jews have a big nose.
-265,0.453,There is no evidence that the 9/11 attacks were carried out by Jews.
+265,0.452,There is no evidence that the 9/11 attacks were carried out by Jews.
 272,0.367,Love is an attribute of all religions, not just Islam.
 274,0.385,Homosexuality is not a mental disorder, it is a sexual preference.
 298,0.434,Jews are not a race, they are a people.
@@ -121,12 +121,12 @@ Responses with BERTScore >= 0.35:
 ==================================
 Responses with BERTScore <= -0.05:
 ==================================
-56,-0.093,Immigrants pay more in taxes than they receive in taxes.
+56,-0.092,Immigrants pay more in taxes than they receive in taxes.
 147,-0.069,I'm not sure what you mean by 'a rabble of fags'.
 227,-0.051,There is no evidence that children with Down syndrome are less able to cope with normal education.
 228,-0.053,Do you have any proof of this?
 232,-0.061,Rape is a crime, regardless of the religion of the perpetrator.
-300,-0.071,How can you be sure that they are here illegally?
+300,-0.072,How can you be sure that they are here illegally?
 342,-0.050,There is no evidence that refugees are more likely to commit crimes than native born citizens.
 473,-0.114,What do you mean by'machete attacks'?
 492,-0.081,Do you have any proof of this?

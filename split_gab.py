@@ -23,6 +23,11 @@ def main(args):
     df, df_val = train_test_split(df, test_size=n_val, random_state=args.seed, shuffle=False)
     df_train = df
 
+    print("Shuffling the order of the rows in the train/val/test sets")
+    df_train = df_train.sample(frac=1, random_state=args.seed).reset_index(drop=True)
+    df_val = df_val.sample(frac=1, random_state=args.seed).reset_index(drop=True)
+    df_test = df_test.sample(frac=1, random_state=args.seed).reset_index(drop=True)
+
     print(f"Writing train, val, and test sets to csv's in {args.output_dir}")
     Path(args.output_dir).mkdir(parents=True, exist_ok=True)  # create the output directories if they don't exist
     df_train.to_csv(args.output_dir / "train.csv", index=False, quoting=csv.QUOTE_ALL)
@@ -32,7 +37,6 @@ def main(args):
     print(f"Writing the test inputs and references to txt files in {args.output_dir}")
     inputs = [str(text).replace("\n", " ") for text in list(df_test["hate_speech"])]
     references = [str(text).replace("\n", " ") for text in list(df_test["counter_speech"])]
-    print(len(inputs), len(references))
     write_list_to_file(args.output_dir / "test.inputs.txt", inputs)
     write_list_to_file(args.output_dir / "test.references.txt", references)
 

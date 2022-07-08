@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH -J train
+#SBATCH -J gab-train
 #SBATCH -A MLMI-SW984-SL2-GPU
 #! How many whole nodes should be allocated?
 #SBATCH --nodes=1
@@ -9,7 +9,7 @@
 #! Specify the number of GPUs per node (between 1 and 4; must be 4 if nodes>1).
 #! Note that the job submission script will enforce no more than 32 cpus per GPU.
 #SBATCH --gres=gpu:1
-#SBATCH --time=02:00:00
+#SBATCH --time=05:00:00
 #SBATCH -p ampere
 #SBATCH --output=slurm_logs/%j.%x.out
 #SBATCH --error=slurm_logs/%j.%x.err
@@ -30,7 +30,7 @@ echo "Running on master node: `hostname`"
 echo "Start time: `date`"
 
 # Scripts to run
-python train.py
+python train.py -d data/splits/gab -c config/train.config.gab.json
 
 # Final logs
 echo "Finish time: `date`"

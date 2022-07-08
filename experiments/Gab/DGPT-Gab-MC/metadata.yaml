@@ -1,4 +1,4 @@
-Date: 2022-07-08 11-10-28
+Date: 2022-07-08 17-27-32
 Args:
 	model_name_or_path: models/DialoGPT-finetuned-gab-then-multiCONAN
 	decoding_config_path: config/decode.config.json

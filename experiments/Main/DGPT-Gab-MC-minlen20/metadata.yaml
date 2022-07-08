@@ -1,8 +1,8 @@
-Date: 2022-07-07 10-10-59
+Date: 2022-07-08 17-14-22
 Args:
 	model_name_or_path: models/DialoGPT-finetuned-gab-then-multiCONAN
 	decoding_config_path: config/decode.config.json
 	inputs_path: evaluation/test.inputs.txt
 	batch_size: 16
-	output_dir: experiments/UsingGab/DGPT-Gab-MC-minlen20
+	output_dir: experiments/Main/DGPT-Gab-MC-minlen20
 	config_overrides: no_repeat_ngram_size=5;min_new_tokens=20
