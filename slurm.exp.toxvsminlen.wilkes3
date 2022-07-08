@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH -J gab-decode
+#SBATCH -J tox-v-mlen
 #SBATCH -A MLMI-SW984-SL2-GPU
 #! How many whole nodes should be allocated?
 #SBATCH --nodes=1
@@ -13,7 +13,7 @@
 #SBATCH -p ampere
 #SBATCH --output=slurm_logs/%j.%x_%a.out
 #SBATCH --error=slurm_logs/%j.%x_%a.err
-#SBATCH --array=0-2
+#SBATCH --array=0-5
 
 #! Optionally modify the environment seen by the application
 #! (note that SLURM reproduces the environment at submission irrespective of ~/.bashrc):
@@ -32,28 +32,20 @@ echo "Start time: `date`"
 
 #################################
 
-EXP_NAME="UsingGab"
-EXP_DIR="experiments/$EXP_NAME"
+EXP_DIR="experiments/ToxicityVsMinlen"
+
 NO_REP=5
-MIN_LEN=20
+MIN_LEN_ARRAY=(5 10 15 20 40 80)
+MIN_LEN=${MIN_LEN_ARRAY[$SLURM_ARRAY_TASK_ID]}
+
+MODEL_NAME=microsoft/DialoGPT-medium
+SYSTEM_NAME=DGPT-minlen$MIN_LEN
+OUTPUT_DIR="$EXP_DIR/$SYSTEM_NAME"
 
 #################################
 
-SYSTEM_NAMES=(DGPT-Gab DGPT-Gab-MC DGPT-Gab-MC-minlen$MIN_LEN)
-MODEL_NAMES=(models/DialoGPT-finetuned-gab models/DialoGPT-finetuned-gab-then-multiCONAN models/DialoGPT-finetuned-gab-then-multiCONAN)
-DECODE_OR_NOT_ARRAY=(false false false)
-MIN_NEW_TOKENS_ARRAY=(None None $MIN_LEN)
-
-SYSTEM_NAME=${SYSTEM_NAMES[$SLURM_ARRAY_TASK_ID]}
-MODEL_NAME=${MODEL_NAMES[$SLURM_ARRAY_TASK_ID]}
-SHOULD_DECODE=${DECODE_OR_NOT_ARRAY[$SLURM_ARRAY_TASK_ID]}
-MIN_NEW_TOKENS=${MIN_NEW_TOKENS_ARRAY[$SLURM_ARRAY_TASK_ID]}
-
-OUTPUT_DIR="$EXP_DIR/$SYSTEM_NAME"
-if [ $SHOULD_DECODE = true ]; then
-    CONFIG_OVERRIDES="no_repeat_ngram_size=$NO_REP;min_new_tokens=$MIN_NEW_TOKENS"
-    python decode.py -m $MODEL_NAME -o $OUTPUT_DIR -co $CONFIG_OVERRIDES
-fi
+CONFIG_OVERRIDES="no_repeat_ngram_size=$NO_REP;min_new_tokens=$MIN_LEN"
+python decode.py -m $MODEL_NAME -o $OUTPUT_DIR -co $CONFIG_OVERRIDES
 
 PREDICTIONS_FILE="$OUTPUT_DIR/predictions.txt"
 python evaluate.py -p $PREDICTIONS_FILE -v
