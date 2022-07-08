@@ -27,7 +27,7 @@ class RoBERTaColaFluencyClassifier(Metric):
             sentence_scores = []
             for sentence in sent_tokenize(prediction):
                 sentence_scores.append(self.score_sentence(sentence))
-            score = np.mean(sentence_scores)
+            score = np.mean(sentence_scores) if len(sentence_scores) > 0 else 0.0
             scores.append(score)
         self.individual_scores = scores
         self.score = np.mean(scores)

@@ -1,0 +1,8 @@
+Date: 2022-07-07 16-33-15
+Args:
+	model_name_or_path: models/DialoGPT-finetuned-gab
+	decoding_config_path: config/decode.config.json
+	inputs_path: data/splits/gab/test.inputs.txt
+	batch_size: 8
+	output_dir: experiments/Gab/DGPT-Gab
+	config_overrides: no_repeat_ngram_size=5

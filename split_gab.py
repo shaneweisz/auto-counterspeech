@@ -3,6 +3,7 @@ import pandas as pd
 from pathlib import Path
 from sklearn.model_selection import train_test_split
 import csv
+from util.file_io import write_list_to_file
 
 
 def main(args):
@@ -27,6 +28,13 @@ def main(args):
     df_train.to_csv(args.output_dir / "train.csv", index=False, quoting=csv.QUOTE_ALL)
     df_val.to_csv(args.output_dir / "val.csv", index=False, quoting=csv.QUOTE_ALL)
     df_test.to_csv(args.output_dir / "test.csv", index=False, quoting=csv.QUOTE_ALL)
+
+    print(f"Writing the test inputs and references to txt files in {args.output_dir}")
+    inputs = [str(text).replace("\n", " ") for text in list(df_test["hate_speech"])]
+    references = [str(text).replace("\n", " ") for text in list(df_test["counter_speech"])]
+    print(len(inputs), len(references))
+    write_list_to_file(args.output_dir / "test.inputs.txt", inputs)
+    write_list_to_file(args.output_dir / "test.references.txt", references)
 
 
 if __name__ == "__main__":
