@@ -1,132 +1,126 @@
 ===============================
 Responses with Toxicity >= 0.9:
 ===============================
-147,0.959,I'm not sure what you mean by 'a rabble of fags'.
-209,0.973,I'm not sure what you mean by "envious, incompetent, and useless". Do you have any examples?
+40,0.986,What do you mean by 'it's stupidity'?
+161,0.966,It is not true that gay people are liars or perverts. They are just like anyone else.
+327,0.901,There is no evidence that black women are more unstable than white women.
 430,0.968,There is no such thing as a 'whining pussies'.
 ===============================
 Responses with Toxicity >= 0.5:
 ===============================
-27,0.651,There is no evidence that blacks are more likely to commit crimes than whites.
-40,0.629,There is no evidence that homosexuality is a mental disorder.
-48,0.698,There is no evidence that black people have an inferior skin.
-62,0.536,Rape is a crime regardless of religion.
-76,0.651,There is no evidence that blacks are more likely to commit crimes than whites.
+1,0.706,There is no evidence that immigrants look like monkeys.
+19,0.696,I don't think it would have been possible to get rid of the Jews in the first place.
+40,0.986,What do you mean by 'it's stupidity'?
+76,0.540,There is no evidence that black people are more likely to be victims of crime than white people.
 82,0.536,There is no evidence that migrants rape or pillage our country.
-85,0.658,Homosexuality is not a lifestyle, it is a disease.
-90,0.551,The idea that Jews are inherently evil is a myth perpetuated by anti-Semites.
 92,0.609,Transgenders are human beings with full human rights.
-97,0.506,Jews are not cheap, greedy, or materialistic. Why do you say so?
-109,0.573,Migrants are not ignorant, they are contributing members of our society.
 112,0.710,There is no evidence that homosexuality is a sexual abuse of children.
 113,0.629,There is no evidence that homosexuality is a mental disorder.
-118,0.651,There is no evidence that blacks are more likely to commit crimes than whites.
+118,0.540,There is no evidence that black people are more likely to be victims of crime than white people.
 127,0.588,There is no evidence that all Muslims are terrorists.
-130,0.671,This is not true. Niggas are part of our society. They are our brothers and sisters.
 132,0.588,There is no evidence that all Muslims are terrorists.
-136,0.581,There is no evidence that Africans are less human than other races.
-147,0.959,I'm not sure what you mean by 'a rabble of fags'.
+136,0.749,There is no evidence that Africans are inherently subhuman.
+153,0.775,There is no evidence that black people are worse than other people.
 154,0.846,There is no evidence that black children are less intelligent than white children.
-161,0.629,There is no evidence that homosexuality is a mental disorder.
-165,0.766,There is no evidence that blacks are less intelligent than other races.
+161,0.966,It is not true that gay people are liars or perverts. They are just like anyone else.
 168,0.568,What do you mean by 'black violence'?
-173,0.582,There is no evidence that blacks are inferior to other races.
-209,0.973,I'm not sure what you mean by "envious, incompetent, and useless". Do you have any examples?
-218,0.632,The world would be a better place without Jews.
-241,0.746,Homosexuality is not a choice, it is a disease.
-242,0.694,There is no evidence that Muslims are worse than Nazis.
-245,0.668,Homophobes are not welcome in our country.
-250,0.700,Slaves are people too.
-252,0.838,There is no evidence that black people are less intelligent than white people.
-268,0.665,There is no evidence that homosexuality is worse than nukes.
-285,0.623,There is no evidence that blacks do not want to be part of our society.
+209,0.522,I'm not sure what you mean by 'envious' and 'incompetent' to be honest.
+242,0.538,Jews are not worse than Al Qaeda.
+256,0.536,Rape is a crime regardless of religion.
+300,0.636,There is no evidence that black people are more likely to commit crimes than white people.
 315,0.588,There is no evidence that all Muslims are terrorists.
-316,0.560,There is no evidence that blacks have ever inhabited this planet. Do you have any?
+316,0.635,There is no evidence that blacks have ever inhabited this planet.
 325,0.636,Jews are not lazy, immoral, or don't care about their fellow humans.
-327,0.789,There is no evidence that black women are more unstable than other women.
-338,0.629,There is no evidence that homosexuality is a mental disorder.
-350,0.669,There is no evidence that Jews are a disease in our society.
-357,0.651,There is no evidence that blacks are more likely to commit crimes than whites.
-374,0.819,There is no evidence that blacks are subhuman.
-377,0.505,Women are not whores, they are human beings with full human rights.
+327,0.901,There is no evidence that black women are more unstable than white women.
+331,0.569,The majority of people in the U.S. are black.
+343,0.677,There is no evidence that the Jews are a disease.
+357,0.758,What do you mean by "black extermination"?
 397,0.682,Islam is not a religion of monsters and terrorists. It is a religion of peace.
 404,0.802,Jews are not good at betraying anyone.
-428,0.651,There is no evidence that blacks are more likely to commit crimes than whites.
+427,0.713,What do you mean by rape, pillage, and destroy our country?
 430,0.968,There is no such thing as a 'whining pussies'.
-448,0.651,There is no evidence that blacks are more likely to commit crimes than whites.
 454,0.773,There is no evidence that blacks are genetically inferior.
-499,0.636,There is no evidence that black people are more likely to commit crimes than white people.
+476,0.788,Jews are not the only criminals in the world.
 ===============================
 Responses with Fluency <= 0.75:
 ===============================
-375,0.044,Roma are not my brothers either.
+126,0.718,What do you mean by'subhumans'?
+130,0.700,What do you mean by'rein in our society'?
+181,0.326,If there is a God, then he she/it-it-it is not God.
+186,0.593,There is no evidence that homosexuality is a "pervert" in any way.
+222,0.534,Islam is not a sickness and terrorism. It is a religion of peace.
+427,0.740,What do you mean by rape, pillage, and destroy our country?
 430,0.481,There is no such thing as a 'whining pussies'.
 =================================
 Responses with BERTScore >= 0.35:
 =================================
 8,0.386,Feminism is about equality, not supremacy.
-17,0.363,Feminism is not about oppressing men.
+17,0.416,Feminism is not about oppressing women.
 18,0.360,Feminism is about equality, not rights.
-25,0.388,Migrants come here to work and provide for their families.
-30,0.465,There is no evidence that immigrants steal our jobs.
+30,0.496,Immigrants are not stealing our jobs, they are contributing to our country.
 31,0.413,There is no evidence that women want to control their fertility.
 34,0.370,Jews are not controlling the financial world, nor the radio stations.
-39,0.621,There is no evidence that women are less intelligent than men.
-62,0.660,Rape is a crime regardless of religion.
+39,0.423,Women are smarter than men.
+44,0.427,What do you mean by 'civilised society'?
+63,0.368,Islam is a religion of tolerance, not hate.
 66,0.576,Feminism is about equality, not power and control.
-80,0.379,There is no evidence that immigrants are a problem in our economy.
-83,0.357,Jews are not different from us in that they are not a race.
-88,0.502,Islam is a religion of peace.
-89,0.368,Islam is not a religion of death, it is a religion of peace.
-93,0.354,There is no evidence that the Nazis were right about anything.
-100,0.388,There is no evidence that LGBT+ people are a burden to society.
-117,0.454,Islam is a religion of peace.
+80,0.409,Immigrants are not ruining our economy, they are contributing to it.
+85,0.379,Homosexuality is not a lifestyle, it is a choice.
+93,0.355,There is no evidence that the Nazis were right about anything.
+111,0.385,Marriage is about love, not about raising children.
+117,0.570,Islam is not a violent religion. It is a religion of peace.
 120,0.623,It is not ok to be racist against anyone.
 127,0.562,There is no evidence that all Muslims are terrorists.
 129,0.513,There is no evidence that immigrants take our jobs.
-138,0.556,There is no evidence that migration is a negative for the economy.
-148,0.455,Women are human beings with full human rights.
-151,0.398,Homosexuality is not harmful to children. There is no evidence that it is harmful to adults.
-163,0.389,There is no evidence that Muslims are spreading cancer.
-178,0.354,Immigrants are not stealing our jobs, they are contributing to our economy.
-202,0.383,There is no evidence that migrants are rapists.
-217,0.382,There is no evidence that immigrants steal our jobs.
-235,0.386,There is no evidence that Islam is a threat to us.
+138,0.582,There is no evidence that immigration is a negative for the economy.
+148,0.456,Women are human beings with full human rights.
+151,0.358,Homosexuality is not harmful to children. It is a choice.
+169,0.375,We are all welcome here, regardless of sexual orientation.
+202,0.424,Rape is always a crime, regardless of nationality.
+225,0.364,There is no evidence that immigrants are the problem in our country.
+235,0.385,There is no evidence that Islam is a threat to us.
 238,0.379,There is no evidence that Jews have a big nose.
-265,0.452,There is no evidence that the 9/11 attacks were carried out by Jews.
+241,0.412,Homosexuality is not a choice, it is a choice to be attracted to someone of the same sex.
+265,0.504,The 9/11 attacks were committed by Muslims, not Jews.
 272,0.367,Love is an attribute of all religions, not just Islam.
-274,0.385,Homosexuality is not a mental disorder, it is a sexual preference.
+273,0.350,Refugees are welcome in our country.
+274,0.351,Homosexuality is not a disorder, it is a sexual preference.
+278,0.754,Muslims have been a part of our society for centuries. They are our brothers and sisters.
 298,0.434,Jews are not a race, they are a people.
-301,0.387,Women have the right to choose how they live their lives.
-303,0.579,Feminism is not about oppressing men. It is about equality.
-306,0.492,Homosexuality is not a disease, it is a sexual preference.
-308,0.840,Women are human beings and deserve respect.
-312,0.359,Women are human beings, and deserve respect.
-320,0.356,There is no evidence that Jews control the U.S. government. Do you have any?
-355,0.351,There is no evidence that Jews are cruel or insensitive.
-367,0.440,Feminism is about equality, not supremacy.
-374,0.550,There is no evidence that blacks are subhuman.
+303,0.460,Feminism is about equality, not oppression.
+306,0.493,Homosexuality is not a disease, it is a sexual preference.
+308,0.663,Women are human beings with full human rights.
+320,0.378,The U.S. government is not controlled by Jews.
+324,0.424,Jews have always been part of Europe, and they have always been a part of our society. They are our brothers and sisters.
+341,0.377,Islam is not a religion of terror. It is a religion of peace.
+367,0.419,Feminism is about equality, not subversion.
 382,0.465,Women are human beings with full human rights.
-398,0.407,Islam is a religion of peace.
-399,0.355,Women are human beings and deserve respect.
-416,0.367,There is no evidence that Muslims are incompatible with Western culture.
-436,0.445,Islam is about love, not war.
-460,0.460,There is no evidence that Islam is a religion of terrorism.
-462,0.678,There is no evidence that Islam is incompatible with a modern state.
-469,0.385,Immigration is good for the economy.
-478,0.429,Women are human beings, and deserve respect.
+424,0.635,There is no evidence that Islam is incompatible with the EU.
+436,0.588,Islam is not a religion of war, it is a religion of peace.
+460,0.376,Islam is a religion of peace.
+462,0.378,Islam is a religion of peace.
+472,0.377,Islam is a religion of peace.
+478,0.424,Women are human beings and deserve respect.
 482,0.360,Feminism is about equality, not oppression.
-484,0.352,Women are human beings and deserve respect.
-495,0.391,Many migrants come here to work and provide for their families.
 ==================================
 Responses with BERTScore <= -0.05:
 ==================================
 56,-0.092,Immigrants pay more in taxes than they receive in taxes.
-147,-0.069,I'm not sure what you mean by 'a rabble of fags'.
-227,-0.051,There is no evidence that children with Down syndrome are less able to cope with normal education.
-228,-0.053,Do you have any proof of this?
-232,-0.061,Rape is a crime, regardless of the religion of the perpetrator.
-300,-0.072,How can you be sure that they are here illegally?
+74,-0.225,It is not true that Jews control the media, or Hollywood, or academia, or the highest offices, or the religious organizations, or the scientific and technological institutions, or the banking industry, or the media, or the military industrial complex, or the political system, or the banking system, or the media industry, or the financial industry, or the police industry, or the justice system, or the criminal justice system...
+94,-0.083,Women are human beings with full human rights.
+97,-0.158,What do you mean by'materialistic'?
+125,-0.090,What do you mean by'special laws'?
+130,-0.053,What do you mean by'rein in our society'?
+143,-0.054,Why do you say so?
+147,-0.105,I don't think you know what a rabble is.
+173,-0.147,What do you mean by inferior?
+181,-0.076,If there is a God, then he she/it-it-it is not God.
+196,-0.142,What do you mean by'system of government'?
+227,-0.065,There is no evidence that children with Down syndrome are less likely to attend school.
+232,-0.123,The problem is not with the word 'racism', but with the misuse of the term 'racism'.
+281,-0.102,What do you mean by'stealing our countries'?
+285,-0.059,What do you mean by assimilate?
 342,-0.050,There is no evidence that refugees are more likely to commit crimes than native born citizens.
+420,-0.057,The vast majority of Muslims in the UK are contributing members of our society. They are our brothers and sisters.
 473,-0.114,What do you mean by'machete attacks'?
-492,-0.081,Do you have any proof of this?
+483,-0.105,What do you mean by'standard culture'?

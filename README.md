@@ -70,7 +70,7 @@ python eda.py -f <data>.csv [-o <output_file_path>]
 
 ## Generating Counterspeech Responses
 
-Counterspeech response predictions using a model (e.g. `dialoGPT`) can be made on a set of inputs as follows:
+Counterspeech response predictions using a model (e.g. `microsoft/DialoGPT-medium`) can be made on a set of inputs as follows:
 
 ```
 python decode.py --model <modelname> --config <config>.json -i <inputs>.txt [-o <predictions>.txt]
@@ -181,3 +181,13 @@ python evaluate.py --refs_dir path_to_refs_dir --hyp_file path_to_predictions.cl
 ```
 
 Note: `clean-str.py` tokenizes a set of predictions into a cleaned format expected by the `evaluate.py` script.
+
+## Reproducing results
+
+The experiments were conducted on Nvidia Ampere (A100) GPU nodes through the Cambridge HPC via the Slurm Workload Manager.
+
+The respective `slurm.train` scripts can be run to reproduce the training of the respective fine-tuned counterspeech models. For example, by running `sbatch slurm.train.mc.wilkes3`.
+
+The various experiments using these models can then be done by running the respective `slurm.exp` scripts. For example, by running `sbatch slurm.exp.main.wilkes3`
+
+Inspect and adapt these scripts to configure your own experiments or training details.

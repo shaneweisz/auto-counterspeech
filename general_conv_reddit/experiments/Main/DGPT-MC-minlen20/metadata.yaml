@@ -1,8 +1,8 @@
-Date: 2022-07-07 10-36-58
+Date: 2022-07-12 11-22-17
 Args:
 	model_name_or_path: models/DialoGPT-finetuned-multiCONAN
 	decoding_config_path: config/decode.config.json
 	inputs_path: general_conv_reddit/data/inputs.6k.txt
 	batch_size: 16
-	output_dir: general_conv_reddit/experiments/Main/DGPT-MC-norep5-minlen20
+	output_dir: general_conv_reddit/experiments/Main/DGPT-MC-minlen20
 	config_overrides: no_repeat_ngram_size=5;min_new_tokens=20

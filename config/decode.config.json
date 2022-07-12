@@ -1,5 +1,5 @@
 {
     "max_new_tokens": 100,
-    "no_repeat_ngram_size": 3,
+    "no_repeat_ngram_size": 5,
     "num_beams": 10
 }

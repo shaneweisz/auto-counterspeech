@@ -118,7 +118,7 @@ if __name__ == "__main__":
         "--references",
         type=Path,
         dest="references_path",
-        default="evaluation/test.refs.txt",
+        default="data/splits/multitarget-conan/test.references.txt",
         help="Path to file containing gold-standard reference responses for each input",
     )
     parser.add_argument(
@@ -126,7 +126,7 @@ if __name__ == "__main__":
         "--inputs",
         type=Path,
         dest="inputs_path",
-        default="evaluation/test.inputs.txt",
+        default="data/splits/multitarget-conan/test.inputs.txt",
         help="Path to file containing hate speech inputs that the predictions and references correspond to",
     )
 

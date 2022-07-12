@@ -1,8 +1,8 @@
-Date: 2022-07-05 10-36-06
+Date: 2022-07-12 11-04-44
 Args:
 	model_name_or_path: models/DialoGPT-finetuned-multiCONAN
 	decoding_config_path: config/decode.config.json
 	inputs_path: evaluation/test.inputs.txt
 	batch_size: 16
-	output_dir: experiments/DGPT-MC-vs-baselines/DGPT-MC-norep5
-	config_overrides: no_repeat_ngram_size=5
+	output_dir: experiments/Main/DGPT-MC
+	config_overrides: no_repeat_ngram_size=5;min_new_tokens=None

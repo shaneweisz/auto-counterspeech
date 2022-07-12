@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH -J gab-train
+#SBATCH -J mc-train
 #SBATCH -A MLMI-SW984-SL2-GPU
 #! How many whole nodes should be allocated?
 #SBATCH --nodes=1
@@ -30,7 +30,7 @@ echo "Running on master node: `hostname`"
 echo "Start time: `date`"
 
 # Scripts to run
-python train.py -d data/splits/gab -c config/train.config.gab.json
+python train.py -d data/splits/multitarget-conan -c config/train.config.mc.json
 
 # Final logs
 echo "Finish time: `date`"

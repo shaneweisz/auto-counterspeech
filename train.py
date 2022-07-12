@@ -1,5 +1,5 @@
 from pathlib import Path
-from typing import List
+from typing import Any, Dict, List, Union
 from datasets import DatasetDict, load_dataset
 from transformers import (
     AutoModelForCausalLM,
@@ -12,12 +12,14 @@ import argparse
 import json
 import wandb
 
+
 wandb.init(project="AutoCounterspeech")
 
 
 def main():
     print(f"Loading model: {args.model_name_or_path}")
     model = AutoModelForCausalLM.from_pretrained(args.model_name_or_path)
+    model = freeze_first_n_layers(model, args.freeze_first_n)
 
     print(f"Loading tokenizer: {args.model_name_or_path}")
     tokenizer = AutoTokenizer.from_pretrained(args.model_name_or_path)
@@ -36,7 +38,7 @@ def main():
     tokenized_dataset = tokenize(dataset, tokenizer)
 
     print("Setup Trainer")
-    data_collator = DataCollatorForLanguageModeling(tokenizer=tokenizer, mlm=False)
+    data_collator = DataCollatorForDialog(tokenizer=tokenizer, mlm=False)
     trainer = Trainer(
         model=model,
         args=training_args,
@@ -51,6 +53,14 @@ def main():
 
     print("Training finished. Saving best model.")
     trainer.save_model()
+
+
+def freeze_first_n_layers(model, n):
+    for i in range(n):
+        gpt2_block = model.transformer.h[i]
+        for param in gpt2_block.parameters():
+            param.requires_grad = False
+    return model
 
 
 def load_dataset_dict(data_dir: Path, splits: List[str] = ["train", "val"]) -> DatasetDict:
@@ -73,13 +83,31 @@ def tokenize(dataset: DatasetDict, tokenizer: AutoTokenizer) -> DatasetDict:
     return dataset.map(tokenize_row, remove_columns=dataset["train"].column_names)
 
 
+class DataCollatorForDialog(DataCollatorForLanguageModeling):
+    """Extend the DataCollatorForLanguageModeling to overwite the `torch_call` function, so that language modelling
+    training is based on next-token prediction of the response only (not the context too).
+    This is done by setting the training label to -100 for all tokens from the context."""
+
+    def torch_call(self, examples: List[Union[List[int], Any, Dict[str, Any]]]) -> Dict[str, Any]:
+        batch = super().torch_call(examples)
+        labels = batch["labels"]
+
+        # Set training label to -100 for all tokens left of the 2nd last EOS token (marking the end of the context)
+        for i in range(len(labels)):
+            index_of_eos_at_end_of_context = (labels[i] == self.tokenizer.eos_token_id).nonzero()[-2].item()
+            labels[i, : index_of_eos_at_end_of_context + 1] = -100
+
+        return batch
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
 
     DIALO_GPT_MEDIUM = "microsoft/DialoGPT-medium"
     parser.add_argument("-m", "--model_name_or_path", type=str, default=DIALO_GPT_MEDIUM)
-    parser.add_argument("-c", "--config", dest="config_path", default="config/train.config.json", type=Path)
+    parser.add_argument("-c", "--config", dest="config_path", default="config/train.config.mc.json", type=Path)
     parser.add_argument("-d", "--data_dir", type=Path, default="data/splits/multitarget-conan")
+    parser.add_argument("-f", "--freeze_first_n", type=int, default=0)
 
     args = parser.parse_args()
 

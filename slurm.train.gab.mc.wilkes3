@@ -30,7 +30,7 @@ echo "Running on master node: `hostname`"
 echo "Start time: `date`"
 
 # Scripts to run
-python train.py -m models/DialoGPT-finetuned-gab
+python train.py -m models/DialoGPT-finetuned-gab -c config/train.config.gab.mc.json
 
 # Final logs
 echo "Finish time: `date`"

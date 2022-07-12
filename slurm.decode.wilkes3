@@ -33,20 +33,18 @@ echo "Start time: `date`"
 #################################
 
 # Config
-MODEL_NAME=models/DialoGPT-finetuned-gab
-SYSTEM_NAME=DGPT-Gab
+MODEL_NAME=models/DialoGPT-finetuned-multiCONAN
+SYSTEM_NAME=DGPT-MC
 OUTPUT_DIR=$SYSTEM_NAME
 
-INPUTS=data/splits/gab/test.inputs.txt
-REFS=data/splits/gab/test.references.txt
-
-BATCH_SIZE=8
+INPUTS=data/splits/multitarget-conan/test.inputs.txt
+REFS=data/splits/multitarget-conan/test.references.txt
 
 NO_REP=5
 CONFIG_OVERRIDES="no_repeat_ngram_size=$NO_REP"
 
 # Predict
-python decode.py -m $MODEL_NAME -o $OUTPUT_DIR -co $CONFIG_OVERRIDES -i $INPUTS -b $BATCH_SIZE
+python decode.py -m $MODEL_NAME -o $OUTPUT_DIR -co $CONFIG_OVERRIDES -i $INPUTS
 
 # Evaluate
 PREDICTIONS_FILE="$OUTPUT_DIR/predictions.txt"

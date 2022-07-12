@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH -J conv
+#SBATCH -J conv-exp
 #SBATCH -A MLMI-SW984-SL2-GPU
 #! How many whole nodes should be allocated?
 #SBATCH --nodes=1
