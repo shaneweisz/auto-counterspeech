@@ -41,7 +41,7 @@ MIN_LEN=20
 
 ##############################################################################
 SYSTEM_NAMES=(DGPT-replication DGPT-MC DGPT-MC-minlen$MIN_LEN Human DGPT-Gab DGPT-Gab-MC DGPT-Gab-MC-minlen$MIN_LEN)
-MODEL_NAMES=(microsoft/DialoGPT-medium models/DialoGPT-finetuned-multiCONAN models/DialoGPT-finetuned-multiCONAN NA models/DialoGPT-finetuned-gab models/DialoGPT-finetuned-gab-then-multiCONAN models/DialoGPT-finetuned-gab-then-multiCONAN)
+MODEL_NAMES=(microsoft/DialoGPT-medium models/DialoGPT-finetuned-multiCONAN models/DialoGPT-finetuned-multiCONAN NA models/DialoGPT-finetuned-gab models/DialoGPT-finetuned-gab-multiCONAN models/DialoGPT-finetuned-gab-multiCONAN)
 DECODE_OR_NOT_ARRAY=(false false false false false false false)
 MIN_NEW_TOKENS_ARRAY=(None None $MIN_LEN NA None None $MIN_LEN)
 

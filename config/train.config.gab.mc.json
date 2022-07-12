@@ -1,5 +1,5 @@
 {
-    "output_dir": "models/DialoGPT-finetuned-gab-then-multiCONAN",
+    "output_dir": "models/DialoGPT-finetuned-gab-multiCONAN",
     "evaluation_strategy": "epoch",
     "logging_strategy": "epoch",
     "save_strategy": "epoch",
