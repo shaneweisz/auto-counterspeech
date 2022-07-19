@@ -1,6 +1,7 @@
-import random
 from pathlib import Path
 from typing import List
+
+# run from the base directory
 
 
 def read_list_from_file(file_path: Path) -> List[str]:
@@ -26,10 +27,6 @@ SYSTEM_RESPONSES_FILE = "human_evaluation/system_responses.txt"
 OUTPUT_FILE = Path("human_evaluation/form_questions.txt")
 
 ids = [int(id) - 1 for id in read_list_from_file(IDs_FILE)]
-
-SEED = 42
-random.seed(SEED)
-random.shuffle(ids)
 
 inputs = read_list_from_file(INPUTS_FILE)
 human_responses = read_list_from_file(HUMAN_RESPONSES_FILE)
