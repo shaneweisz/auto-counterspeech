@@ -99,7 +99,7 @@ The supported metrics are:
 
 3. Fluency:
 
-    * `gruen`, `fluency`
+    * `fluency`
 
 4. Response lengths:
 
@@ -108,11 +108,6 @@ The supported metrics are:
 5. Toxicity:
 
     * `toxicity`
-
-Note that to use GRUEN, the following steps are necessary:
-
-* Download the pretrained CoLA classifier [here](https://drive.google.com/file/d/1Hw5na_Iy4-kGEoX60bD8vXYeJDQrzyj6/view?usp=sharing) and unzip it in the `metrics/fluency` directory.
-* Run `python -m spacy download en_core_web_md` to download `en_core_web_md` from the `spacy` module.
 
 To use BLEU, the nltk tokenizer requires the punkt package. You can install this locally using the python interpreter as follows:
 

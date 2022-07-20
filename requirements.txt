@@ -1,16 +1,12 @@
---extra-index-url https://download.pytorch.org/whl/cu113 # for PyTorch 1.11.0 to work with CUDA 11.3
-torch==1.11.0+cu113
+torch==1.11.0
 pandas==1.4.2 # to work with CSVs
 datasets==2.2.2 # huggingface library that includes metrics
-sacrebleu==2.1.0 # for official BLEU-4 score
 nltk==3.7 # for BLEU-N
 rouge-score==0.0.4 # for ROUGE-1, ROUGE-2, ROUGE-L
 bert-score==0.3.11
-editdistance==0.6.0 # for GRUEN redundancy metric
-spacy==2.3.7 # for GRUEN focus metric
-wmd==1.3.2 # Word Mover Distance for GRUEN focus metric
 scikit-learn==1.1.1 # for train-test split
 wandb==0.12.17 # Weights & Biases, for tracking experiments
 colorama==0.4.4 # for colored terminal output when interacting with model
 detoxify==0.5.0 # For toxicity metric
 gradio==3.0.20 # For web demo
+krippendorff==0.5.1 # For measuring inter-rater reliability
