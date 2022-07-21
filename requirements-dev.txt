@@ -3,3 +3,4 @@ black==22.3.0 # formatter
 flake8==4.0.1 # linter
 matplotlib==3.5.2 # plotting
 pytest==7.1.2 # unit tests
+seaborn==0.11.2 # plotting
