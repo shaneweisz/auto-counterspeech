@@ -84,7 +84,7 @@ def tokenize(dataset: DatasetDict, tokenizer: AutoTokenizer) -> DatasetDict:
 
 
 class DataCollatorForDialog(DataCollatorForLanguageModeling):
-    """Extend the DataCollatorForLanguageModeling to overwite the `torch_call` function, so that language modelling
+    """Extend the DataCollatorForLanguageModeling to overwrite the `torch_call` function, so that language modelling
     training is based on next-token prediction of the response only (not the context too).
     This is done by setting the training label to -100 for all tokens from the context."""
 
