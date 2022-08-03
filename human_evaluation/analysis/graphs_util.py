@@ -11,7 +11,7 @@ tex_fonts = {
     "font.family": "serif",
     "font.serif": ["Palatino"],
     # Use 12pt font in plots, to match 12pt font in document
-    "axes.labelsize": 12,
+    "axes.labelsize": 10,
     "font.size": 12,
     # Make the legend/label fonts a little smaller
     "legend.fontsize": 10,
