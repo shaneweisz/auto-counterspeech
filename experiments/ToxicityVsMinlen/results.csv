@@ -1,7 +1,8 @@
-Model,Fluency(%),Toxicity(%),BERTScore(%),Dist-2(%),AvgLen
-DGPT-minlen5,96.1,11.3,10.2,24.8,5.3
-DGPT-minlen20,97.0,60.1,5.9,24.4,15.4
-DGPT-minlen80,92.2,59.2,-18.1,20.6,45.2
-DGPT-minlen15,96.7,62.2,4.5,22.1,10.8
-DGPT-minlen40,95.8,60.4,2.7,23.9,29.5
-DGPT-minlen10,97.7,13.4,6.2,23.2,8.5
+Model,Fluency(%),Toxicity(%),BERTScore(%),BLEU-4(%),Dist-2(%),Ent-4,AvgLen
+DGPT-minlen15,96.7,62.2,4.5,0.8,22.1,6.1,10.8
+DGPT-minlen40,95.8,60.4,2.7,1.5,23.9,8.4,29.5
+DGPT-minlen0,95.2,10.1,9.9,0.1,26.3,5.6,4.6
+DGPT-minlen80,92.2,59.2,-18.1,0.9,20.6,8.9,45.2
+DGPT-minlen20,97.0,60.1,5.9,1.5,24.4,7.1,15.4
+DGPT-minlen10,97.7,13.4,6.2,0.5,23.2,5.9,8.5
+DGPT-minlen5,96.1,11.3,10.2,0.1,24.8,5.7,5.3
