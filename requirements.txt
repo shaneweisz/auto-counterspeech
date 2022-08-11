@@ -1,6 +1,6 @@
-# --extra-index-url https://download.pytorch.org/whl/cu113 # for PyTorch 1.11.0 to work with CUDA 11.3
-# torch==1.11.0+cu113
-torch==1.11.0
+--extra-index-url https://download.pytorch.org/whl/cu113 # for PyTorch 1.11.0 to work with CUDA 11.3
+torch==1.11.0+cu113
+# torch==1.11.0 # if you don't need to use a custom CUDA version
 pandas==1.4.2 # to work with CSVs
 datasets==2.2.2 # huggingface library that includes metrics
 nltk==3.7 # for BLEU-N metrics

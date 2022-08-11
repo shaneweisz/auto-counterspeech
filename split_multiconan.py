@@ -32,6 +32,7 @@ def main(args):
     df_train = pd.concat([df_no_hs_duplicates, df_hs_duplicates])
 
     print(f"Writing train, val, and test sets to csv's in {args.output_dir}")
+    args.output_dir.mkdir(exist_ok=True, parents=True)
     df_train.to_csv(args.output_dir / "train.csv", index=False, quoting=csv.QUOTE_ALL)
     df_val.to_csv(args.output_dir / "val.csv", index=False, quoting=csv.QUOTE_ALL)
     df_test.to_csv(args.output_dir / "test.csv", index=False, quoting=csv.QUOTE_ALL)

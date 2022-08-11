@@ -1,9 +1,10 @@
 ![Python 3.8](https://img.shields.io/badge/python-3.8-green.svg)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 # Automating Counterspeech in Dialogue Systems
 
 ## Project Overview
 
-"Counterspeech" is a direct response to hate speech that seeks to undermine it. The key advantage of using counterspeech to combat hate speech, as opposed to measures like content moderation and blocking users, is that it does not violate freedom of speech. However, manual generation of good counterspeech is time-consuming and expensive. AI, therefore, could have a powerful impact in improving the *scalability* of applying counterspeech. However, research on AI approaches to generating counterspeech is still in its infancy. As such, this project thus aims to contribute towards improved automatic generation of counterspeech.
+*Counterspeech* is a direct response to hate speech that seeks to undermine it and challenge the hate narratives. The key advantage of using counterspeech to combat hate speech, as opposed to measures like content moderation and blocking users, is that it does not violate freedom of speech. However, manual generation of good counterspeech is time-consuming and expensive. AI, therefore, could have a powerful impact in improving the *scalability* of applying counterspeech. However, research on AI approaches to generating counterspeech is still in its infancy. As such, this project thus aims to contribute towards improved automatic generation of counterspeech.
 
 ## Requirements
 
@@ -13,6 +14,16 @@ We recommend that you create a top-level virtual environment with:
 
 ```bash
 python -m venv .venv
+```
+
+Activate the virtual environment with:
+```bash
+source .venv/bin/activate
+```
+
+Upgrade your pip:
+```bash
+pip install --upgrade pip
 ```
 
 Then install the main dependencies as below:
@@ -35,10 +46,10 @@ Firstly, notice that the original counterspeech datasets (as released by their a
 
 After preprocessing the datasets, the resulting files are located in the `data/preprocessed` directory.
 
-The preprocessing can be replicated by running:
+The preprocessing can be replicated by running, for example:
 
 ```bash
-python preprocess.py -i data/unprocessed/<data>.csv [-o <output_file_path>]
+python preprocess.py -i data/unprocessed/Multitarget-CONAN.csv -o data/preprocessed/REPLICATED-Multitarget-CONAN.csv
 ```
 
 ### Train-Val-Test Split
@@ -46,29 +57,36 @@ python preprocess.py -i data/unprocessed/<data>.csv [-o <output_file_path>]
 To replicate the multi-conan train-val-test split, run:
 
 ```bash
-python split_multiconan.py -i <path_to_multiconan_csv> -o <output_dir>
+python split_multiconan.py -i data/preprocessed/Multitarget-CONAN.csv -o data/splits/REPLICATED-multitarget-conan
 ```
 
 To replicate the gab or reddit train-val-test split, run:
 ```bash
-python split_gab.py -i <path_to_gab_csv> -o <output_dir>
+python split_gab.py -i data/preprocessed/gab.csv -o data/splits/REPLICATED-gab
 ```
 
 ### Exploratory Data Analysis (EDA)
 
-Data analysis can be conducted on all datasets (gab, reddit, conan, multitarget-conan) by running:
+Data analysis can be conducted on all preprocessed datasets (gab, reddit, conan, multitarget-conan) by running:
 
 ```bash
-python eda.py [-o <output_file_path>]
+python eda.py -o data/eda/REPLICATED-EDA.txt
 ```
 
-or on an individual dataset by running:
+or on individual dataset(s) by running, for example:
 
 ```bash
-python eda.py -f <data>.csv [-o <output_file_path>]
+python eda.py -f data/splits/multitarget-conan/train.csv data/splits/multitarget-conan/val.csv  data/splits/multitarget-conan/test.csv -o data/eda/REPLICATED-MultiCONAN-EDA.txt
 ```
 
-## Generating Counterspeech Responses
+## Fine-tuning
+
+To fine-tune DialoGPT on MultCONAN, run:
+```
+python train.py -d data/splits/multitarget-conan -c config/train.config.mc.json
+```
+
+## Decoding
 
 Counterspeech response predictions using a model (e.g. `microsoft/DialoGPT-medium`) can be made on a set of inputs as follows:
 
@@ -115,7 +133,7 @@ To use BLEU, the nltk tokenizer requires the punkt package. You can install this
 python -c 'import nltk; nltk.download("punkt")'
 ```
 
-## General Conversational Ability Experiments
+## General Conversational Ability Framework
 
 This is mainly based on the code and experiments from Microsoft's DialoGPT paper. [[code]](https://github.com/microsoft/DialoGPT) [[paper]](https://arxiv.org/abs/1911.00536)
 
@@ -177,12 +195,26 @@ python evaluate.py --refs_dir path_to_refs_dir --hyp_file path_to_predictions.cl
 
 Note: `clean-str.py` tokenizes a set of predictions into a cleaned format expected by the `evaluate.py` script.
 
-## Reproducing results
+## Reproducing Experiment Results
 
-The experiments were conducted on Nvidia Ampere (A100) GPU nodes through the Cambridge HPC via the Slurm Workload Manager.
+All experiments were conducted on Nvidia Ampere (A100) GPU nodes through the Cambridge HPC via the Slurm Workload Manager.
 
-The respective `slurm.train` scripts can be run to reproduce the training of the respective fine-tuned counterspeech models. For example, by running `sbatch slurm.train.mc.wilkes3`.
+All slurm scripts are found in the `slurm_scripts` folder. Inspect and adapt these scripts to configure your own experiments or training details.
 
-The various experiments using these models can then be done by running the respective `slurm.exp` scripts. For example, by running `sbatch slurm.exp.main.wilkes3`
+### Model training
 
-Inspect and adapt these scripts to configure your own experiments or training details.
+The experiments use three fine-tuned models: `models/DialoGPT-finetuned-multiCONAN`, `models/DialoGPT-finetuned-gab`, and `models/DialoGPT-finetuned-gab`
+
+The respective `slurm.train` scripts can be run to reproduce the training of each the respective fine-tuned counterspeech models. For example, after running `sbatch slurm.train.mc.wilkes3`, the trained model from fine-tuning DialoGPT on MultiCONAN will be found at `models/DialoGPT-finetuned-multiCONAN`.
+
+### Experiments
+
+#### Counterspeech
+
+There were three main experiments using these models: `Main` (comparing fine-tuned models to baselines evaluated using MultiCONAN test set), `Gab` (comparing models, but using Gab test), and
+
+The various experiment results can then be reproduced by running the respective `slurm.exp` scripts. For example, by running `sbatch slurm.exp.main.wilkes3`.
+
+#### General Converstional Ability
+
+Run `sbatch slurm_scripts/slurm.exp.conv.wilkes3` to reproduce the general conversational ability experiment results.
