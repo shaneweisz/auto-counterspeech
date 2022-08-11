@@ -1,12 +1,14 @@
+# --extra-index-url https://download.pytorch.org/whl/cu113 # for PyTorch 1.11.0 to work with CUDA 11.3
+# torch==1.11.0+cu113
 torch==1.11.0
 pandas==1.4.2 # to work with CSVs
 datasets==2.2.2 # huggingface library that includes metrics
-nltk==3.7 # for BLEU-N
-rouge-score==0.0.4 # for ROUGE-1, ROUGE-2, ROUGE-L
-bert-score==0.3.11
+nltk==3.7 # for BLEU-N metrics
+rouge-score==0.0.4 # for ROUGE-1, ROUGE-2, ROUGE-L metrics
+bert-score==0.3.11 # for BERT-score metric
 scikit-learn==1.1.1 # for train-test split
 wandb==0.12.17 # Weights & Biases, for tracking experiments
 colorama==0.4.4 # for colored terminal output when interacting with model
-detoxify==0.5.0 # For toxicity metric
-gradio==3.0.20 # For web demo
-krippendorff==0.5.1 # For measuring inter-rater reliability
+detoxify==0.5.0 # for toxicity metric
+gradio==3.0.20 # for web demo
+krippendorff==0.5.1 # for measuring inter-rater reliability
