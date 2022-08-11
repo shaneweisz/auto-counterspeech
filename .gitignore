@@ -137,8 +137,11 @@ tmp*
 # Repo-specific files
 metrics/fluency/cola_model
 wandb
-models
-slurm_logs
+models/*
+!models/.gitkeep
+slurm_logs/*
+!slurm_logs/.gitkeep
+
 
 # hacky shell scripts
 experiments/fix-eval-formatting.sh
