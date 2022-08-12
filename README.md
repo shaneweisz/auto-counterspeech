@@ -8,6 +8,8 @@
 
 This project thus aims to contribute towards improved automatic generation of counterspeech using dialogue systems, along with investigating the impact on the general conversational ability of such a system. In particular, our primary modelling approach is based on fine-tuning [DialoGPT](https://huggingface.co/microsoft/DialoGPT-medium#:~:text=DialoGPT%20is%20a%20SOTA%20large,single%2Dturn%20conversation%20Turing%20test) on the [MultiCONAN](https://github.com/marcoguerini/CONAN#Multitarget-CONAN) dataset, a dataset comprising a set of hate speech inputs and appropriate [counterspeech](https://dangerousspeech.org/counterspeech/) responses produced under the supervision of trained NGO operators from [Stop Hate UK](https://www.stophateuk.org/).
 
+You can interact with one of the trained counterspeech-enhanced systems via our [public web demo](https://huggingface.co/spaces/shaneweisz/AutoCounterspeech).
+
 ## Requirements
 
 The recommended python version is python 3.8+. You can check your python version is at least 3.8 by running `python --version`
