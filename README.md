@@ -231,6 +231,6 @@ The respective `slurm.train` scripts can be run to reproduce the training of eac
 
 The various experiment results can then be reproduced by running the respective `slurm.exp` scripts.
 
-There were two main counterspeech experiments using these models: `Main` (comparing fine-tuned models to baselines evaluated using MultiCONAN test set) and `Gab` (comparing models, but using Gab test). The results can be reproduced by running `sbatch slurm_scripts/slurm.exp.main.wilkes3` and `sbatch slurm_scripts/slurm.exp.gab.wilkes3` respectively.
+There were two main counterspeech experiments using these models: `Main` (comparing fine-tuned models to baselines evaluated using MultiCONAN test set) and `Gab` (comparing models, but using the Gab test set). The results can be reproduced by running `sbatch slurm_scripts/slurm.exp.main.wilkes3` and `sbatch slurm_scripts/slurm.exp.gab.wilkes3` respectively.
 
 Finally, run `sbatch slurm_scripts/slurm.exp.conv.wilkes3` to reproduce the general conversational ability experiment results.
