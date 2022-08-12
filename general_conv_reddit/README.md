@@ -3,17 +3,12 @@
 
 This is mainly based on the code and experiments from Microsoft's DialoGPT paper. [[code]](https://github.com/microsoft/DialoGPT) [[paper]](https://arxiv.org/abs/1911.00536)
 
-All the necessary code and files are in the `general_conv_reddit` folder.
-
 ### Setup
 
 #### Conda environment
 
 We use the conda environment from the DialoGPT repo. Ensure you deactivate the `auto-counterspeech` venv before switching to this conda environment, by running `deactivate`.
 
-```bash
-cd general_conv_reddit
-```
 
 Create the conda environment:
 
@@ -54,7 +49,6 @@ cpan install XML:Twig Sort:Naturally String:Util
 To evaluate a set of predictions:
 
 ```
-cd general_conv_reddit
 python util/clean-str.py path_to_predictions.txt
 python evaluate.py --refs_dir <path_to_refs_dir> --hyp_file <path_to_predictions.cleaned.txt>
 ```
