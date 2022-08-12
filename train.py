@@ -13,7 +13,7 @@ import json
 import wandb
 
 
-wandb.init(project="AutoCounterspeech")
+wandb.init(project="AutoCounterspeech")  # for visualizing training, see: https://wandb.ai/quickstart/hugging-face
 
 
 def main():
