@@ -2,6 +2,8 @@
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 # Automating Counterspeech in Dialogue Systems
 
+[[Public Web Demo]](https://huggingface.co/spaces/shaneweisz/AutoCounterspeech)
+
 ## Project Overview
 
 *Counterspeech* is a direct response to hate speech that seeks to undermine it and challenge the hate narratives. The key advantage of using counterspeech to combat hate speech, as opposed to measures like content moderation and blocking users, is that it does not violate freedom of speech. However, manual generation of good counterspeech is time-consuming and expensive. AI, therefore, could have a powerful impact in improving the *scalability* of applying counterspeech. However, research on AI approaches to generating counterspeech is still in its infancy, and has yet to be approached from a general dialogue systems framing.
