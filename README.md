@@ -2,7 +2,7 @@
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 # Automating Counterspeech in Dialogue Systems
 
-[[Public Web Demo]](https://huggingface.co/spaces/shaneweisz/AutoCounterspeech)
+[[Thesis]](https://shaneweisz.com/docs/CambridgeMPhilThesis.pdf) [[Web Demo]](https://huggingface.co/spaces/shaneweisz/AutoCounterspeech)
 
 ## Project Overview
 
