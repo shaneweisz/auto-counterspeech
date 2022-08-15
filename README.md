@@ -103,15 +103,16 @@ python interact.py -m microsoft/DialoGPT-medium
 
 Similarly, interact with a trained fine-tuned model by running, for example:
 ```
-python interact.py -m models/DialoGPT-finetuned-multiCONAN --config_overrides "num_beams=3;no_repeat_ngram_size=5"
+python interact.py -m shaneweisz/DialoGPT-finetuned-gab-multiCONAN --config_overrides "num_beams=3;no_repeat_ngram_size=5"
 ```
 
+Note that this pulls the model `shaneweisz/DialoGPT-finetuned-gab-multiCONAN` from Hugging Face. You could use your own local trained model instead.
 ## Decoding
 
 Generate responses to a text file of inputs by running, for example:
 
 ```
-python decode.py --model models/DialoGPT-finetuned-multiCONAN --config config/decode.config.json -i data/splits/gab/test.inputs.txt -o TEST-DECODING-FOLDER
+python decode.py --model shaneweisz/DialoGPT-finetuned-gab-multiCONAN --config config/decode.config.json -i data/splits/gab/test.inputs.txt -o TEST-DECODING-FOLDER
 ```
 
 ## Evaluation
